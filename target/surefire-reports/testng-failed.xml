@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]">
+  <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver"/>
+  <parameter name="mainPageUrl" value="http://www.wecsandbox.com"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <test name="Test case on Chrome">
+    <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver"/>
+    <parameter name="selenium.browser" value="chrome"/>
+    <classes>
+      <class name="tests.UserRegistration_Test"/>
+    </classes>
+  </test> <!-- Test case on Chrome -->
+  <test name="Test case on Chrome(failed)">
+    <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver"/>
+    <parameter name="selenium.browser" value="chrome"/>
+    <classes>
+      <class name="tests.UserRegistration_Test">
+        <methods>
+          <include name="testGoToMainPage" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.UserRegistration_Test -->
+    </classes>
+  </test> <!-- Test case on Chrome(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

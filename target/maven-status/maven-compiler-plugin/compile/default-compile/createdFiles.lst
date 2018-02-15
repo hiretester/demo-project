@@ -1,0 +1,7 @@
+utils/ResultValidationMessage.class
+base_classes/BaseTest.class
+listeners/TestListener.class
+pages/RegestrationAndLoginPage.class
+tests/UserRegistration_Test.class
+base_classes/BasePage.class
+pages/MainPage.class
