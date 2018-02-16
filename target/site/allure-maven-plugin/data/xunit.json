@@ -1,0 +1,136 @@
+{
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 2,
+    "unknown" : 0,
+    "total" : 3
+  },
+  "time" : {
+    "minDuration" : 171,
+    "maxDuration" : 11929,
+    "sumDuration" : 18276,
+    "start" : 1518713567354,
+    "stop" : 1518794950305,
+    "duration" : 81382951
+  },
+  "children" : [ {
+    "uid" : "1b925a08dc7edd5f",
+    "name" : "Suite1",
+    "time" : {
+      "minDuration" : 171,
+      "maxDuration" : 11929,
+      "sumDuration" : 18276,
+      "start" : 1518713567354,
+      "stop" : 1518794950305,
+      "duration" : 81382951
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "49f8ef8fcd68bafb",
+      "name" : "Test case on Chrome",
+      "time" : {
+        "minDuration" : 171,
+        "maxDuration" : 11929,
+        "sumDuration" : 18276,
+        "start" : 1518713567354,
+        "stop" : 1518794950305,
+        "duration" : 81382951
+      },
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "8c10a690bd80545e",
+        "name" : "tests.UserRegistration_Test",
+        "time" : {
+          "minDuration" : 171,
+          "maxDuration" : 171,
+          "sumDuration" : 171,
+          "start" : 1518713567354,
+          "stop" : 1518713567525,
+          "duration" : 171
+        },
+        "statistic" : {
+          "failed" : 0,
+          "broken" : 1,
+          "skipped" : 0,
+          "passed" : 0,
+          "unknown" : 0,
+          "total" : 1
+        },
+        "type" : "TestGroupNode",
+        "children" : [ {
+          "uid" : "ea0eaf3dd686d34f",
+          "name" : "testGoToMainPage",
+          "time" : {
+            "start" : 1518713567354,
+            "stop" : 1518713567525,
+            "duration" : 171
+          },
+          "status" : "broken",
+          "flaky" : false,
+          "type" : "TestCaseNode"
+        } ]
+      }, {
+        "uid" : "b59126199295a798",
+        "name" : "web_eye_care.tests.UserRegistration_Test",
+        "time" : {
+          "minDuration" : 6176,
+          "maxDuration" : 11929,
+          "sumDuration" : 18105,
+          "start" : 1518794932106,
+          "stop" : 1518794950305,
+          "duration" : 18199
+        },
+        "statistic" : {
+          "failed" : 0,
+          "broken" : 0,
+          "skipped" : 0,
+          "passed" : 2,
+          "unknown" : 0,
+          "total" : 2
+        },
+        "type" : "TestGroupNode",
+        "children" : [ {
+          "uid" : "d4e22a1ae1562c27",
+          "name" : "testGoToMainPage",
+          "time" : {
+            "start" : 1518794932106,
+            "stop" : 1518794938282,
+            "duration" : 6176
+          },
+          "status" : "passed",
+          "flaky" : false,
+          "type" : "TestCaseNode"
+        }, {
+          "uid" : "222db15d2ea0aed7",
+          "name" : "testRegistration",
+          "time" : {
+            "start" : 1518794938376,
+            "stop" : 1518794950305,
+            "duration" : 11929
+          },
+          "status" : "passed",
+          "flaky" : false,
+          "type" : "TestCaseNode"
+        } ]
+      } ]
+    } ]
+  } ]
+}

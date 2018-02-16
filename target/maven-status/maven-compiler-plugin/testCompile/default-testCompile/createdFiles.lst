@@ -1,7 +1,7 @@
-utils/ResultValidationMessage.class
-base_classes/BaseTest.class
-listeners/TestListener.class
-pages/RegestrationAndLoginPage.class
-tests/UserRegistration_Test.class
-base_classes/BasePage.class
-pages/MainPage.class
+web_eye_care/utils/ResultValidationMessage.class
+web_eye_care/tests/UserRegistration_Test.class
+web_eye_care/listeners/TestListener.class
+web_eye_care/base_classes/BaseTest.class
+web_eye_care/pages/RegistrationAndLoginPage.class
+web_eye_care/base_classes/BasePage.class
+web_eye_care/pages/MainPage.class

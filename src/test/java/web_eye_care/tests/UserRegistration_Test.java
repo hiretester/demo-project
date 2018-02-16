@@ -22,10 +22,11 @@ public class UserRegistration_Test extends BaseTest{
     }
 
     @Parameters ({"loginAndRegistrationPageUrl"})
-    @Test
+    @Test(dependsOnMethods = "testGoToMainPage")
     @Description("Opening registration page")
     public void testRegistration(String url){
         MainPage.goToRegistrationAndLoginPage();
         Assert.assertTrue(RegistrationAndLoginPage.isRegistrationAndLoginPageOpened(url), "Registration page was not opened");
+
     }
 }

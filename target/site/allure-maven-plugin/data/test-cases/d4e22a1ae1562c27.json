@@ -1,0 +1,136 @@
+{
+  "uid" : "d4e22a1ae1562c27",
+  "name" : "testGoToMainPage",
+  "fullName" : "web_eye_care.tests.UserRegistration_Test.testGoToMainPage",
+  "historyId" : "cc1b4f14c17d8eea7988b34f14463440",
+  "time" : {
+    "start" : 1518794932106,
+    "stop" : 1518794938282,
+    "duration" : 6176
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "description" : "Opening main page of the site",
+  "descriptionHtml" : "<p>Opening main page of the site</p>",
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1518794930563,
+      "stop" : 1518794931985,
+      "duration" : 1422
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Переход на главную страницу сайта",
+      "time" : {
+        "start" : 1518794932268,
+        "stop" : 1518794938212,
+        "duration" : 5944
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://www.wecsandbox.com"
+      } ]
+    }, {
+      "name" : "Проверяем открыта ли главная страница сайта",
+      "time" : {
+        "start" : 1518794938213,
+        "stop" : 1518794938279,
+        "duration" : 66
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    } ],
+    "attachments" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1518794950308,
+      "stop" : 1518794950378,
+      "duration" : 70
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.UserRegistration_Test"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.UserRegistration_Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGoToMainPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.UserRegistration_Test"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "18869@user-H81M-HD3.main(1)"
+  } ],
+  "parameters" : [ {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "arg0",
+    "value" : "http://www.wecsandbox.com"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ ]
+  }
+}
