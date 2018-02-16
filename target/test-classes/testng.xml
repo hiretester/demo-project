@@ -2,12 +2,13 @@
 
 <suite name="Suite1" verbose="1">
     <parameter name="mainPageUrl" value="http://www.wecsandbox.com" />
+    <parameter name="loginAndRegistrationPageUrl" value="http://hrqzq.qvfht.servertrust.com/login.asp"/>
 
     <test name="Test case on Chrome">
         <parameter name="selenium.browser" value="chrome" />
         <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver" />
         <classes>
-            <class name="tests.UserRegistration_Test" />
+            <class name="web_eye_care.tests.UserRegistration_Test" />
         </classes>
     </test>
 
