@@ -1,14 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1">
+    <parameter name="email" value="test1@spam4.me" />
+    <parameter name="password" value="qwerty" />
+
+    <parameter name="spam4meUrl" value="https://www.spam4.me" />
     <parameter name="mainPageUrl" value="http://www.wecsandbox.com" />
     <parameter name="loginAndRegistrationPageUrl" value="http://hrqzq.qvfht.servertrust.com/login.asp"/>
+    <parameter name="myAccountPageUrl" value="http://hrqzq.qvfht.servertrust.com/myaccount.asp" />
 
     <test name="Test case on Chrome">
         <parameter name="selenium.browser" value="chrome" />
         <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver" />
         <classes>
-            <class name="web_eye_care.tests.UserRegistration_Test" />
+            <class name="web_eye_care.tests.UserRegistrationTest" />
         </classes>
     </test>
 

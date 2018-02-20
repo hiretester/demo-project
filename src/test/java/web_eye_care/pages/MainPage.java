@@ -9,7 +9,7 @@ import io.qameta.allure.Step;
 public class MainPage extends BasePage {
 
     private static By menuMyAccountLocator = By.xpath("//div[@class='header-account']");
-    private static By menuItemSignInSingUpLocator = By.xpath("//ul[@class = 'header-account-list']/li[5]/a");
+    private static By menuItemSignInSingUpLocator = By.xpath("//ul[@class='header-account-list']/li[5]/a");
 
     private static By popUpWindowLocator = By.xpath("//div[@id='usi_content']");
     private static By popUpWindowCloseButtonLocator = By.xpath("//div[@id='usi_close']");
@@ -17,17 +17,17 @@ public class MainPage extends BasePage {
     private MainPage(){
     }
 
-    @Step("Переход на главную страницу сайта")
+    @Step("Trying to load main page of the site")
     public static void goToMainPage(String url){
         driver.navigate().to(url);
     }
 
-    @Step("Проверяем открыта ли главная страница сайта")
+    @Step("Checking if main page is opened")
     public static boolean isMainPageOpened(){
         return tryToWaitForPresenceOfElementLocated(wait, menuMyAccountLocator,"TimeoutException in isMainPageOpened");
     }
 
-    @Step("Переходим на страницу регистрации")
+    @Step("Goes to registration and login page by click")
     public static void goToRegistrationAndLoginPage(){
 
         boolean popUpWindowIsShown = tryToWaitForVisibilityOfElementLocated(wait, popUpWindowLocator,"Pop-up window was not found");
