@@ -1,5 +1,6 @@
 package web_eye_care.pages;
 
+import org.testng.annotations.Optional;
 import web_eye_care.base_classes.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -27,7 +28,7 @@ public class MainPage extends BasePage {
         return tryToWaitForPresenceOfElementLocated(wait, menuMyAccountLocator,"TimeoutException in isMainPageOpened");
     }
 
-    @Step("Goes to registration and login page by click")
+    @Step("Goes to registration and login page")
     public static void goToRegistrationAndLoginPage(){
 
         boolean popUpWindowIsShown = tryToWaitForVisibilityOfElementLocated(wait, popUpWindowLocator,"Pop-up window was not found");
@@ -45,5 +46,12 @@ public class MainPage extends BasePage {
         builder = new Actions(driver);
         builder.moveToElement(menuItemSignInSignUp).click().build().perform();
 
+    }
+
+    @Step("Goes to product category page")
+    public static void goToProductCategoryPage (@Optional("//ul[@class='cat-list']/li[1]/a") String xpath){
+        By productLocator = By.xpath(xpath);
+        WebElement product = driver.findElement(productLocator);
+        product.click();
     }
 }

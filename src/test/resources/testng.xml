@@ -8,12 +8,20 @@
     <parameter name="mainPageUrl" value="http://www.wecsandbox.com" />
     <parameter name="loginAndRegistrationPageUrl" value="http://hrqzq.qvfht.servertrust.com/login.asp"/>
     <parameter name="myAccountPageUrl" value="http://hrqzq.qvfht.servertrust.com/myaccount.asp" />
+    <parameter name="cartPageUrl" value="http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp" />
+    <parameter name="orderPageUrl" value="http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"/>
+    <parameter name="productXpath" value="//ul[@class='cat-list']/li[1]/a"/>
+    <parameter name="productPriceXpath" value="//ul[@class='products-list two-columns products-container']/li[1]/div[@class='our-price']//span"/>
+    <parameter name="productCategoryPageUrl" value="http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"/>
+    <parameter name="xpath" value="//ul[@class='products-list two-columns products-container']/li[1]/a"/>
+    <parameter name="productPageUrl" value="http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"/>
 
     <test name="Test case on Chrome">
         <parameter name="selenium.browser" value="chrome" />
         <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver" />
         <classes>
-            <class name="web_eye_care.tests.UserRegistrationTest" />
+            <!--<class name="web_eye_care.tests.UserRegistrationTest" />-->
+            <class name="web_eye_care.tests.BuyAsNewUserTest" />
         </classes>
     </test>
 

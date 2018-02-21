@@ -15,7 +15,6 @@ public class Spam4Me extends BasePage{
     private static By emailButtonLocator = By.xpath("//span[@id='inbox-id']");
     private static By emailFieldLocator = By.xpath("//span[@id='inbox-id']/input");
     private static By setButtonLocator = By.xpath("//span[@id='inbox-id']/button[@class='save button small']");
-    //private static By emailListLocator = By.id("email_list");
     private static By emailListLocator = By.xpath("//tbody[@id='email_list']/tr");
 
 
@@ -85,7 +84,7 @@ public class Spam4Me extends BasePage{
     private static void waitForLetter (){
 
         try {
-            Thread.sleep(50000);
+            Thread.sleep(30000);
         }catch (InterruptedException e) {
             System.out.println(e);
         }
