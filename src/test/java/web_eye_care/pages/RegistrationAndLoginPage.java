@@ -62,18 +62,21 @@ public class RegistrationAndLoginPage extends BasePage{
     @Step("Fill email field with" + "{0}")
     private static void fillEmailField(String email, By locator){
         emailField = driver.findElement(locator);
+        emailField.clear();
         emailField.sendKeys(email);
     }
 
     @Step("Fill password field with" + "{0}")
     private static void fillPasswordField(String password, By locator){
         passwordField = driver.findElement(locator);
+        passwordField.clear();
         passwordField.sendKeys(password);
     }
 
     @Step("Fill repeat password field with" + "{0}")
     private static void fillRepeatPasswordField(String password, By locator){
         repeatPasswordField = driver.findElement(locator);
+        repeatPasswordField.clear();
         repeatPasswordField.sendKeys(password);
     }
 

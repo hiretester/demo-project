@@ -19,6 +19,7 @@ public abstract class BaseTest {
 
 // Методы для инициализации и работы с драйвером ------------------------------------------------------------------
 
+
     private WebDriver getDriver(String browser, String driverPath) {
         switch (browser) {
             case "firefox":

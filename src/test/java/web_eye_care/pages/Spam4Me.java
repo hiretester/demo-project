@@ -54,6 +54,9 @@ public class Spam4Me extends BasePage{
     }
 
     public static boolean isRegistrationLetterInInbox (){
+
+        waitForLetter();
+
         boolean isLetter = false;
         emailList = driver.findElements(emailListLocator);
 
@@ -77,6 +80,15 @@ public class Spam4Me extends BasePage{
         }
 
         return isLetter;
+    }
+
+    private static void waitForLetter (){
+
+        try {
+            Thread.sleep(50000);
+        }catch (InterruptedException e) {
+            System.out.println(e);
+        }
     }
 
 }

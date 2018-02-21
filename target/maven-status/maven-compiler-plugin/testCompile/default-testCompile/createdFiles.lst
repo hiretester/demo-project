@@ -1,9 +1,0 @@
-web_eye_care/pages/MyAccountPage.class
-web_eye_care/utils/ResultValidationMessage.class
-web_eye_care/listeners/TestListener.class
-web_eye_care/base_classes/BaseTest.class
-web_eye_care/pages/RegistrationAndLoginPage.class
-web_eye_care/utils/DataProviders.class
-web_eye_care/base_classes/BasePage.class
-web_eye_care/pages/MainPage.class
-web_eye_care/tests/UserRegistrationTest.class
