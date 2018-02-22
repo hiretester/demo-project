@@ -46,7 +46,7 @@ public abstract class BaseTest {
         return new RemoteWebDriver(new URL(hubUrl), capabilities);
     }
 
-    @BeforeTest
+    @BeforeClass
     @Parameters({"selenium.hub", "selenium.browser", "selenium.driver.path"})
     public void setUp(@Optional("") String hubURL, @Optional("chrome") String browser, @Optional("src/test/resources/drivers/chromedriver") String driverPath)
             throws MalformedURLException {
@@ -63,7 +63,7 @@ public abstract class BaseTest {
         BasePage.wait = wait;
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();

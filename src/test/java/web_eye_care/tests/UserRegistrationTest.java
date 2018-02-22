@@ -54,7 +54,7 @@ public class UserRegistrationTest extends BaseTest{
     @Test(dependsOnMethods = "testRegistrationOfNewUser")
     @Description("Sign in as created user")
     public void testSignInOfCreatedUser(String email, String password, String url, String url2){
-        Assert.assertFalse(RegistrationAndLoginPage.isLoginPageOpened(url2), "Login page was not opened");
+        Assert.assertTrue(RegistrationAndLoginPage.isLoginPageOpened(url2), "Login page was not opened");
         RegistrationAndLoginPage.signIn(email, password);
         Assert.assertTrue(MyAccountPage.isMyAccountPageOpened(url),"My Account page was not opened");
         MyAccountPage.signOut();

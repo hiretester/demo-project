@@ -12,7 +12,7 @@ public class ProductPage extends BasePage{
     private static By priceLocator = By.xpath("//div[@class='product-price']//span");
     private static By addToCartButtonLocator = By.xpath("//div[@class='add-to-cart']/button");
 
-    private static Float price;
+    private static float price;
 
     private ProductPage (){
     }
@@ -49,7 +49,7 @@ public class ProductPage extends BasePage{
     public static boolean isPriceEqualsToPriceFromProductCategoryPage(){
         boolean isEqual = false;
 
-        if(price.floatValue() == ProductCategoryPage.getPrice().floatValue()){
+        if(price == ProductCategoryPage.getPrice()){
             isEqual = true;
         }
 

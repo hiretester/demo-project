@@ -9,7 +9,7 @@ import web_eye_care.base_classes.BasePage;
 public class ProductCategoryPage extends BasePage{
 
     private static By productListLocator = By.xpath("//ul[@class='products-list two-columns products-container']");
-    private static Float price;
+    private static float price;
 
     private ProductCategoryPage (){
     }

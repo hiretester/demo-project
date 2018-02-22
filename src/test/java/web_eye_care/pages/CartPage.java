@@ -7,6 +7,8 @@ import web_eye_care.base_classes.BasePage;
 
 public class CartPage extends BasePage{
 
+    private static WebElement emailField, passwordField, loginAndCheckoutButton;
+
     private static By shoppingCartFormLocator = By.id("shop-cart-form");
     private static By priceLocator = By.xpath("//td[@class='item-each']/span");
     private static By subtotalLocator = By.xpath("//td[@class='item-subtotal align-center']/span");
@@ -16,11 +18,17 @@ public class CartPage extends BasePage{
 
     private static By proceedToCheckoutLocator = By.xpath("//td[@class='cart-right']/button");
 
-    private static Float price;
-    private static Float subtotal;
-    private static Float total;
+    private static By returningCustomerFormLocator = By.xpath("//form[@class='white-form shopping-cart-login']");
+    private static By emailLocator = By.xpath("//input[@class='login-username']");
+    private static By passwordLocator = By.xpath("//input[@class='login-password']");
+    private static By loginAndCheckoutButtonLocator = By.xpath("//button[@class='btn m-check m-green login-checkout']");
 
-    private static Integer quantity;
+
+    private static float price;
+    private static float subtotal;
+    private static float total;
+
+    private static int quantity;
 
     private CartPage (){
     }
@@ -96,23 +104,67 @@ public class CartPage extends BasePage{
     public static boolean isPriceEqualsToPriceFromProductPage(){
         boolean isEqual = false;
 
-        if(price.floatValue() == ProductPage.getPrice().floatValue()){
+        if(price == ProductPage.getPrice()){
             isEqual = true;
         }
 
         return isEqual;
     }
 
+    @Step("Checking if subtotal price equals to the price multiplied by the quantity")
     public static boolean isSubtotalEqualsToPriceMultipliedByQuantity(){
         boolean isEqual = false;
 
-        float subtotalPrice = price.floatValue();
-        subtotalPrice = subtotalPrice * quantity.intValue();
+        float subtotalPrice = price;
+        subtotalPrice = subtotalPrice * quantity;
 
-        if(subtotalPrice == subtotal.floatValue()){
+        if(subtotalPrice == subtotal){
             isEqual = true;
         }
 
         return isEqual;
+    }
+
+    @Step("Checking if total price equals to subtotal price")
+    public static boolean isTotalEqualsToSubtotal(){
+        boolean isEqual = false;
+
+        if(total == subtotal){
+            isEqual = true;
+        }
+
+        return isEqual;
+    }
+
+    @Step("Checking if returning customer form is visible")
+    public static boolean isReturningCustomerFormVisible(){
+        return tryToWaitForVisibilityOfElementLocated(wait, returningCustomerFormLocator,"Returning customer form does not visible");
+    }
+
+    @Step("Filling registration form and sending it in order to register a new user")
+    public static void loginAndCheckout(String email, String password){
+        fillEmailField(email, emailLocator);
+        fillPasswordField(password, passwordLocator);
+        sendReturningCustomerForm();
+    }
+
+    @Step("Fill email field with" + "{0}")
+    private static void fillEmailField(String email, By locator){
+        emailField = driver.findElement(locator);
+        emailField.clear();
+        emailField.sendKeys(email);
+    }
+
+    @Step("Fill password field with" + "{0}")
+    private static void fillPasswordField(String password, By locator){
+        passwordField = driver.findElement(locator);
+        passwordField.clear();
+        passwordField.sendKeys(password);
+    }
+
+    @Step("Confirm login and checkout on returning customer form")
+    private static void sendReturningCustomerForm(){
+        loginAndCheckoutButton = driver.findElement(loginAndCheckoutButtonLocator);
+        loginAndCheckoutButton.click();
     }
 }
