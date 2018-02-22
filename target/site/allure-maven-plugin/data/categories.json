@@ -1,0 +1,72 @@
+{
+  "statistic" : {
+    "failed" : 1,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 1
+  },
+  "time" : {
+    "minDuration" : 2118,
+    "maxDuration" : 2118,
+    "sumDuration" : 2118,
+    "start" : 1519322736611,
+    "stop" : 1519322738729,
+    "duration" : 2118
+  },
+  "children" : [ {
+    "uid" : "af484295d0138adf",
+    "name" : "Product defects",
+    "time" : {
+      "minDuration" : 2118,
+      "maxDuration" : 2118,
+      "sumDuration" : 2118,
+      "start" : 1519322736611,
+      "stop" : 1519322738729,
+      "duration" : 2118
+    },
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "a97b69367fae2e7b",
+      "name" : "Login page was not opened expected [true] but found [false]",
+      "time" : {
+        "minDuration" : 2118,
+        "maxDuration" : 2118,
+        "sumDuration" : 2118,
+        "start" : 1519322736611,
+        "stop" : 1519322738729,
+        "duration" : 2118
+      },
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 1
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "e94876ebbcbef165",
+        "name" : "testSignInOfCreatedUser",
+        "time" : {
+          "start" : 1519322736611,
+          "stop" : 1519322738729,
+          "duration" : 2118
+        },
+        "status" : "failed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      } ]
+    } ]
+  } ]
+}

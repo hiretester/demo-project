@@ -1,34 +1,41 @@
 package web_eye_care.tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
+import org.testng.annotations.Listeners;
 import web_eye_care.base_classes.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import web_eye_care.listeners.TestListener;
 import web_eye_care.pages.MainPage;
 import io.qameta.allure.Description;
 import web_eye_care.pages.MyAccountPage;
 import web_eye_care.pages.RegistrationAndLoginPage;
 import web_eye_care.pages.Spam4Me;
 
+@Listeners({TestListener.class})
+@Feature("User registration")
+@Story("Register a new user")
 public class UserRegistrationTest extends BaseTest{
 
     // test cases link
     // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
     //Test case ID - REG-01
 
-    @Parameters ({"email", "spam4meUrl"})
-    @Test
-    @Description("Creating email for registration")
-    public void testCreateEmail(String email, String url){
+    @Step("Creating email for registration")
+    private void createEmail(String email, String url){
         Spam4Me.goToSpam4Me(url);
         Assert.assertTrue(Spam4Me.isSpam4MePageOpened(url), "spam4.me was not opened");
         Spam4Me.createEmail(email);
     }
 
-    @Parameters({"mainPageUrl"})
-    @Test(dependsOnMethods = "testCreateEmail")
+    @Parameters({"mainPageUrl", "email", "spam4meUrl"})
+    @Test()
     @Description("Opening main page of the site")
-    public void testGoToMainPage(String url) {
+    public void testGoToMainPage(String url, String email, String mailUrl) {
+        createEmail(email, mailUrl);
         MainPage.goToMainPage(url);
         Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");
     }
@@ -66,7 +73,7 @@ public class UserRegistrationTest extends BaseTest{
     public void testLetterInInbox(String url){
         Spam4Me.goToSpam4Me(url);
         Assert.assertTrue(Spam4Me.isSpam4MePageOpened(url), "spam4.me was not opened");
-        Assert.assertTrue(Spam4Me.isRegistrationLetterInInbox(),"There is no confirmation letter in inbox after registration");
+        Assert.assertTrue(Spam4Me.isConfirmationLetterInInbox(),"There is no confirmation letter in inbox after registration");
     }
 
 }

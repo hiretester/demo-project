@@ -1,0 +1,186 @@
+{
+  "uid" : "56473e05ff7fde6",
+  "name" : "testGoToProductCategoryPage",
+  "fullName" : "web_eye_care.tests.BuyAsNewUserTest.testGoToProductCategoryPage",
+  "historyId" : "79a1ccf38fad855f44e8f04cd726fd2",
+  "time" : {
+    "start" : 1519322744974,
+    "stop" : 1519322747443,
+    "duration" : 2469
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "description" : "Opening  \"Acuvue\" product category page",
+  "descriptionHtml" : "<p>Opening &ldquo;Acuvue&rdquo; product category page</p>",
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1519322738851,
+      "stop" : 1519322739523,
+      "duration" : 672
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Goes to product category page",
+      "time" : {
+        "start" : 1519322744974,
+        "stop" : 1519322745036,
+        "duration" : 62
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    }, {
+      "name" : "Checking if product category page is loaded",
+      "time" : {
+        "start" : 1519322745069,
+        "stop" : 1519322747397,
+        "duration" : 2328
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+      } ]
+    }, {
+      "name" : "Remember product price from Product category page",
+      "time" : {
+        "start" : 1519322747397,
+        "stop" : 1519322747443,
+        "duration" : 46
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    } ],
+    "attachments" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 3,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1519322758812,
+      "stop" : 1519322758883,
+      "duration" : 71
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGoToProductCategoryPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "15981@user-H81M-HD3.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Product ordering"
+  }, {
+    "name" : "story",
+    "value" : "Ordering product as a new user"
+  } ],
+  "parameters" : [ {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "productCategoryPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  }, {
+    "name" : "myAccountPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "registeredPassword",
+    "value" : "qwerty"
+  }, {
+    "name" : "productPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"
+  }, {
+    "name" : "password",
+    "value" : "qwerty"
+  }, {
+    "name" : "orderPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  }, {
+    "name" : "registeredEmail",
+    "value" : "testa@spam4.me"
+  }, {
+    "name" : "cartPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "email",
+    "value" : "testh@spam4.me"
+  }, {
+    "name" : "spam4meUrl",
+    "value" : "https://www.spam4.me/inbox"
+  }, {
+    "name" : "arg0",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ ]
+  }
+}

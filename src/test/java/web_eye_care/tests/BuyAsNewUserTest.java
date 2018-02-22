@@ -1,14 +1,20 @@
 package web_eye_care.tests;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import web_eye_care.base_classes.BaseTest;
+import web_eye_care.listeners.TestListener;
 import web_eye_care.pages.*;
 
+@Listeners({TestListener.class})
+@Feature("Product ordering")
+@Story("Ordering product as a new user")
 public class BuyAsNewUserTest extends BaseTest{
 
     // test cases link
@@ -23,20 +29,20 @@ public class BuyAsNewUserTest extends BaseTest{
         Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");
     }
 
-    @Parameters({"productXpath","productPriceXpath", "productCategoryPageUrl"})
+    @Parameters({"productCategoryPageUrl"})
     @Test(dependsOnMethods = "testGoToMainPage")
     @Description("Opening  \"Acuvue\" product category page")
-    public void testGoToProductCategoryPage(String productXpath, String productPriceXpath, String url){
-        MainPage.goToProductCategoryPage(productXpath);
+    public void testGoToProductCategoryPage(String url){
+        MainPage.goToProductCategoryPage();
         Assert.assertTrue(ProductCategoryPage.isProductCategoryPageOpened(url), "Product category page was not opened");
-        ProductCategoryPage.setPrice(productPriceXpath);
+        ProductCategoryPage.setPrice();
     }
 
-    @Parameters({"xpath", "productPageUrl"})
+    @Parameters({"productPageUrl"})
     @Test(dependsOnMethods = "testGoToProductCategoryPage")
-    @Description("Opening first product page from \"Acuvue\" category")
-    public void testGoToProductPage(String xpath, String url){
-        ProductCategoryPage.goToProductPage(xpath);
+    @Description("Opening page of the first product from \"Acuvue\" category")
+    public void testGoToProductPage(String url){
+        ProductCategoryPage.goToProductPage();
         Assert.assertTrue(ProductPage.isProductPageOpened(url), "Product page was not opened");
         ProductPage.setPrice();
         Assert.assertTrue(ProductPage.isPriceEqualsToPriceFromProductCategoryPage(),
@@ -53,11 +59,14 @@ public class BuyAsNewUserTest extends BaseTest{
         CartPage.setTotalPrice();
         CartPage.setQuantity();
         CartPage.setSubtotalPrice();
-        Assert.assertTrue(CartPage.isPriceEqualsToPriceFromProductPage(),
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(CartPage.isPriceEqualsToPriceFromProductPage(),
                 "Price from product page does not equal to the price from cart page");
-        Assert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),
+        softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),
                 "Subtotal price does not equal to the price multiplied by quantity");
-        Assert.assertTrue(CartPage.isTotalEqualsToSubtotal(), "Subtotal price does not equal to the total price");
+        softAssert.assertTrue(CartPage.isTotalEqualsToSubtotal(), "Subtotal price does not equal to the total price");
+        softAssert.assertAll();
     }
 
     @Parameters({"orderPageUrl"})
@@ -67,6 +76,7 @@ public class BuyAsNewUserTest extends BaseTest{
         CartPage.proceedToCheckout();
         Assert.assertTrue(OrderPage.isOrderPageOpened(url),"Order page was not opened");
         OrderPage.setSubtotalPrice();
+
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(OrderPage.isRegistrationFormVisible(),"Registration form does not visible");
         softAssert.assertTrue(OrderPage.isSubtotalEqualsToTotalFromCartPage(),

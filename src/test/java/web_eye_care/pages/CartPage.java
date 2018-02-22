@@ -101,6 +101,7 @@ public class CartPage extends BasePage{
         return quantity;
     }
 
+    @Step("Checking if price equals to the price from product page")
     public static boolean isPriceEqualsToPriceFromProductPage(){
         boolean isEqual = false;
 
@@ -141,7 +142,7 @@ public class CartPage extends BasePage{
         return tryToWaitForVisibilityOfElementLocated(wait, returningCustomerFormLocator,"Returning customer form does not visible");
     }
 
-    @Step("Filling registration form and sending it in order to register a new user")
+    @Step("Filling returning customer form and sending it in order to login and proceed to checkout")
     public static void loginAndCheckout(String email, String password){
         fillEmailField(email, emailLocator);
         fillPasswordField(password, passwordLocator);

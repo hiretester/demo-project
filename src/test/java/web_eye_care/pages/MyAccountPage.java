@@ -31,6 +31,7 @@ public class MyAccountPage extends BasePage {
      return false;
     }
 
+    @Step("Signing out from account")
     public static void signOut(){
         boolean isMenuPresent = tryToWaitForPresenceOfElementLocated(wait, menuMyAccountLocator," My Account menu does not present");
         WebElement menuMyAccount = driver.findElement(menuMyAccountLocator);

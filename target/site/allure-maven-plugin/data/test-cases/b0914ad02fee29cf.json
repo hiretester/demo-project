@@ -1,0 +1,249 @@
+{
+  "uid" : "b0914ad02fee29cf",
+  "name" : "testGoToMainPage",
+  "fullName" : "web_eye_care.tests.UserRegistrationTest.testGoToMainPage",
+  "historyId" : "d5e0c348816b46eed54b8468cc8ee06e",
+  "time" : {
+    "start" : 1519322704977,
+    "stop" : 1519322713240,
+    "duration" : 8263
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "description" : "Opening main page of the site",
+  "descriptionHtml" : "<p>Opening main page of the site</p>",
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1519322702727,
+      "stop" : 1519322704929,
+      "duration" : 2202
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Creating email for registration",
+      "time" : {
+        "start" : 1519322705010,
+        "stop" : 1519322707211,
+        "duration" : 2201
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "steps" : [ {
+        "name" : "Trying to load email box page",
+        "time" : {
+          "start" : 1519322705035,
+          "stop" : 1519322706945,
+          "duration" : 1910
+        },
+        "status" : "passed",
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "https://www.spam4.me/inbox"
+        } ]
+      }, {
+        "name" : "Checking if Email page is loaded",
+        "time" : {
+          "start" : 1519322706945,
+          "stop" : 1519322706987,
+          "duration" : 42
+        },
+        "status" : "passed",
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "https://www.spam4.me/inbox"
+        } ]
+      }, {
+        "name" : "Creating email",
+        "time" : {
+          "start" : 1519322706988,
+          "stop" : 1519322707211,
+          "duration" : 223
+        },
+        "status" : "passed",
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "testh@spam4.me"
+        } ]
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "testh@spam4.me"
+      }, {
+        "name" : "url",
+        "value" : "https://www.spam4.me/inbox"
+      } ]
+    }, {
+      "name" : "Trying to load main page of the site",
+      "time" : {
+        "start" : 1519322707218,
+        "stop" : 1519322713219,
+        "duration" : 6001
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://www.wecsandbox.com"
+      } ]
+    }, {
+      "name" : "Checking if main page is opened",
+      "time" : {
+        "start" : 1519322713219,
+        "stop" : 1519322713237,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    } ],
+    "attachments" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 6,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1519322738733,
+      "stop" : 1519322738850,
+      "duration" : 117
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGoToMainPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "15981@user-H81M-HD3.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "User registration"
+  }, {
+    "name" : "story",
+    "value" : "Register a new user"
+  } ],
+  "parameters" : [ {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "productCategoryPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  }, {
+    "name" : "myAccountPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "registeredPassword",
+    "value" : "qwerty"
+  }, {
+    "name" : "productPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"
+  }, {
+    "name" : "password",
+    "value" : "qwerty"
+  }, {
+    "name" : "orderPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  }, {
+    "name" : "registeredEmail",
+    "value" : "testa@spam4.me"
+  }, {
+    "name" : "cartPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "email",
+    "value" : "testh@spam4.me"
+  }, {
+    "name" : "spam4meUrl",
+    "value" : "https://www.spam4.me/inbox"
+  }, {
+    "name" : "arg0",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "arg1",
+    "value" : "testh@spam4.me"
+  }, {
+    "name" : "arg2",
+    "value" : "https://www.spam4.me/inbox"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ ]
+  }
+}

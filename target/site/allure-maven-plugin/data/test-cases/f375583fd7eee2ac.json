@@ -1,0 +1,242 @@
+{
+  "uid" : "f375583fd7eee2ac",
+  "name" : "testProceedToCheckout",
+  "fullName" : "web_eye_care.tests.BuyAsNewUserTest.testProceedToCheckout",
+  "historyId" : "106c1cd853eab86f519abfb17b4531af",
+  "time" : {
+    "start" : 1519322755487,
+    "stop" : 1519322758812,
+    "duration" : 3325
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "description" : "Checking order page",
+  "descriptionHtml" : "<p>Checking order page</p>",
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1519322738851,
+      "stop" : 1519322739523,
+      "duration" : 672
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Proceed to checkout",
+      "time" : {
+        "start" : 1519322755488,
+        "stop" : 1519322757884,
+        "duration" : 2396
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    }, {
+      "name" : "Checking if order page is loaded",
+      "time" : {
+        "start" : 1519322757889,
+        "stop" : 1519322758498,
+        "duration" : 609
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+      } ]
+    }, {
+      "name" : "Remember subtotal price from Cart page",
+      "time" : {
+        "start" : 1519322758498,
+        "stop" : 1519322758535,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    }, {
+      "name" : "Checking if registration form is visible",
+      "time" : {
+        "start" : 1519322758535,
+        "stop" : 1519322758607,
+        "duration" : 72
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    }, {
+      "name" : "Checking if subtotal price equals to total price from cart page",
+      "time" : {
+        "start" : 1519322758607,
+        "stop" : 1519322758607,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "steps" : [ {
+        "name" : "Get total price from Cart page",
+        "time" : {
+          "start" : 1519322758607,
+          "stop" : 1519322758607,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ]
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    }, {
+      "name" : "Checking if \"Place Order\" button is clickable",
+      "time" : {
+        "start" : 1519322758607,
+        "stop" : 1519322758811,
+        "duration" : 204
+      },
+      "status" : "passed",
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ]
+    } ],
+    "attachments" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 7,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1519322758812,
+      "stop" : 1519322758883,
+      "duration" : 71
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testProceedToCheckout"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "15981@user-H81M-HD3.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Product ordering"
+  }, {
+    "name" : "story",
+    "value" : "Ordering product as a new user"
+  } ],
+  "parameters" : [ {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "productCategoryPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  }, {
+    "name" : "myAccountPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "registeredPassword",
+    "value" : "qwerty"
+  }, {
+    "name" : "productPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"
+  }, {
+    "name" : "password",
+    "value" : "qwerty"
+  }, {
+    "name" : "orderPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  }, {
+    "name" : "registeredEmail",
+    "value" : "testa@spam4.me"
+  }, {
+    "name" : "cartPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "email",
+    "value" : "testh@spam4.me"
+  }, {
+    "name" : "spam4meUrl",
+    "value" : "https://www.spam4.me/inbox"
+  }, {
+    "name" : "arg0",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ ]
+  }
+}

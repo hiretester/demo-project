@@ -1,6 +1,5 @@
 package web_eye_care.pages;
 
-import org.testng.annotations.Optional;
 import web_eye_care.base_classes.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,6 +13,8 @@ public class MainPage extends BasePage {
 
     private static By popUpWindowLocator = By.xpath("//div[@id='usi_content']");
     private static By popUpWindowCloseButtonLocator = By.xpath("//div[@id='usi_close']");
+
+    private static By productCategoryLocator = By.xpath("//ul[@class='cat-list']/li[1]/a");
 
     private MainPage(){
     }
@@ -31,11 +32,7 @@ public class MainPage extends BasePage {
     @Step("Goes to registration and login page")
     public static void goToRegistrationAndLoginPage(){
 
-        boolean popUpWindowIsShown = tryToWaitForVisibilityOfElementLocated(wait, popUpWindowLocator,"Pop-up window was not found");
-        if (popUpWindowIsShown){
-            WebElement closeButton = driver.findElement(popUpWindowCloseButtonLocator);
-            closeButton.click();
-        }
+        closePopUpWindow();
 
         WebElement menuMyAccount = driver.findElement(menuMyAccountLocator);
         Actions builder = new Actions(driver);
@@ -49,9 +46,16 @@ public class MainPage extends BasePage {
     }
 
     @Step("Goes to product category page")
-    public static void goToProductCategoryPage (@Optional("//ul[@class='cat-list']/li[1]/a") String xpath){
-        By productLocator = By.xpath(xpath);
-        WebElement product = driver.findElement(productLocator);
+    public static void goToProductCategoryPage (){
+        WebElement product = driver.findElement(productCategoryLocator);
         product.click();
+    }
+
+    private static void closePopUpWindow(){
+        boolean popUpWindowIsShown = tryToWaitForVisibilityOfElementLocated(wait, popUpWindowLocator,"Pop-up window was not found");
+        if (popUpWindowIsShown){
+            WebElement closeButton = driver.findElement(popUpWindowCloseButtonLocator);
+            closeButton.click();
+        }
     }
 }

@@ -46,6 +46,7 @@ public class ProductPage extends BasePage{
         return price;
     }
 
+    @Step("Checking if price equals to the price from product category page")
     public static boolean isPriceEqualsToPriceFromProductCategoryPage(){
         boolean isEqual = false;
 

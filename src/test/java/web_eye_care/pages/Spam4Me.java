@@ -52,7 +52,8 @@ public class Spam4Me extends BasePage{
         setButton.click();
     }
 
-    public static boolean isRegistrationLetterInInbox (){
+    @Step("Checking if confirmation letter is received")
+    public static boolean isConfirmationLetterInInbox(){
 
         waitForLetter();
 
@@ -81,6 +82,7 @@ public class Spam4Me extends BasePage{
         return isLetter;
     }
 
+    @Step("Delay for letter receiving")
     private static void waitForLetter (){
 
         try {

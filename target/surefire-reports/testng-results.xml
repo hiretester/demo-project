@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="1" total="15" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="90273" started-at="2018-02-22T18:05:02Z" finished-at="2018-02-22T18:06:32Z">
+    <groups>
+    </groups>
+    <test name="Test case on Chrome" duration-ms="90273" started-at="2018-02-22T18:05:02Z" finished-at="2018-02-22T18:06:32Z">
+      <class name="web_eye_care.tests.UserRegistrationTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="setUp" is-config="true" duration-ms="2220" started-at="2018-02-22T20:05:02Z" finished-at="2018-02-22T20:05:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/drivers/chromedriver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGoToMainPage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="testGoToMainPage" duration-ms="8304" started-at="2018-02-22T20:05:04Z" finished-at="2018-02-22T20:05:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.wecsandbox.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testh@spam4.me]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.spam4.me/inbox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToMainPage -->
+        <test-method status="PASS" signature="testGoToRegistrationPage(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="testGoToRegistrationPage" duration-ms="17520" started-at="2018-02-22T20:05:13Z" depends-on-methods="web_eye_care.tests.UserRegistrationTest.testGoToMainPage" finished-at="2018-02-22T20:05:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/login.asp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToRegistrationPage -->
+        <test-method status="PASS" signature="testRegistrationOfNewUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="testRegistrationOfNewUser" duration-ms="5727" started-at="2018-02-22T20:05:30Z" depends-on-methods="web_eye_care.tests.UserRegistrationTest.testGoToRegistrationPage" finished-at="2018-02-22T20:05:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testh@spam4.me]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[qwerty]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/myaccount.asp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistrationOfNewUser -->
+        <test-method status="FAIL" signature="testSignInOfCreatedUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="testSignInOfCreatedUser" duration-ms="1922" started-at="2018-02-22T20:05:36Z" depends-on-methods="web_eye_care.tests.UserRegistrationTest.testRegistrationOfNewUser" finished-at="2018-02-22T20:05:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testh@spam4.me]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[qwerty]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/myaccount.asp]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/login.asp]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login page was not opened expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login page was not opened expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser(UserRegistrationTest.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignInOfCreatedUser -->
+        <test-method status="SKIP" signature="testLetterInInbox(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="testLetterInInbox" duration-ms="0" started-at="2018-02-22T20:05:38Z" depends-on-methods="web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser" finished-at="2018-02-22T20:05:38Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method UserRegistrationTest.testLetterInInbox(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method UserRegistrationTest.testLetterInInbox(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1037)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLetterInInbox -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2]" name="tearDown" is-config="true" duration-ms="117" started-at="2018-02-22T20:05:38Z" finished-at="2018-02-22T20:05:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- web_eye_care.tests.UserRegistrationTest -->
+      <class name="web_eye_care.tests.BuyAsExistingUserTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="setUp" is-config="true" duration-ms="1478" started-at="2018-02-22T20:05:58Z" finished-at="2018-02-22T20:06:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/drivers/chromedriver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGoToMainPage(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="testGoToMainPage" duration-ms="5383" started-at="2018-02-22T20:06:00Z" finished-at="2018-02-22T20:06:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.wecsandbox.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToMainPage -->
+        <test-method status="PASS" signature="testGoToProductCategoryPage(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="testGoToProductCategoryPage" duration-ms="2453" started-at="2018-02-22T20:06:05Z" depends-on-methods="web_eye_care.tests.BuyAsExistingUserTest.testGoToMainPage" finished-at="2018-02-22T20:06:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToProductCategoryPage -->
+        <test-method status="PASS" signature="testGoToProductPage(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="testGoToProductPage" duration-ms="4927" started-at="2018-02-22T20:06:08Z" depends-on-methods="web_eye_care.tests.BuyAsExistingUserTest.testGoToProductCategoryPage" finished-at="2018-02-22T20:06:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToProductPage -->
+        <test-method status="PASS" signature="testAddToCart(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="testAddToCart" duration-ms="4125" started-at="2018-02-22T20:06:13Z" depends-on-methods="web_eye_care.tests.BuyAsExistingUserTest.testGoToProductPage" finished-at="2018-02-22T20:06:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method status="PASS" signature="testProceedToCheckout(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="testProceedToCheckout" duration-ms="15633" started-at="2018-02-22T20:06:17Z" depends-on-methods="web_eye_care.tests.BuyAsExistingUserTest.testAddToCart" finished-at="2018-02-22T20:06:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testa@spam4.me]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[qwerty]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProceedToCheckout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0]" name="tearDown" is-config="true" duration-ms="83" started-at="2018-02-22T20:06:32Z" finished-at="2018-02-22T20:06:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- web_eye_care.tests.BuyAsExistingUserTest -->
+      <class name="web_eye_care.tests.BuyAsNewUserTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="setUp" is-config="true" duration-ms="673" started-at="2018-02-22T20:05:38Z" finished-at="2018-02-22T20:05:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/drivers/chromedriver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGoToMainPage(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="testGoToMainPage" duration-ms="5445" started-at="2018-02-22T20:05:39Z" finished-at="2018-02-22T20:05:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.wecsandbox.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToMainPage -->
+        <test-method status="PASS" signature="testGoToProductCategoryPage(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="testGoToProductCategoryPage" duration-ms="2474" started-at="2018-02-22T20:05:44Z" depends-on-methods="web_eye_care.tests.BuyAsNewUserTest.testGoToMainPage" finished-at="2018-02-22T20:05:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToProductCategoryPage -->
+        <test-method status="PASS" signature="testGoToProductPage(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="testGoToProductPage" duration-ms="4136" started-at="2018-02-22T20:05:47Z" depends-on-methods="web_eye_care.tests.BuyAsNewUserTest.testGoToProductCategoryPage" finished-at="2018-02-22T20:05:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToProductPage -->
+        <test-method status="PASS" signature="testAddToCart(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="testAddToCart" duration-ms="3904" started-at="2018-02-22T20:05:51Z" depends-on-methods="web_eye_care.tests.BuyAsNewUserTest.testGoToProductPage" finished-at="2018-02-22T20:05:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method status="PASS" signature="testProceedToCheckout(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="testProceedToCheckout" duration-ms="3325" started-at="2018-02-22T20:05:55Z" depends-on-methods="web_eye_care.tests.BuyAsNewUserTest.testAddToCart" finished-at="2018-02-22T20:05:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProceedToCheckout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@2187fff7]" name="tearDown" is-config="true" duration-ms="71" started-at="2018-02-22T20:05:58Z" finished-at="2018-02-22T20:05:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- web_eye_care.tests.BuyAsNewUserTest -->
+    </test> <!-- Test case on Chrome -->
+  </suite> <!-- Suite1 -->
+</testng-results>
