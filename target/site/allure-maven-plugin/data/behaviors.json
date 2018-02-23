@@ -1,7 +1,7 @@
 {
   "statistic" : {
-    "failed" : 1,
-    "broken" : 0,
+    "failed" : 0,
+    "broken" : 1,
     "skipped" : 1,
     "passed" : 13,
     "unknown" : 0,
@@ -9,42 +9,42 @@
   },
   "time" : {
     "minDuration" : 0,
-    "maxDuration" : 17519,
-    "sumDuration" : 85416,
-    "start" : 1519322704977,
-    "stop" : 1519322792886,
-    "duration" : 87909
+    "maxDuration" : 30705,
+    "sumDuration" : 117130,
+    "start" : 1519385309638,
+    "stop" : 1519385428915,
+    "duration" : 119277
   },
   "children" : [ {
-    "uid" : "e6dfac135d2dbcb8",
-    "name" : "Product ordering",
+    "uid" : "ed5d1f26cecbde7b",
+    "name" : "User registration",
     "time" : {
-      "minDuration" : 2453,
-      "maxDuration" : 15632,
-      "sumDuration" : 51791,
-      "start" : 1519322739525,
-      "stop" : 1519322792886,
-      "duration" : 53361
+      "minDuration" : 4345,
+      "maxDuration" : 30705,
+      "sumDuration" : 70023,
+      "start" : 1519385309638,
+      "stop" : 1519385379783,
+      "duration" : 70145
     },
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 5,
       "unknown" : 0,
-      "total" : 10
+      "total" : 5
     },
     "type" : "TestGroupNode",
     "children" : [ {
-      "uid" : "a3dc0ce0e189609b",
-      "name" : "Ordering product as an existing user",
+      "uid" : "b02777a30393006d",
+      "name" : "Register a new user",
       "time" : {
-        "minDuration" : 2453,
-        "maxDuration" : 15632,
-        "sumDuration" : 32516,
-        "start" : 1519322760362,
-        "stop" : 1519322792886,
-        "duration" : 32524
+        "minDuration" : 4345,
+        "maxDuration" : 30705,
+        "sumDuration" : 70023,
+        "start" : 1519385309638,
+        "stop" : 1519385379783,
+        "duration" : 70145
       },
       "statistic" : {
         "failed" : 0,
@@ -56,132 +56,56 @@
       },
       "type" : "TestGroupNode",
       "children" : [ {
-        "uid" : "6ebea4d91bd02050",
-        "name" : "testGoToProductPage",
-        "time" : {
-          "start" : 1519322768201,
-          "stop" : 1519322773126,
-          "duration" : 4925
-        },
-        "status" : "passed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      }, {
-        "uid" : "b87aacdf0a63f678",
-        "name" : "testGoToProductCategoryPage",
-        "time" : {
-          "start" : 1519322765746,
-          "stop" : 1519322768199,
-          "duration" : 2453
-        },
-        "status" : "passed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      }, {
-        "uid" : "b640887961415fd7",
-        "name" : "testProceedToCheckout",
-        "time" : {
-          "start" : 1519322777254,
-          "stop" : 1519322792886,
-          "duration" : 15632
-        },
-        "status" : "passed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      }, {
-        "uid" : "513c10b2a7e19b03",
-        "name" : "testAddToCart",
-        "time" : {
-          "start" : 1519322773129,
-          "stop" : 1519322777253,
-          "duration" : 4124
-        },
-        "status" : "passed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      }, {
-        "uid" : "c41a6f7ba2f8e343",
+        "uid" : "f6f5c4c2aac11334",
         "name" : "testGoToMainPage",
         "time" : {
-          "start" : 1519322760362,
-          "stop" : 1519322765744,
-          "duration" : 5382
-        },
-        "status" : "passed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      } ]
-    }, {
-      "uid" : "4a5fae360b765a5",
-      "name" : "Ordering product as a new user",
-      "time" : {
-        "minDuration" : 2469,
-        "maxDuration" : 5443,
-        "sumDuration" : 19275,
-        "start" : 1519322739525,
-        "stop" : 1519322758812,
-        "duration" : 19287
-      },
-      "statistic" : {
-        "failed" : 0,
-        "broken" : 0,
-        "skipped" : 0,
-        "passed" : 5,
-        "unknown" : 0,
-        "total" : 5
-      },
-      "type" : "TestGroupNode",
-      "children" : [ {
-        "uid" : "12740127c99e28a3",
-        "name" : "testAddToCart",
-        "time" : {
-          "start" : 1519322751583,
-          "stop" : 1519322755485,
-          "duration" : 3902
+          "start" : 1519385309638,
+          "stop" : 1519385318701,
+          "duration" : 9063
         },
         "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       }, {
-        "uid" : "b1a76a086457885d",
-        "name" : "testGoToProductPage",
+        "uid" : "86b928d140dee0aa",
+        "name" : "testRegistrationOfNewUser",
         "time" : {
-          "start" : 1519322747445,
-          "stop" : 1519322751581,
-          "duration" : 4136
+          "start" : 1519385331554,
+          "stop" : 1519385335899,
+          "duration" : 4345
         },
         "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       }, {
-        "uid" : "4ecb166908875752",
-        "name" : "testGoToMainPage",
+        "uid" : "f7bb06db204a586a",
+        "name" : "testLetterInInbox",
         "time" : {
-          "start" : 1519322739525,
-          "stop" : 1519322744968,
-          "duration" : 5443
+          "start" : 1519385349078,
+          "stop" : 1519385379783,
+          "duration" : 30705
         },
         "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       }, {
-        "uid" : "f375583fd7eee2ac",
-        "name" : "testProceedToCheckout",
+        "uid" : "bccc8c43ab031b5f",
+        "name" : "testGoToRegistrationPage",
         "time" : {
-          "start" : 1519322755487,
-          "stop" : 1519322758812,
-          "duration" : 3325
+          "start" : 1519385318790,
+          "stop" : 1519385331550,
+          "duration" : 12760
         },
         "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       }, {
-        "uid" : "56473e05ff7fde6",
-        "name" : "testGoToProductCategoryPage",
+        "uid" : "41e0e66bb47a63b5",
+        "name" : "testSignInOfCreatedUser",
         "time" : {
-          "start" : 1519322744974,
-          "stop" : 1519322747443,
-          "duration" : 2469
+          "start" : 1519385335926,
+          "stop" : 1519385349076,
+          "duration" : 13150
         },
         "status" : "passed",
         "flaky" : false,
@@ -189,39 +113,39 @@
       } ]
     } ]
   }, {
-    "uid" : "9220224910577191",
-    "name" : "User registration",
+    "uid" : "577a894c4aca50ba",
+    "name" : "Product ordering",
     "time" : {
       "minDuration" : 0,
-      "maxDuration" : 17519,
-      "sumDuration" : 33625,
-      "start" : 1519322704977,
-      "stop" : 1519322738732,
-      "duration" : 33755
+      "maxDuration" : 18259,
+      "sumDuration" : 47107,
+      "start" : 1519385381060,
+      "stop" : 1519385428915,
+      "duration" : 47855
     },
     "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
+      "failed" : 0,
+      "broken" : 1,
       "skipped" : 1,
-      "passed" : 3,
+      "passed" : 8,
       "unknown" : 0,
-      "total" : 5
+      "total" : 10
     },
     "type" : "TestGroupNode",
     "children" : [ {
-      "uid" : "ce2514c90b5c53b7",
-      "name" : "Register a new user",
+      "uid" : "77e356150aa9621f",
+      "name" : "Ordering product as a new user",
       "time" : {
         "minDuration" : 0,
-        "maxDuration" : 17519,
-        "sumDuration" : 33625,
-        "start" : 1519322704977,
-        "stop" : 1519322738732,
-        "duration" : 33755
+        "maxDuration" : 6871,
+        "sumDuration" : 13284,
+        "start" : 1519385381060,
+        "stop" : 1519385394355,
+        "duration" : 13295
       },
       "statistic" : {
-        "failed" : 1,
-        "broken" : 0,
+        "failed" : 0,
+        "broken" : 1,
         "skipped" : 1,
         "passed" : 3,
         "unknown" : 0,
@@ -229,58 +153,134 @@
       },
       "type" : "TestGroupNode",
       "children" : [ {
-        "uid" : "23a0d40136c7ff1",
-        "name" : "testGoToRegistrationPage",
+        "uid" : "a8cca53b4f9dff32",
+        "name" : "testGoToProductPage",
         "time" : {
-          "start" : 1519322713356,
-          "stop" : 1519322730875,
-          "duration" : 17519
+          "start" : 1519385390538,
+          "stop" : 1519385394101,
+          "duration" : 3563
         },
         "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       }, {
-        "uid" : "b0914ad02fee29cf",
+        "uid" : "bbd49d823ab025b",
+        "name" : "testGoToProductCategoryPage",
+        "time" : {
+          "start" : 1519385387933,
+          "stop" : 1519385390536,
+          "duration" : 2603
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "94b6667dd470f865",
+        "name" : "testAddToCart",
+        "time" : {
+          "start" : 1519385394103,
+          "stop" : 1519385394350,
+          "duration" : 247
+        },
+        "status" : "broken",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "f84ed7c262632433",
         "name" : "testGoToMainPage",
         "time" : {
-          "start" : 1519322704977,
-          "stop" : 1519322713240,
-          "duration" : 8263
+          "start" : 1519385381060,
+          "stop" : 1519385387931,
+          "duration" : 6871
         },
         "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       }, {
-        "uid" : "2e5305e77e506f54",
-        "name" : "testRegistrationOfNewUser",
+        "uid" : "83f95672e87273d8",
+        "name" : "testProceedToCheckout",
         "time" : {
-          "start" : 1519322730880,
-          "stop" : 1519322736605,
-          "duration" : 5725
-        },
-        "status" : "passed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      }, {
-        "uid" : "e94876ebbcbef165",
-        "name" : "testSignInOfCreatedUser",
-        "time" : {
-          "start" : 1519322736611,
-          "stop" : 1519322738729,
-          "duration" : 2118
-        },
-        "status" : "failed",
-        "flaky" : false,
-        "type" : "TestCaseNode"
-      }, {
-        "uid" : "a5fb1216427b474",
-        "name" : "testLetterInInbox",
-        "time" : {
-          "start" : 1519322738732,
-          "stop" : 1519322738732,
+          "start" : 1519385394355,
+          "stop" : 1519385394355,
           "duration" : 0
         },
         "status" : "skipped",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      } ]
+    }, {
+      "uid" : "5b5212a6736b9484",
+      "name" : "Ordering product as an existing user",
+      "time" : {
+        "minDuration" : 2193,
+        "maxDuration" : 18259,
+        "sumDuration" : 33823,
+        "start" : 1519385395085,
+        "stop" : 1519385428915,
+        "duration" : 33830
+      },
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "2f3d1c0a45a3543b",
+        "name" : "testGoToProductPage",
+        "time" : {
+          "start" : 1519385402783,
+          "stop" : 1519385406850,
+          "duration" : 4067
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "229c21912fdffd13",
+        "name" : "testProceedToCheckout",
+        "time" : {
+          "start" : 1519385410656,
+          "stop" : 1519385428915,
+          "duration" : 18259
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "2fa3b5dad499e143",
+        "name" : "testGoToMainPage",
+        "time" : {
+          "start" : 1519385395085,
+          "stop" : 1519385400587,
+          "duration" : 5502
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "8da44c0a152fb347",
+        "name" : "testAddToCart",
+        "time" : {
+          "start" : 1519385406852,
+          "stop" : 1519385410654,
+          "duration" : 3802
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "eb5677bf4eff5562",
+        "name" : "testGoToProductCategoryPage",
+        "time" : {
+          "start" : 1519385400588,
+          "stop" : 1519385402781,
+          "duration" : 2193
+        },
+        "status" : "passed",
         "flaky" : false,
         "type" : "TestCaseNode"
       } ]

@@ -2,8 +2,8 @@
   "summary" : {
     "reportName" : "Allure Report",
     "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
+      "failed" : 0,
+      "broken" : 1,
       "skipped" : 1,
       "passed" : 13,
       "unknown" : 0,
@@ -11,17 +11,17 @@
     },
     "time" : {
       "minDuration" : 0,
-      "maxDuration" : 17519,
-      "sumDuration" : 85416,
-      "start" : 1519322704977,
-      "stop" : 1519322792886,
-      "duration" : 87909
+      "maxDuration" : 30705,
+      "sumDuration" : 117130,
+      "start" : 1519385309638,
+      "stop" : 1519385428915,
+      "duration" : 119277
     }
   },
   "environment" : [ ],
   "history-trend" : [ {
-    "failed" : 1,
-    "broken" : 0,
+    "failed" : 0,
+    "broken" : 1,
     "skipped" : 1,
     "passed" : 13,
     "unknown" : 0,
@@ -30,24 +30,24 @@
   "behaviors" : {
     "total" : 2,
     "items" : [ {
-      "name" : "User registration",
+      "name" : "Product ordering",
       "statistic" : {
-        "failed" : 1,
-        "broken" : 0,
+        "failed" : 0,
+        "broken" : 1,
         "skipped" : 0,
-        "passed" : 0,
+        "passed" : 1,
         "unknown" : 0,
-        "total" : 1
+        "total" : 2
       }
     }, {
-      "name" : "Product ordering",
+      "name" : "User registration",
       "statistic" : {
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 1,
         "unknown" : 0,
-        "total" : 2
+        "total" : 1
       }
     } ]
   },

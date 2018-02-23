@@ -1,8 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 91.213 s <<< FAILURE! - in TestSuite
-testSignInOfCreatedUser(web_eye_care.tests.UserRegistrationTest)  Time elapsed: 2.118 s  <<< FAILURE!
-java.lang.AssertionError: Login page was not opened expected [true] but found [false]
-	at web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser(UserRegistrationTest.java:64)
+Tests run: 15, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 121.669 s <<< FAILURE! - in TestSuite
+testAddToCart(web_eye_care.tests.BuyAsNewUserTest)  Time elapsed: 0.242 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: Element <button class="btn m-check m-green">...</button> is not clickable at point (1385, 931). Other element would receive the click: <div class="...-sep">or</div>
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-32-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'user-H81M-HD3', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-32-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=LINUX, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=LINUX, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881), userDataDir=/tmp/.org.chromium.Chromium.cj6Rvm}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=64.0.3282.167, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 380b17bc79c467165904dd81a2ead3c3
+	at web_eye_care.tests.BuyAsNewUserTest.testAddToCart(BuyAsNewUserTest.java:56)
 

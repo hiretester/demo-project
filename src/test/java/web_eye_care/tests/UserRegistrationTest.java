@@ -57,7 +57,7 @@ public class UserRegistrationTest extends BaseTest{
         MyAccountPage.signOut();
     }
 
-    @Parameters ({"email", "password", "myAccountPageUrl", "loginAndRegistrationPageUrl"})
+    @Parameters ({"email", "password", "myAccountPageUrl", "loginAfterSignOutPageUrl"})
     @Test(dependsOnMethods = "testRegistrationOfNewUser")
     @Description("Sign in as created user")
     public void testSignInOfCreatedUser(String email, String password, String url, String url2){
@@ -65,6 +65,7 @@ public class UserRegistrationTest extends BaseTest{
         RegistrationAndLoginPage.signIn(email, password);
         Assert.assertTrue(MyAccountPage.isMyAccountPageOpened(url),"My Account page was not opened");
         MyAccountPage.signOut();
+        Assert.assertTrue(RegistrationAndLoginPage.isLoginPageOpened(url2), "Login page was not opened after sign out");
     }
 
     @Parameters ({"spam4meUrl"})

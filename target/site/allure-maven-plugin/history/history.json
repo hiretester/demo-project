@@ -1,5 +1,5 @@
 {
-  "79a1ccf38fad855f44e8f04cd726fd2" : {
+  "beb3ea2934d4524a6265bb4141db07e1" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -9,16 +9,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "56473e05ff7fde6",
+      "uid" : "f7bb06db204a586a",
       "status" : "passed",
       "time" : {
-        "start" : 1519322744974,
-        "stop" : 1519322747443,
-        "duration" : 2469
+        "start" : 1519385349078,
+        "stop" : 1519385379783,
+        "duration" : 30705
       }
     } ]
   },
-  "8c77324949e32b64682d93643a165704" : {
+  "6e8d6cb72d2944f157f47be42628d3ce" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -28,16 +28,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b640887961415fd7",
+      "uid" : "2f3d1c0a45a3543b",
       "status" : "passed",
       "time" : {
-        "start" : 1519322777254,
-        "stop" : 1519322792886,
-        "duration" : 15632
+        "start" : 1519385402783,
+        "stop" : 1519385406850,
+        "duration" : 4067
       }
     } ]
   },
-  "8fdbba7b50a03c3d43a3204f8742bfde" : {
+  "1c735231c51b76d28b3d2b866f87b4f3" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -47,16 +47,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "2e5305e77e506f54",
+      "uid" : "f84ed7c262632433",
       "status" : "passed",
       "time" : {
-        "start" : 1519322730880,
-        "stop" : 1519322736605,
-        "duration" : 5725
+        "start" : 1519385381060,
+        "stop" : 1519385387931,
+        "duration" : 6871
       }
     } ]
   },
-  "2a610136ad895d7105d93ccb2f247596" : {
+  "a13669fc7c789ea942eca930338f2232" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -66,16 +66,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c41a6f7ba2f8e343",
+      "uid" : "2fa3b5dad499e143",
       "status" : "passed",
       "time" : {
-        "start" : 1519322760362,
-        "stop" : 1519322765744,
-        "duration" : 5382
+        "start" : 1519385395085,
+        "stop" : 1519385400587,
+        "duration" : 5502
       }
     } ]
   },
-  "106c1cd853eab86f519abfb17b4531af" : {
+  "9dd31b2d026d92653a9ee63ee80db6aa" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -85,36 +85,35 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "f375583fd7eee2ac",
+      "uid" : "a8cca53b4f9dff32",
       "status" : "passed",
       "time" : {
-        "start" : 1519322755487,
-        "stop" : 1519322758812,
-        "duration" : 3325
+        "start" : 1519385390538,
+        "stop" : 1519385394101,
+        "duration" : 3563
       }
     } ]
   },
-  "95a9a06e6bd82be45e838e48aeb52c3" : {
+  "90f0d0a3e6bc6ce4b2fc505467cface2" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "e94876ebbcbef165",
-      "status" : "failed",
-      "statusDetails" : "Login page was not opened expected [true] but found [false]",
+      "uid" : "8da44c0a152fb347",
+      "status" : "passed",
       "time" : {
-        "start" : 1519322736611,
-        "stop" : 1519322738729,
-        "duration" : 2118
+        "start" : 1519385406852,
+        "stop" : 1519385410654,
+        "duration" : 3802
       }
     } ]
   },
-  "d867e184480b6170a37b43ea5635c929" : {
+  "57fbf3ab20bb0551fd6af265d29db84e" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -124,17 +123,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a5fb1216427b474",
+      "uid" : "83f95672e87273d8",
       "status" : "skipped",
-      "statusDetails" : "Method UserRegistrationTest.testLetterInInbox(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2] depends on not successfully finished methods",
+      "statusDetails" : "Method BuyAsNewUserTest.testProceedToCheckout(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@7df587ef] depends on not successfully finished methods",
       "time" : {
-        "start" : 1519322738732,
-        "stop" : 1519322738732,
+        "start" : 1519385394355,
+        "stop" : 1519385394355,
         "duration" : 0
       }
     } ]
   },
-  "cad8ad98fe514077c7a6449fd26e528c" : {
+  "cf0cb295d4d0dd89c2379a9fedf24dc4" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -144,16 +143,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4ecb166908875752",
+      "uid" : "eb5677bf4eff5562",
       "status" : "passed",
       "time" : {
-        "start" : 1519322739525,
-        "stop" : 1519322744968,
-        "duration" : 5443
+        "start" : 1519385400588,
+        "stop" : 1519385402781,
+        "duration" : 2193
       }
     } ]
   },
-  "c5298ad206a308d9b0d1a63695a6ad37" : {
+  "3225268d7a1342142af74d5a37ce06b8" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -163,35 +162,36 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "12740127c99e28a3",
+      "uid" : "229c21912fdffd13",
       "status" : "passed",
       "time" : {
-        "start" : 1519322751583,
-        "stop" : 1519322755485,
-        "duration" : 3902
+        "start" : 1519385410656,
+        "stop" : 1519385428915,
+        "duration" : 18259
       }
     } ]
   },
-  "f20fa3be262b4fa6b135d29d7d9e5f53" : {
+  "a6e72669a553fd0d6eafa87d83787bb0" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b1a76a086457885d",
-      "status" : "passed",
+      "uid" : "94b6667dd470f865",
+      "status" : "broken",
+      "statusDetails" : "unknown error: Element <button class=\"btn m-check m-green\">...</button> is not clickable at point (1385, 931). Other element would receive the click: <div class=\"...-sep\">or</div>\n  (Session info: chrome=64.0.3282.167)\n  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-32-generic x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'\nSystem info: host: 'user-H81M-HD3', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-32-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=LINUX, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=LINUX, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881), userDataDir=/tmp/.org.chromium.Chromium.cj6Rvm}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=64.0.3282.167, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]\nSession ID: 380b17bc79c467165904dd81a2ead3c3",
       "time" : {
-        "start" : 1519322747445,
-        "stop" : 1519322751581,
-        "duration" : 4136
+        "start" : 1519385394103,
+        "stop" : 1519385394350,
+        "duration" : 247
       }
     } ]
   },
-  "75c2d50c6ba3109c4a77663172820b97" : {
+  "fd6abe977570f6228e7d8e930882aeff" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -201,16 +201,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "23a0d40136c7ff1",
+      "uid" : "bbd49d823ab025b",
       "status" : "passed",
       "time" : {
-        "start" : 1519322713356,
-        "stop" : 1519322730875,
-        "duration" : 17519
+        "start" : 1519385387933,
+        "stop" : 1519385390536,
+        "duration" : 2603
       }
     } ]
   },
-  "e5b14d62aec9754c5a64c0dd7f105253" : {
+  "4be1bb1d305f5d6a7edc71bbe93bef89" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -220,16 +220,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b87aacdf0a63f678",
+      "uid" : "f6f5c4c2aac11334",
       "status" : "passed",
       "time" : {
-        "start" : 1519322765746,
-        "stop" : 1519322768199,
-        "duration" : 2453
+        "start" : 1519385309638,
+        "stop" : 1519385318701,
+        "duration" : 9063
       }
     } ]
   },
-  "a8bf59ef70b4cbf2f6ae04391a4c8a49" : {
+  "b61757d9ef544dd95d42c1c775e58ffc" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -239,16 +239,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "6ebea4d91bd02050",
+      "uid" : "86b928d140dee0aa",
       "status" : "passed",
       "time" : {
-        "start" : 1519322768201,
-        "stop" : 1519322773126,
-        "duration" : 4925
+        "start" : 1519385331554,
+        "stop" : 1519385335899,
+        "duration" : 4345
       }
     } ]
   },
-  "d5e0c348816b46eed54b8468cc8ee06e" : {
+  "4819ee38386b7cca65f79542bf4889cd" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -258,16 +258,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b0914ad02fee29cf",
+      "uid" : "41e0e66bb47a63b5",
       "status" : "passed",
       "time" : {
-        "start" : 1519322704977,
-        "stop" : 1519322713240,
-        "duration" : 8263
+        "start" : 1519385335926,
+        "stop" : 1519385349076,
+        "duration" : 13150
       }
     } ]
   },
-  "c82a9e781bbf9cb219b0dffe5a998418" : {
+  "5fef7c434778828748687a7c2908802d" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -277,12 +277,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "513c10b2a7e19b03",
+      "uid" : "bccc8c43ab031b5f",
       "status" : "passed",
       "time" : {
-        "start" : 1519322773129,
-        "stop" : 1519322777253,
-        "duration" : 4124
+        "start" : 1519385318790,
+        "stop" : 1519385331550,
+        "duration" : 12760
       }
     } ]
   }

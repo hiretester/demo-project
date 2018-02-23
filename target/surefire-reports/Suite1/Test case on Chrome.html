@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>13/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 22 20:05:02 EET 2018</td>
+<td>Started on:</td><td>Fri Feb 23 13:28:28 EET 2018</td>
 </tr>
-<tr><td>Total time:</td><td>90 seconds (90273 ms)</td>
+<tr><td>Total time:</td><td>120 seconds (120840 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,61 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser()'><b>testSignInOfCreatedUser</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: testh@spam4.me, qwerty, http://hrqzq.qvfht.servertrust.com/myaccount.asp, http://hrqzq.qvfht.servertrust.com/login.asp</td>
-<td><div><pre>java.lang.AssertionError: Login page was not opened expected [true] but found [false]
-	at web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser(UserRegistrationTest.java:64)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1184965604", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1184965604'><pre>java.lang.AssertionError: Login page was not opened expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser(UserRegistrationTest.java:64)
+<td title='web_eye_care.tests.BuyAsNewUserTest.testAddToCart()'><b>testAddToCart</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;btn m-check m-green&quot;&gt;...&lt;/button&gt; is not clickable at point (1385, 931). Other element would receive the click: &lt;div class=&quot;...-sep&quot;&gt;or&lt;/div&gt;
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-32-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;user-H81M-HD3&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.13.0-32-generic&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=LINUX, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=LINUX, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881), userDataDir=/tmp/.org.chromium.Chromium.cj6Rvm}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=64.0.3282.167, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 380b17bc79c467165904dd81a2ead3c3
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at web_eye_care.pages.ProductPage.addToCart_aroundBody2(ProductPage.java:34)
+	at web_eye_care.pages.ProductPage$AjcClosure3.run(ProductPage.java:1)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at web_eye_care.pages.ProductPage.addToCart(ProductPage.java:33)
+	at web_eye_care.tests.BuyAsNewUserTest.testAddToCart(BuyAsNewUserTest.java:56)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace514404587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace514404587'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;btn m-check m-green&quot;&gt;...&lt;/button&gt; is not clickable at point (1385, 931). Other element would receive the click: &lt;div class=&quot;...-sep&quot;&gt;or&lt;/div&gt;
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-32-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;user-H81M-HD3&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.13.0-32-generic&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=LINUX, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=LINUX, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881), userDataDir=/tmp/.org.chromium.Chromium.cj6Rvm}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=64.0.3282.167, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 380b17bc79c467165904dd81a2ead3c3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at web_eye_care.pages.ProductPage.addToCart_aroundBody2(ProductPage.java:34)
+	at web_eye_care.pages.ProductPage$AjcClosure3.run(ProductPage.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at web_eye_care.pages.ProductPage.addToCart(ProductPage.java:33)
+	at web_eye_care.tests.BuyAsNewUserTest.testAddToCart(BuyAsNewUserTest.java:56)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,8 +159,8 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
 </pre></div></td>
-<td>1</td>
-<td>web_eye_care.tests.UserRegistrationTest@388ffbc2</td></tr>
+<td>0</td>
+<td>web_eye_care.tests.BuyAsNewUserTest@7df587ef</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -124,70 +170,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='web_eye_care.tests.BuyAsNewUserTest.testAddToCart()'><b>testAddToCart</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp</td>
-<td></td>
-<td>3</td>
-<td>web_eye_care.tests.BuyAsNewUserTest@2187fff7</td></tr>
-<tr>
 <td title='web_eye_care.tests.BuyAsExistingUserTest.testAddToCart()'><b>testAddToCart</b><br>Test class: web_eye_care.tests.BuyAsExistingUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp</td>
 <td></td>
-<td>4</td>
-<td>web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0</td></tr>
+<td>3</td>
+<td>web_eye_care.tests.BuyAsExistingUserTest@2755d705</td></tr>
 <tr>
-<td title='web_eye_care.tests.UserRegistrationTest.testGoToMainPage()'><b>testGoToMainPage</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: http://www.wecsandbox.com, testh@spam4.me, https://www.spam4.me/inbox</td>
+<td title='web_eye_care.tests.UserRegistrationTest.testGoToMainPage()'><b>testGoToMainPage</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: http://www.wecsandbox.com, test_a8@spam4.me, https://www.spam4.me/inbox</td>
 <td></td>
-<td>8</td>
-<td>web_eye_care.tests.UserRegistrationTest@388ffbc2</td></tr>
+<td>9</td>
+<td>web_eye_care.tests.UserRegistrationTest@18cc679e</td></tr>
 <tr>
 <td title='web_eye_care.tests.BuyAsNewUserTest.testGoToMainPage()'><b>testGoToMainPage</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest<br>Parameters: http://www.wecsandbox.com</td>
 <td></td>
-<td>5</td>
-<td>web_eye_care.tests.BuyAsNewUserTest@2187fff7</td></tr>
+<td>6</td>
+<td>web_eye_care.tests.BuyAsNewUserTest@7df587ef</td></tr>
 <tr>
 <td title='web_eye_care.tests.BuyAsExistingUserTest.testGoToMainPage()'><b>testGoToMainPage</b><br>Test class: web_eye_care.tests.BuyAsExistingUserTest<br>Parameters: http://www.wecsandbox.com</td>
 <td></td>
 <td>5</td>
-<td>web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0</td></tr>
+<td>web_eye_care.tests.BuyAsExistingUserTest@2755d705</td></tr>
 <tr>
 <td title='web_eye_care.tests.BuyAsNewUserTest.testGoToProductCategoryPage()'><b>testGoToProductCategoryPage</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm</td>
 <td></td>
 <td>2</td>
-<td>web_eye_care.tests.BuyAsNewUserTest@2187fff7</td></tr>
+<td>web_eye_care.tests.BuyAsNewUserTest@7df587ef</td></tr>
 <tr>
 <td title='web_eye_care.tests.BuyAsExistingUserTest.testGoToProductCategoryPage()'><b>testGoToProductCategoryPage</b><br>Test class: web_eye_care.tests.BuyAsExistingUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm</td>
 <td></td>
 <td>2</td>
-<td>web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0</td></tr>
+<td>web_eye_care.tests.BuyAsExistingUserTest@2755d705</td></tr>
 <tr>
 <td title='web_eye_care.tests.BuyAsNewUserTest.testGoToProductPage()'><b>testGoToProductPage</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm</td>
 <td></td>
-<td>4</td>
-<td>web_eye_care.tests.BuyAsNewUserTest@2187fff7</td></tr>
+<td>3</td>
+<td>web_eye_care.tests.BuyAsNewUserTest@7df587ef</td></tr>
 <tr>
 <td title='web_eye_care.tests.BuyAsExistingUserTest.testGoToProductPage()'><b>testGoToProductPage</b><br>Test class: web_eye_care.tests.BuyAsExistingUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm</td>
 <td></td>
 <td>4</td>
-<td>web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0</td></tr>
+<td>web_eye_care.tests.BuyAsExistingUserTest@2755d705</td></tr>
 <tr>
 <td title='web_eye_care.tests.UserRegistrationTest.testGoToRegistrationPage()'><b>testGoToRegistrationPage</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/login.asp</td>
 <td></td>
-<td>17</td>
-<td>web_eye_care.tests.UserRegistrationTest@388ffbc2</td></tr>
+<td>12</td>
+<td>web_eye_care.tests.UserRegistrationTest@18cc679e</td></tr>
 <tr>
-<td title='web_eye_care.tests.BuyAsNewUserTest.testProceedToCheckout()'><b>testProceedToCheckout</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest<br>Parameters: http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp</td>
+<td title='web_eye_care.tests.UserRegistrationTest.testLetterInInbox()'><b>testLetterInInbox</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: https://www.spam4.me/inbox</td>
 <td></td>
-<td>3</td>
-<td>web_eye_care.tests.BuyAsNewUserTest@2187fff7</td></tr>
+<td>30</td>
+<td>web_eye_care.tests.UserRegistrationTest@18cc679e</td></tr>
 <tr>
-<td title='web_eye_care.tests.BuyAsExistingUserTest.testProceedToCheckout()'><b>testProceedToCheckout</b><br>Test class: web_eye_care.tests.BuyAsExistingUserTest<br>Parameters: testa@spam4.me, qwerty, http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp</td>
+<td title='web_eye_care.tests.BuyAsExistingUserTest.testProceedToCheckout()'><b>testProceedToCheckout</b><br>Test class: web_eye_care.tests.BuyAsExistingUserTest<br>Parameters: test_a1@spam4.me, qwerty, http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp</td>
 <td></td>
-<td>15</td>
-<td>web_eye_care.tests.BuyAsExistingUserTest@21d5c1a0</td></tr>
+<td>18</td>
+<td>web_eye_care.tests.BuyAsExistingUserTest@2755d705</td></tr>
 <tr>
-<td title='web_eye_care.tests.UserRegistrationTest.testRegistrationOfNewUser()'><b>testRegistrationOfNewUser</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: testh@spam4.me, qwerty, http://hrqzq.qvfht.servertrust.com/myaccount.asp</td>
+<td title='web_eye_care.tests.UserRegistrationTest.testRegistrationOfNewUser()'><b>testRegistrationOfNewUser</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: test_a8@spam4.me, qwerty, http://hrqzq.qvfht.servertrust.com/myaccount.asp</td>
 <td></td>
-<td>5</td>
-<td>web_eye_care.tests.UserRegistrationTest@388ffbc2</td></tr>
+<td>4</td>
+<td>web_eye_care.tests.UserRegistrationTest@18cc679e</td></tr>
+<tr>
+<td title='web_eye_care.tests.UserRegistrationTest.testSignInOfCreatedUser()'><b>testSignInOfCreatedUser</b><br>Test class: web_eye_care.tests.UserRegistrationTest<br>Parameters: test_a8@spam4.me, qwerty, http://hrqzq.qvfht.servertrust.com/myaccount.asp, http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes</td>
+<td></td>
+<td>13</td>
+<td>web_eye_care.tests.UserRegistrationTest@18cc679e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -197,10 +243,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='web_eye_care.tests.UserRegistrationTest.testLetterInInbox()'><b>testLetterInInbox</b><br>Test class: web_eye_care.tests.UserRegistrationTest</td>
-<td><div><pre>java.lang.Throwable: Method UserRegistrationTest.testLetterInInbox(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2] depends on not successfully finished methods
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace356347252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace356347252'><pre>java.lang.Throwable: Method UserRegistrationTest.testLetterInInbox(java.lang.String)[pri:0, instance:web_eye_care.tests.UserRegistrationTest@388ffbc2] depends on not successfully finished methods
+<td title='web_eye_care.tests.BuyAsNewUserTest.testProceedToCheckout()'><b>testProceedToCheckout</b><br>Test class: web_eye_care.tests.BuyAsNewUserTest</td>
+<td><div><pre>java.lang.Throwable: Method BuyAsNewUserTest.testProceedToCheckout(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@7df587ef] depends on not successfully finished methods
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1644606631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1644606631'><pre>java.lang.Throwable: Method BuyAsNewUserTest.testProceedToCheckout(java.lang.String)[pri:0, instance:web_eye_care.tests.BuyAsNewUserTest@7df587ef] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1037)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
