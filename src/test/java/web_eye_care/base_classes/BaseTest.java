@@ -76,7 +76,7 @@ TODO
             driver.quit();
         }
     }
-
+//TODO: ненужный код удаляем)
     //public void refresh() {
     //    driver.navigate().refresh();
     //}
