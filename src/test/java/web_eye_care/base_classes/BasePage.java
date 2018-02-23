@@ -53,7 +53,6 @@ public abstract class BasePage {
         return isPresent;
     }
 
-
     public static boolean tryToWaitForElementToBeClickable(WebDriverWait wait, By locator, String msg) {
         boolean isClickable = true;
         try {

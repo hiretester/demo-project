@@ -53,7 +53,7 @@ public abstract class BaseTest {
 
         driver = hubURL.isEmpty() ? getDriver(browser, driverPath) : getRemoteDriver(hubURL, browser);
 
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
