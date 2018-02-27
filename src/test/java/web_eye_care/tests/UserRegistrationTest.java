@@ -13,7 +13,7 @@ import web_eye_care.pages.MainPage;
 import io.qameta.allure.Description;
 import web_eye_care.pages.MyAccountPage;
 import web_eye_care.pages.RegistrationAndLoginPage;
-import web_eye_care.pages.Spam4Me;
+import web_eye_care.utils.Spam4Me;
 
 @Listeners({TestListener.class})
 @Feature("User registration")
@@ -70,7 +70,7 @@ public class UserRegistrationTest extends BaseTest{
 
     @Parameters ({"spam4meUrl"})
     @Test(dependsOnMethods = "testSignInOfCreatedUser")
-    @Description("Sign in as created user")
+    @Description("Checking the email box")
     public void testLetterInInbox(String url){
         Spam4Me.goToSpam4Me(url);
         Assert.assertTrue(Spam4Me.isSpam4MePageOpened(url), "spam4.me was not opened");

@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -19,7 +20,7 @@ public class BuyAsNewUserTest extends BaseTest{
 
     // test cases link
     // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
-    //Test case ID - BUY-01
+    // Test case ID - BUY-01
 
     @Parameters({"mainPageUrl"})
     @Test()
@@ -84,5 +85,12 @@ public class BuyAsNewUserTest extends BaseTest{
 
         softAssert.assertTrue(OrderPage.isPlaceOrderButtonClickable(), "\"Place Order\" button does not clickable");
         softAssert.assertAll();
+    }
+
+    @Parameters({"cartPageUrl"})
+    @AfterClass
+    public void cleanTheCart(String url){
+        CartPage.goToTheCart(url);
+        CartPage.cleanTheCart();
     }
 }

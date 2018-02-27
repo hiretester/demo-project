@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -87,4 +88,10 @@ public class BuyAsExistingUserTest extends BaseTest{
         softAssert.assertAll();
     }
 
+    @Parameters({"cartPageUrl"})
+    @AfterClass
+    public void cleanTheCart(String url){
+        CartPage.goToTheCart(url);
+        CartPage.cleanTheCart();
+    }
 }

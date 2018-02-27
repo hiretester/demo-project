@@ -53,31 +53,27 @@ TODO
         return new RemoteWebDriver(new URL(hubUrl), capabilities);
     }
 
-    @BeforeClass
+    @BeforeTest
     @Parameters({"selenium.hub", "selenium.browser", "selenium.driver.path"})
     public void setUp(@Optional("") String hubURL, @Optional("chrome") String browser, @Optional("src/test/resources/drivers/chromedriver") String driverPath)
             throws MalformedURLException {
 
         driver = hubURL.isEmpty() ? getDriver(browser, driverPath) : getRemoteDriver(hubURL, browser);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 15);
 
         BasePage.driver = driver;
         BasePage.wait = wait;
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
     }
-
-    //public void refresh() {
-    //    driver.navigate().refresh();
-    //}
 }
