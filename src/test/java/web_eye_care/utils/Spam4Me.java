@@ -1,4 +1,4 @@
-package web_eye_care.pages;
+package web_eye_care.utils;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;

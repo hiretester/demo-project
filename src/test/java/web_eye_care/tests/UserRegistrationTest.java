@@ -13,7 +13,7 @@ import web_eye_care.pages.MainPage;
 import io.qameta.allure.Description;
 import web_eye_care.pages.MyAccountPage;
 import web_eye_care.pages.RegistrationAndLoginPage;
-import web_eye_care.pages.Spam4Me;
+import web_eye_care.utils.Spam4Me;
 
 @Listeners({TestListener.class})
 @Feature("User registration")

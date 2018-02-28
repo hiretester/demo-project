@@ -24,11 +24,6 @@ public class MyAccountPage extends BasePage {
         return driver.getCurrentUrl().equals(url);
     }
 
-    /*@Step("Checking if right user email is shown on MyAccount page")
-    public static boolean isUserEmailIsShown (){
-     return false;
-    }*/
-
     @Step("Signing out from account")
     public static void signOut(){
         moveToElement(menuMyAccountLocator, "My Account menu does not present");
