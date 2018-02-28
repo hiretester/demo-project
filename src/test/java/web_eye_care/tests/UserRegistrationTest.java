@@ -1,8 +1,8 @@
 package web_eye_care.tests;
 
 import io.qameta.allure.Feature;
-import io.qameta.allure.Step;
 import io.qameta.allure.Story;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import web_eye_care.base_classes.BaseTest;
 import org.testng.Assert;
@@ -17,7 +17,7 @@ import web_eye_care.utils.Spam4Me;
 
 @Listeners({TestListener.class})
 @Feature("User registration")
-@Story("Register a new user")//Fixme желательно чтоб стори у тебя совпадала с idea в документации.
+@Story("User registration on the http://www.wecsandbox.com")//Fixme желательно чтоб стори у тебя совпадала с idea в документации.
 public class UserRegistrationTest extends BaseTest{
 
     // test cases link
@@ -31,11 +31,10 @@ public class UserRegistrationTest extends BaseTest{
  Это не хороший тон и запутает поддержку тестов, когда проект разрастется.
  В классах с тестами должны быть только пред/постусловия, передаваемые данные, и тела тестов.
 */
-
-    @Step("Creating email for registration")
-    private void createEmail(String email, String url){
+    @Parameters({"email","spam4meUrl"})
+    @BeforeClass
+    private void setUpEmailBox(String email, String url){
         Spam4Me.goToSpam4Me(url);
-        Assert.assertTrue(Spam4Me.isSpam4MePageOpened(url), "spam4.me was not opened");
         Spam4Me.createEmail(email);
     }
 
@@ -43,7 +42,6 @@ public class UserRegistrationTest extends BaseTest{
     @Test()
     @Description("Opening main page of the site")
     public void testGoToMainPage(String url, String email, String mailUrl) {
-        createEmail(email, mailUrl);
         MainPage.goToMainPage(url);
         Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");//ТODO добавь ещё URL в текст ассерта(чтобы сразу видеть, что проиошло с консоли)
     }

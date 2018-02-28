@@ -169,10 +169,12 @@ public class CartPage extends BasePage{
 
     //--------------------------------------------- clean the cart
 
+    @Step("Open Cart page")
     public static void goToTheCart(String url){
         driver.navigate().to(url);
     }
 
+    @Step("Clean the cart")
     public static void cleanTheCart(){
         tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
         tryToWaitForElementToBeClickable(wait, proceedToCheckoutLocator, "Proceed to checkout button does not clickable");

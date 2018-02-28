@@ -8,7 +8,7 @@ import web_eye_care.base_classes.BasePage;
 public class ProductPage extends BasePage{
 
     private static By productFormLocator = By.xpath("//form[@name='MainForm']");
-    private static By priceLocator = By.xpath("//div[@class='product-price']//span");
+    private static By priceLocator = By.xpath("//div[@class='product-price']/b/span");
     private static By addToCartButtonLocator = By.xpath("//div[@class='add-to-cart']/button");
 
     private static float price;

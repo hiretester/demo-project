@@ -18,12 +18,13 @@ public class Spam4Me extends BasePage{
     private Spam4Me(){
     }
 
-    @Step("Trying to load email box page")
+    @Step("Open email page")
     public static void goToSpam4Me(String url){
         driver.navigate().to(url);
+        isSpam4MePageOpened(url);
     }
 
-    @Step("Checking if Email page is loaded")
+    @Step("Check if email page is loaded")
     public static boolean isSpam4MePageOpened(String url){
         boolean isEmailBoxVisible = tryToWaitForVisibilityOfElementLocated(wait, emailBoxLocator,"Spam4me email box does not visible");
 
@@ -34,7 +35,7 @@ public class Spam4Me extends BasePage{
         return driver.getCurrentUrl().equals(url);
     }
 
-    @Step("Creating email")
+    @Step("Set up email")
     public static void createEmail (String email){
         clickOnElement(emailButtonLocator, "Email button on Spam4me does not clickable");
         tryToWaitForVisibilityOfElementLocated(wait, emailFieldLocator, "Email field does not visible");
@@ -42,7 +43,7 @@ public class Spam4Me extends BasePage{
         clickOnElement(setButtonLocator, "Set button on Spam4me does not clickable");
     }
 
-    @Step("Checking if confirmation letter is received")
+    @Step("Check for confirmation letter to be received")
     public static boolean isConfirmationLetterInInbox(){
 
         waitForLetter();
@@ -73,7 +74,6 @@ public class Spam4Me extends BasePage{
         return isLetter;
     }
 
-    @Step("Delay for letter receiving")
     private static void waitForLetter (){
         try {
             Thread.sleep(30000);

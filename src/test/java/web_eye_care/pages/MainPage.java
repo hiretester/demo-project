@@ -36,6 +36,5 @@ public class MainPage extends BasePage {
     public static void goToProductCategoryPage (){
         moveToElementAndClickOnIt(productCategoryLocator, "Product category does not present on the page",
                 "Product category does not clickable");
-        //clickOnElement(productCategoryLocator, "Product category does not clickable");
     }
 }

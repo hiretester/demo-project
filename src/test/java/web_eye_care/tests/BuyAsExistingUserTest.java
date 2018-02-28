@@ -15,7 +15,7 @@ import web_eye_care.pages.*;
 
 @Listeners({TestListener.class})
 @Feature("Product ordering")
-@Story("Ordering product as an existing user")
+@Story("Ordering product as an existing use")
 public class BuyAsExistingUserTest extends BaseTest{
 
     // test cases link
