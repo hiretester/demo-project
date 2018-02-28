@@ -81,9 +81,7 @@ public abstract class BasePage {
     public static void closePopUpWindow(){
         boolean popUpWindowIsShown = isElementPresent(popUpWindowLocator);
         if (popUpWindowIsShown){
-            tryToWaitForElementToBeClickable(wait,popUpWindowCloseButtonLocator,"Pop-up window close button does not clickable");
-            WebElement closeButton = driver.findElement(popUpWindowCloseButtonLocator);
-            closeButton.click();
+            clickOnElement(popUpWindowCloseButtonLocator, "Pop-up window close button does not clickable");
         }
     }
 

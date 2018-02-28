@@ -1,6 +1,7 @@
 package web_eye_care.tests;
 
 import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
 import io.qameta.allure.Story;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
@@ -18,11 +19,12 @@ import web_eye_care.utils.Spam4Me;
 @Listeners({TestListener.class})
 @Feature("User registration")
 @Story("User registration on the http://www.wecsandbox.com")//Fixme желательно чтоб стори у тебя совпадала с idea в документации.
+@Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
 public class UserRegistrationTest extends BaseTest{
 
     // test cases link
     // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
-    //Test case ID - REG-01
+    // Test case ID - REG-01
 
 /*Этот метод относится к предусловиям некоторых тестов.
  FIXME Необходимо вынести его как предусловие, отметить соответствующей аннотацией и убрать ассерт, можно обозвать его как setUpEmailBox
@@ -41,9 +43,9 @@ public class UserRegistrationTest extends BaseTest{
     @Parameters({"mainPageUrl", "email", "spam4meUrl"})
     @Test()
     @Description("Opening main page of the site")
-    public void testGoToMainPage(String url, String email, String mailUrl) {
+    public void testGoToMainPage(String url) {
         MainPage.goToMainPage(url);
-        Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");//ТODO добавь ещё URL в текст ассерта(чтобы сразу видеть, что проиошло с консоли)
+        Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable. Url http://www.wecsandbox.com");//ТODO добавь ещё URL в текст ассерта(чтобы сразу видеть, что проиошло с консоли)
     }
 
     @Parameters ({"loginAndRegistrationPageUrl"})

@@ -29,6 +29,8 @@ public class CartPage extends BasePage{
 
     private static By cartListLocator = By.xpath("//table[@class='cart-table']/tbody/tr");
 
+    private static By processingFeeLocator = By.xpath("//tfoot//span[@class='fee-value']");
+
     private static float price;
     private static float subtotal;
     private static float total;
@@ -37,7 +39,7 @@ public class CartPage extends BasePage{
     private CartPage (){
     }
 
-    @Step("Checking if cart page is loaded")
+    @Step("Check if cart page is loaded")
     public static boolean isCartPageOpened(String url){
         boolean isShoppingCartFormVisible = tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
 
@@ -104,7 +106,7 @@ public class CartPage extends BasePage{
         return quantity;
     }
 
-    @Step("Checking if price equals to the price from product page")
+    @Step("Check if price equals to the price from product page")
     public static boolean isPriceEqualsToPriceFromProductPage(){
         boolean isEqual = false;
 
@@ -115,7 +117,7 @@ public class CartPage extends BasePage{
         return isEqual;
     }
 
-    @Step("Checking if subtotal price equals to the price multiplied by the quantity")
+    @Step("Check if subtotal price equals to the price multiplied by the quantity")
     public static boolean isSubtotalEqualsToPriceMultipliedByQuantity(){
         boolean isEqual = false;
 
@@ -129,7 +131,7 @@ public class CartPage extends BasePage{
         return isEqual;
     }
 
-    @Step("Checking if total price equals to subtotal price")
+    @Step("Check if total price equals to subtotal price")
     public static boolean isTotalEqualsToSubtotal(){
         boolean isEqual = false;
 
@@ -140,12 +142,57 @@ public class CartPage extends BasePage{
         return isEqual;
     }
 
-    @Step("Checking if returning customer form is visible")
+    @Step("Check if total price calculated right on cart page")
+    public static boolean isTotalCalculatedRight(){
+        boolean isRight = false;
+
+        List<WebElement> cartList = driver.findElements(cartListLocator);
+        int listSize = cartList.size();
+
+        if (listSize == 0){
+            return isRight;
+        }
+
+        float subtotal = 0;
+        float fee;
+
+        By locator;
+
+        tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
+        for (int i = listSize; i > 0; i--){
+            locator = By.xpath("//tr[" + i + "]/td[@class='item-subtotal align-center']/span");
+            subtotal = subtotal + readSubtotalPrice(locator);
+        }
+
+        fee = readProcessingFee();
+        subtotal = subtotal + fee;
+
+        if (subtotal == getTotalPrice()){
+            isRight = true;
+        }
+
+        return isRight;
+    }
+
+    private static float readSubtotalPrice (By locator) {
+        WebElement subtotalProductPrice = findElementByLocator(locator);
+        String strPrice = subtotalProductPrice.getText().trim();
+        strPrice = strPrice.substring(1);
+        return Float.valueOf(strPrice);
+    }
+
+    private static float readProcessingFee() {
+        WebElement productFee = findElementByLocator(processingFeeLocator);
+        String strProductFee = productFee.getText().trim();
+        return Float.valueOf(strProductFee);
+    }
+
+    @Step("Check if returning customer form is visible")
     public static boolean isReturningCustomerFormVisible(){
         return tryToWaitForVisibilityOfElementLocated(wait, returningCustomerFormLocator,"Returning customer form does not visible");
     }
 
-    @Step("Filling returning customer form and sending it in order to login and proceed to checkout")
+    @Step("Fill returning customer form and sending it in order to login and proceed to checkout")
     public static void loginAndCheckout(String email, String password){
         fillEmailField(email);
         fillPasswordField(password);
@@ -186,8 +233,10 @@ public class CartPage extends BasePage{
             return;
         }
 
+        By locator;
+
         for (int i = listSize; i > 0; i--){
-            By locator = By.xpath("//table[@class='cart-table']/tbody/tr[" + i + "]/td[@class='item-remove']/div");
+            locator = By.xpath("//table[@class='cart-table']/tbody/tr[" + i + "]/td[@class='item-remove']/div");
             moveToElementAndClickOnIt(locator,"Remove item " + i + "does not present",
                     "Remove item " + i + "does not clickable");
             tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
