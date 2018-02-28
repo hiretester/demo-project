@@ -15,7 +15,6 @@ public class CartPage extends BasePage{
    гораздо удобнее будет использовать аннотацию FyndBy (избавит от рутины) и дублирования кода
    */
 
-    private static WebElement emailField, passwordField, loginAndCheckoutButton;
     private static By shoppingCartFormLocator = By.id("shop-cart-form");
     private static By priceLocator = By.xpath("//td[@class='item-each']/span");
     private static By subtotalLocator = By.xpath("//td[@class='item-subtotal align-center']/span");
@@ -178,17 +177,18 @@ public class CartPage extends BasePage{
         tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
         tryToWaitForElementToBeClickable(wait, proceedToCheckoutLocator, "Proceed to checkout button does not clickable");
 
-        List<WebElement> emailList = driver.findElements(cartListLocator);
-        int listSize = emailList.size();
+        List<WebElement> cartList = driver.findElements(cartListLocator);
+        int listSize = cartList.size();
 
         if (listSize == 0){
             return;
         }
 
         for (int i = listSize; i > 0; i--){
-            By locator = By.xpath("//table[@class='cart-table']/tbody/tr[" + i + "]/td[@class='item-remove']");
+            By locator = By.xpath("//table[@class='cart-table']/tbody/tr[" + i + "]/td[@class='item-remove']/div");
             moveToElementAndClickOnIt(locator,"Remove item " + i + "does not present",
                     "Remove item " + i + "does not clickable");
+            tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
         }
     }
 

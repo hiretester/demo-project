@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1">
-    <parameter name="email" value="test_a20@spam4.me" />
+    <parameter name="email" value="test_a22@spam4.me" />
     <parameter name="password" value="qwerty" />
 
     <parameter name="registeredEmail" value="test_a1@spam4.me" />
@@ -21,7 +21,7 @@
         <parameter name="selenium.browser" value="chrome" />
         <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver" />
         <classes>
-            <class name="web_eye_care.tests.UserRegistrationTest" />
+            <!--<class name="web_eye_care.tests.UserRegistrationTest" />-->
             <class name="web_eye_care.tests.BuyAsNewUserTest" />
             <class name="web_eye_care.tests.BuyAsExistingUserTest" />
         </classes>
