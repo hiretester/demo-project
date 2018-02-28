@@ -44,3 +44,4 @@ public class ProductCategoryPage extends BasePage{
         return price;
     }
 }
+
