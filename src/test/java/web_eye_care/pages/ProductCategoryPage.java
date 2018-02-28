@@ -29,19 +29,19 @@ public class ProductCategoryPage extends BasePage{
 
     @Step("Goes to product page")
     public static void goToProductPage (){
-        WebElement product = driver.findElement(productLocator);
-        product.click();
+        clickOnElement(productLocator, "Product does not clickable");
     }
 
     @Step("Remember product price from Product category page")
     public static void setPrice () {
-        WebElement productPrice = driver.findElement(productPriceLocator);
+        WebElement productPrice = findElementByLocator(productPriceLocator);
         String strPrice = productPrice.getText().trim();
         price = Float.valueOf(strPrice);
     }
 
     @Step("Get product price from Product category page")
-    public static Float getPrice() {
+    public static float getPrice() {
         return price;
     }
 }
+
