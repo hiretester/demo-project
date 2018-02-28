@@ -49,7 +49,11 @@ public class TestListener extends BaseTest implements ITestListener{
     private static String getTestMethodName (ITestResult iTestResult){
         return iTestResult.getMethod().getConstructorOrMethod().getName();
     }
+/*TODO: Всё, что касается работы с Аллюр отчетом выносим в отдельтный класс AllureReport:
+    там реализуем методы на добавление скриншотов, текстов, html, pdf, json-ов и прочего, что тебе необходимо для того, чтобы сделать отчет максимально читабельным.
+    в конце концов при аттаче чего- нибудь тебе необходимо будет сделать просто вызов екземпляра класса и нужный метод например: report.addScreenshot('название скриншота')
 
+ */
     @Attachment (value = "{1}", type = "image/png")
     private byte[] saveScreenshotPNG(WebDriver driver, String imageName){
         return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);

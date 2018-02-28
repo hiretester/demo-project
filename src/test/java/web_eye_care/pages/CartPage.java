@@ -9,6 +9,13 @@ import java.util.List;
 
 public class CartPage extends BasePage{
 
+/* TODO: повыносить дублируемый код в универсальные методы, касается всего проекта
+   привести подпись аллюр шагов к единому формату например : "Enter email", "Check price" , "Select item from the list" итп. ввести, сделать проверить и тп, также как при ручном описании бага
+   написать оббертки под базовые действия управления элементами в классе BasePage.
+   гораздо удобнее будет использовать аннотацию FyndBy (избавит от рутины) и дублирования кода
+   */
+
+    private static WebElement emailField, passwordField, loginAndCheckoutButton;
     private static By shoppingCartFormLocator = By.id("shop-cart-form");
     private static By priceLocator = By.xpath("//td[@class='item-each']/span");
     private static By subtotalLocator = By.xpath("//td[@class='item-subtotal align-center']/span");

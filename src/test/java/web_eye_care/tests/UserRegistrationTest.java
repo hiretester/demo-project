@@ -13,16 +13,24 @@ import web_eye_care.pages.MainPage;
 import io.qameta.allure.Description;
 import web_eye_care.pages.MyAccountPage;
 import web_eye_care.pages.RegistrationAndLoginPage;
-import web_eye_care.utils.Spam4Me;
+import web_eye_care.pages.Spam4Me;
 
 @Listeners({TestListener.class})
 @Feature("User registration")
-@Story("Register a new user")
+@Story("Register a new user")//Fixme желательно чтоб стори у тебя совпадала с idea в документации.
 public class UserRegistrationTest extends BaseTest{
 
     // test cases link
     // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
     //Test case ID - REG-01
+
+/*Этот метод относится к предусловиям некоторых тестов.
+ FIXME Необходимо вынести его как предусловие, отметить соответствующей аннотацией и убрать ассерт, можно обозвать его как setUpEmailBox
+ (Ассерты используем только в тестах!).
+ Ни каких отдельных реализаций шагов в классах с тестами.
+ Это не хороший тон и запутает поддержку тестов, когда проект разрастется.
+ В классах с тестами должны быть только пред/постусловия, передаваемые данные, и тела тестов.
+*/
 
     @Step("Creating email for registration")
     private void createEmail(String email, String url){
@@ -37,7 +45,7 @@ public class UserRegistrationTest extends BaseTest{
     public void testGoToMainPage(String url, String email, String mailUrl) {
         createEmail(email, mailUrl);
         MainPage.goToMainPage(url);
-        Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");
+        Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");//ТODO добавь ещё URL в текст ассерта(чтобы сразу видеть, что проиошло с консоли)
     }
 
     @Parameters ({"loginAndRegistrationPageUrl"})

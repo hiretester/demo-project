@@ -60,13 +60,13 @@ public class BuyAsNewUserTest extends BaseTest{
         CartPage.setTotalPrice();
         CartPage.setQuantity();
         CartPage.setSubtotalPrice();
-
+//почему АssertEquals не испольуешь?На будущее когда сравниваешь 2 числа, обязательно выводи, что сравниваешь, в AssertEquals этого делать нет необходимости. Так бы не пришлось 3 одинаковых метода делать
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(CartPage.isPriceEqualsToPriceFromProductPage(),
                 "Price from product page does not equal to the price from cart page");
-        softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),
+        softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),//почему не предусматриваешь параметры?
                 "Subtotal price does not equal to the price multiplied by quantity");
-        softAssert.assertTrue(CartPage.isTotalEqualsToSubtotal(), "Subtotal price does not equal to the total price");
+        softAssert.assertTrue(CartPage.isTotalEqualsToSubtotal(), "Subtotal price does not equal to the total price");//избытоный метод
         softAssert.assertAll();
     }
 
