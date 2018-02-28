@@ -3,7 +3,6 @@ package web_eye_care.pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Optional;
 import web_eye_care.base_classes.BasePage;
 
 public class ProductPage extends BasePage{
@@ -18,7 +17,7 @@ public class ProductPage extends BasePage{
     }
 
     @Step("Checking if product page is loaded")
-    public static boolean isProductPageOpened(@Optional("http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm") String url){
+    public static boolean isProductPageOpened(String url){
         boolean isProductFormVisible = tryToWaitForVisibilityOfElementLocated(wait, productFormLocator,"Product form does not visible");
 
         if (!isProductFormVisible){
@@ -30,8 +29,7 @@ public class ProductPage extends BasePage{
 
     @Step("Add product to cart")
     public static void addToCart (){
-        WebElement product = driver.findElement(addToCartButtonLocator);
-        product.click();
+        clickOnElement(addToCartButtonLocator, "Add to cart button does not clickable");
     }
 
     @Step("Remember product price from Product category page")
@@ -42,7 +40,7 @@ public class ProductPage extends BasePage{
     }
 
     @Step("Get product price from Product category page")
-    public static Float getPrice() {
+    public static float getPrice() {
         return price;
     }
 
