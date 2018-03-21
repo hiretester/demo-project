@@ -182,9 +182,13 @@ public class CartPage extends BasePage{
     }
 
     private static float readProcessingFee() {
-        WebElement productFee = findElementByLocator(processingFeeLocator);
-        String strProductFee = productFee.getText().trim();
-        return Float.valueOf(strProductFee);
+        if (isElementPresent(processingFeeLocator)){
+            WebElement productFee = findElementByLocator(processingFeeLocator);
+            String strProductFee = productFee.getText().trim();
+            return Float.valueOf(strProductFee);
+        }else{
+            return 0;
+        }
     }
 
     @Step("Check if returning customer form is visible")

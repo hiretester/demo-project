@@ -48,6 +48,7 @@ public abstract class BasePage {
     }
 
     public static WebElement findElementByLocator(By locator){
+        tryToWaitForPresenceOfElementLocated(wait,locator,"Element with locator " + locator.toString() + " does not located.");
         return driver.findElement(locator);
     }
 

@@ -40,7 +40,7 @@ public class UserRegistrationTest extends BaseTest{
         Spam4Me.createEmail(email);
     }
 
-    @Parameters({"mainPageUrl", "email", "spam4meUrl"})
+    @Parameters({"mainPageUrl"})
     @Test()
     @Description("Opening main page of the site")
     public void testGoToMainPage(String url) {
