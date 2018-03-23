@@ -33,7 +33,7 @@ public class ProductPage extends BasePage{
     }
 
     @Step("Remember product price from Product category page")
-    public static void setPrice () {
+    public static void rememberPrice() {
         WebElement productPrice = driver.findElement(priceLocator);
         String strPrice = productPrice.getText().trim();
         price = Float.valueOf(strPrice);

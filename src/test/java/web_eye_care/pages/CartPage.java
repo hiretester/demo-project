@@ -56,7 +56,7 @@ public class CartPage extends BasePage{
     }
 
     @Step("Remember product price from Cart page")
-    public static void setPrice () {
+    public static void rememberPrice() {
         WebElement productPrice = findElementByLocator(priceLocator);
         String strPrice = productPrice.getText().trim();
         strPrice = strPrice.substring(1);
@@ -69,7 +69,7 @@ public class CartPage extends BasePage{
     }
 
     @Step("Remember total price from Cart page")
-    public static void setTotalPrice () {
+    public static void rememberTotalPrice() {
         WebElement totalProductPrice = findElementByLocator(totalLocator);
         String strPrice = totalProductPrice.getText().trim();
         strPrice = strPrice.substring(1);
@@ -82,7 +82,7 @@ public class CartPage extends BasePage{
     }
 
     @Step("Remember subtotal price from Cart page")
-    public static void setSubtotalPrice () {
+    public static void rememberSubtotalPrice() {
         WebElement subtotalProductPrice = findElementByLocator(subtotalLocator);
         String strPrice = subtotalProductPrice.getText().trim();
         strPrice = strPrice.substring(1);
@@ -95,7 +95,7 @@ public class CartPage extends BasePage{
     }
 
     @Step("Remember product quantity from Cart page")
-    public static void setQuantity() {
+    public static void rememberQuantity() {
         WebElement productQuantity = findElementByLocator(quantityLocator);
         String strQuantity = productQuantity.getText().trim();
         quantity = Integer.valueOf(strQuantity);
@@ -143,14 +143,13 @@ public class CartPage extends BasePage{
     }
 
     @Step("Check if total price calculated right on cart page")
-    public static boolean isTotalCalculatedRight(){
-        boolean isRight = false;
+    public static float calculateSubtotal(){
 
         List<WebElement> cartList = driver.findElements(cartListLocator);
         int listSize = cartList.size();
 
         if (listSize == 0){
-            return isRight;
+            return 0;
         }
 
         float subtotal = 0;
@@ -167,11 +166,7 @@ public class CartPage extends BasePage{
         fee = readProcessingFee();
         subtotal = subtotal + fee;
 
-        if (subtotal == getTotalPrice()){
-            isRight = true;
-        }
-
-        return isRight;
+        return subtotal;
     }
 
     private static float readSubtotalPrice (By locator) {

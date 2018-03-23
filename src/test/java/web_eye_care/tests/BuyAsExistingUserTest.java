@@ -36,7 +36,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     public void testGoToProductCategoryPage(String url){
         MainPage.goToProductCategoryPage();
         Assert.assertTrue(ProductCategoryPage.isProductCategoryPageOpened(url), "Product category page was not opened");
-        ProductCategoryPage.setPrice();
+        ProductCategoryPage.rememberPrice();
     }
 
     @Parameters({"productPageUrl"})
@@ -45,7 +45,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     public void testGoToProductPage(String url){
         ProductCategoryPage.goToProductPage();
         Assert.assertTrue(ProductPage.isProductPageOpened(url), "Product page was not opened");
-        ProductPage.setPrice();
+        ProductPage.rememberPrice();
         Assert.assertTrue(ProductPage.isPriceEqualsToPriceFromProductCategoryPage(),
                 "Price from product category page does not equal to the price from product page");
     }
@@ -56,10 +56,10 @@ public class BuyAsExistingUserTest extends BaseTest{
     public void testAddToCart(String url){
         ProductPage.addToCart();
         Assert.assertTrue(CartPage.isCartPageOpened(url), "Cart page was not opened");
-        CartPage.setPrice();
-        CartPage.setTotalPrice();
-        CartPage.setQuantity();
-        CartPage.setSubtotalPrice();
+        CartPage.rememberPrice();
+        CartPage.rememberTotalPrice();
+        CartPage.rememberQuantity();
+        CartPage.rememberSubtotalPrice();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(CartPage.isPriceEqualsToPriceFromProductPage(),
@@ -77,7 +77,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     public void testProceedToCheckout(String email, String password, String url){
         CartPage.loginAndCheckout(email, password);
         Assert.assertTrue(OrderPage.isOrderPageOpened(url),"Order page was not opened");
-        OrderPage.setSubtotalPrice();
+        OrderPage.rememberSubtotalPrice();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertFalse(OrderPage.isRegistrationFormVisible(),"Registration form is visible");

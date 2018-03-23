@@ -51,10 +51,14 @@ public class OrderPage extends BasePage {
     }
 
     @Step("Remember subtotal price from Cart page")
-    public static void setSubtotalPrice () {
+    public static void rememberSubtotalPrice() {
         WebElement subtotalPrice = findElementByLocator(subtotalLocator);
         String strPrice = subtotalPrice.getText().trim();
         strPrice = strPrice.substring(1);
         subtotal = Float.valueOf(strPrice);
+    }
+
+    public static float getSubtotalPrice(){
+        return subtotal;
     }
 }

@@ -36,7 +36,7 @@ public class BuyAsNewUserTest extends BaseTest{
     public void testGoToProductCategoryPage(String url){
         MainPage.goToProductCategoryPage();
         Assert.assertTrue(ProductCategoryPage.isProductCategoryPageOpened(url), "Product category page was not opened");
-        ProductCategoryPage.setPrice();
+        ProductCategoryPage.rememberPrice();
     }
 
     @Parameters({"productPageUrl"})
@@ -45,8 +45,8 @@ public class BuyAsNewUserTest extends BaseTest{
     public void testGoToProductPage(String url){
         ProductCategoryPage.goToProductPage();
         Assert.assertTrue(ProductPage.isProductPageOpened(url), "Product page was not opened");
-        ProductPage.setPrice();
-        Assert.assertTrue(ProductPage.isPriceEqualsToPriceFromProductCategoryPage(),
+        ProductPage.rememberPrice();
+        Assert.assertEquals(ProductCategoryPage.getPrice(), ProductPage.getPrice(), 0,
                 "Price from product category page does not equal to the price from product page");
     }
 
@@ -56,17 +56,18 @@ public class BuyAsNewUserTest extends BaseTest{
     public void testAddToCart(String url){
         ProductPage.addToCart();
         Assert.assertTrue(CartPage.isCartPageOpened(url), "Cart page was not opened");
-        CartPage.setPrice();
-        CartPage.setTotalPrice();
-        CartPage.setQuantity();
-        CartPage.setSubtotalPrice();
+        CartPage.rememberPrice();
+        CartPage.rememberTotalPrice();
+        CartPage.rememberQuantity();
+        CartPage.rememberSubtotalPrice();
 //почему АssertEquals не испольуешь?На будущее когда сравниваешь 2 числа, обязательно выводи, что сравниваешь, в AssertEquals этого делать нет необходимости. Так бы не пришлось 3 одинаковых метода делать
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(CartPage.isPriceEqualsToPriceFromProductPage(),
+        softAssert.assertEquals(ProductPage.getPrice(), CartPage.getPrice(), 0,
                 "Price from product page does not equal to the price from cart page");
         softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),//почему не предусматриваешь параметры?
                 "Subtotal price does not equal to the price multiplied by quantity");
-        softAssert.assertTrue(CartPage.isTotalEqualsToSubtotal(), "Subtotal price does not equal to the total price");//избытоный метод
+        softAssert.assertEquals(CartPage.calculateSubtotal(), CartPage.getTotalPrice(), 0,
+                "Subtotal price plus fee does not equals to the total price");
         softAssert.assertAll();
     }
 
@@ -76,13 +77,12 @@ public class BuyAsNewUserTest extends BaseTest{
     public void testProceedToCheckout(String url){
         CartPage.proceedToCheckout();
         Assert.assertTrue(OrderPage.isOrderPageOpened(url),"Order page was not opened");
-        OrderPage.setSubtotalPrice();
+        OrderPage.rememberSubtotalPrice();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(OrderPage.isRegistrationFormVisible(),"Registration form does not visible");
-        softAssert.assertTrue(OrderPage.isSubtotalEqualsToTotalFromCartPage(),
-                "Subtotal price does not equal to the total price from cart page");
-
+        softAssert.assertEquals(CartPage.getTotalPrice(), OrderPage.getSubtotalPrice(), 0,
+                "Subtotal price does not equals to the total price from cart page");
         softAssert.assertTrue(OrderPage.isPlaceOrderButtonClickable(), "\"Place Order\" button does not clickable");
         softAssert.assertAll();
     }
