@@ -46,7 +46,7 @@ public class BuyAsExistingUserTest extends BaseTest{
         ProductCategoryPage.goToProductPage();
         Assert.assertTrue(ProductPage.isProductPageOpened(url), "Product page was not opened");
         ProductPage.rememberPrice();
-        Assert.assertTrue(ProductPage.isPriceEqualsToPriceFromProductCategoryPage(),
+        Assert.assertEquals(ProductCategoryPage.getPrice(), ProductPage.getPrice(), 0,
                 "Price from product category page does not equal to the price from product page");
     }
 
@@ -62,11 +62,12 @@ public class BuyAsExistingUserTest extends BaseTest{
         CartPage.rememberSubtotalPrice();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(CartPage.isPriceEqualsToPriceFromProductPage(),
+        softAssert.assertEquals(ProductPage.getPrice(), CartPage.getPrice(), 0,
                 "Price from product page does not equal to the price from cart page");
         softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),
                 "Subtotal price does not equal to the price multiplied by quantity");
-        softAssert.assertTrue(CartPage.isTotalEqualsToSubtotal(), "Subtotal price does not equal to the total price");
+        softAssert.assertEquals(CartPage.calculateSubtotal(), CartPage.getTotalPrice(), 0,
+                "Subtotal price plus fee does not equals to the total price");
         softAssert.assertTrue(CartPage.isReturningCustomerFormVisible(), "Returning customer form does not visible");
         softAssert.assertAll();
     }
@@ -81,9 +82,8 @@ public class BuyAsExistingUserTest extends BaseTest{
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertFalse(OrderPage.isRegistrationFormVisible(),"Registration form is visible");
-        softAssert.assertTrue(OrderPage.isSubtotalEqualsToTotalFromCartPage(),
-                "Subtotal price does not equal to the total price from cart page");
-
+        softAssert.assertEquals(CartPage.getTotalPrice(), OrderPage.getSubtotalPrice(), 0,
+                "Subtotal price does not equals to the total price from cart page");
         softAssert.assertTrue(OrderPage.isPlaceOrderButtonClickable(), "\"Place Order\" button does not clickable");
         softAssert.assertAll();
     }

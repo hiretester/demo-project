@@ -60,7 +60,7 @@ public class BuyAsNewUserTest extends BaseTest{
         CartPage.rememberTotalPrice();
         CartPage.rememberQuantity();
         CartPage.rememberSubtotalPrice();
-//почему АssertEquals не испольуешь?На будущее когда сравниваешь 2 числа, обязательно выводи, что сравниваешь, в AssertEquals этого делать нет необходимости. Так бы не пришлось 3 одинаковых метода делать
+
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(ProductPage.getPrice(), CartPage.getPrice(), 0,
                 "Price from product page does not equal to the price from cart page");
