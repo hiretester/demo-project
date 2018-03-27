@@ -11,6 +11,8 @@ public class ProductPage extends BasePage{
     private static By priceLocator = By.xpath("//div[@class='product-price']/b/span");
     private static By addToCartButtonLocator = By.xpath("//div[@class='add-to-cart']/button");
 
+    private static By selectPrescriptionButtonLocator = By.xpath("//ul[@class = 'prescription-list']/li[4]/div[@class = 'pp-select']");
+
     private static float price;
 
     private ProductPage (){
@@ -30,6 +32,7 @@ public class ProductPage extends BasePage{
     @Step("Add product to cart")
     public static void addToCart (){
         clickOnElement(addToCartButtonLocator, "Add to cart button does not clickable");
+        selectPrescription();
     }
 
     @Step("Remember product price from Product category page")
@@ -42,6 +45,14 @@ public class ProductPage extends BasePage{
     @Step("Get product price from Product category page")
     public static float getPrice() {
         return price;
+    }
+
+    @Step("Chose prescription")
+    public static void selectPrescription (){
+        boolean isPrescriptionShown = tryToWaitForVisibilityOfElementLocated(wait, selectPrescriptionButtonLocator,"Prescription form does not visible");
+        if (isPrescriptionShown){
+            clickOnElement(selectPrescriptionButtonLocator,"Select button does not clickable");
+        }
     }
 
     @Step("Checking if price equals to the price from product category page")
