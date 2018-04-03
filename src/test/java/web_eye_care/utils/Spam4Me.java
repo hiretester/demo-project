@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import web_eye_care.base_classes.BasePage;
+import java.util.UUID;
 
 import java.util.List;
 
@@ -36,10 +37,10 @@ public class Spam4Me extends BasePage{
     }
 
     @Step("Set up email")
-    public static void createEmail (String email){
+    public static void createEmail (){
         clickOnElement(emailButtonLocator, "Email button on Spam4me does not clickable");
         tryToWaitForVisibilityOfElementLocated(wait, emailFieldLocator, "Email field does not visible");
-        fillElementWithData(emailFieldLocator,email);
+        fillElementWithData(emailFieldLocator, generateRandomEmail());
         clickOnElement(setButtonLocator, "Set button on Spam4me does not clickable");
     }
 
@@ -80,6 +81,14 @@ public class Spam4Me extends BasePage{
         }catch (InterruptedException e) {
             System.out.println(e);
         }
+    }
+
+    private static String generateRandomUUIDString(){
+        return UUID.randomUUID().toString();
+    }
+
+    private static String generateRandomEmail(){
+        return (generateRandomUUIDString() + "@spam4.me");
     }
 
 }

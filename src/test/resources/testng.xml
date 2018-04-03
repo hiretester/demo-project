@@ -21,7 +21,7 @@
         <parameter name="selenium.browser" value="chrome" />
         <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver" />
         <classes>
-            <!--<class name="web_eye_care.tests.UserRegistrationTest" />-->
+            <class name="web_eye_care.tests.UserRegistrationTest" />
             <class name="web_eye_care.tests.BuyAsNewUserTest" />
             <class name="web_eye_care.tests.BuyAsExistingUserTest" />
         </classes>

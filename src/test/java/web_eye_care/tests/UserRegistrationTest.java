@@ -33,11 +33,11 @@ public class UserRegistrationTest extends BaseTest{
  Это не хороший тон и запутает поддержку тестов, когда проект разрастется.
  В классах с тестами должны быть только пред/постусловия, передаваемые данные, и тела тестов.
 */
-    @Parameters({"email","spam4meUrl"})
+    @Parameters({"spam4meUrl"})
     @BeforeClass
-    private void setUpEmailBox(String email, String url){
+    private void setUpEmailBox(String url){
         Spam4Me.goToSpam4Me(url);
-        Spam4Me.createEmail(email);
+        Spam4Me.createEmail();
     }
 
     @Parameters({"mainPageUrl"})
