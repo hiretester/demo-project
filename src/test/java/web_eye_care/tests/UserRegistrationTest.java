@@ -56,21 +56,21 @@ public class UserRegistrationTest extends BaseTest{
         Assert.assertTrue(RegistrationAndLoginPage.isRegistrationPageOpened(url), "Registration page was not opened");
     }
 
-    @Parameters ({"email", "password", "myAccountPageUrl"})
+    @Parameters ({"password", "myAccountPageUrl"})
     @Test(dependsOnMethods = "testGoToRegistrationPage")
     @Description("Register new user")
-    public void testRegistrationOfNewUser(String email, String password, String url){
-        RegistrationAndLoginPage.registerNewUser(email, password);
+    public void testRegistrationOfNewUser(String password, String url){
+        RegistrationAndLoginPage.registerNewUser(Spam4Me.getNewRandomEmail(), password);
         Assert.assertTrue(MyAccountPage.isMyAccountPageOpened(url),"My Account page was not opened");
         MyAccountPage.signOut();
     }
 
-    @Parameters ({"email", "password", "myAccountPageUrl", "loginAfterSignOutPageUrl"})
+    @Parameters ({"password", "myAccountPageUrl", "loginAfterSignOutPageUrl"})
     @Test(dependsOnMethods = "testRegistrationOfNewUser")
     @Description("Sign in as created user")
-    public void testSignInOfCreatedUser(String email, String password, String url, String url2){
+    public void testSignInOfCreatedUser(String password, String url, String url2){
         Assert.assertTrue(RegistrationAndLoginPage.isLoginPageOpened(url2), "Login page was not opened");
-        RegistrationAndLoginPage.signIn(email, password);
+        RegistrationAndLoginPage.signIn(Spam4Me.getNewRandomEmail(), password);
         Assert.assertTrue(MyAccountPage.isMyAccountPageOpened(url),"My Account page was not opened");
         MyAccountPage.signOut();
         Assert.assertTrue(RegistrationAndLoginPage.isLoginPageOpened(url2), "Login page was not opened after sign out");

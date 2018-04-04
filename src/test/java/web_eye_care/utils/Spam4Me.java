@@ -16,6 +16,8 @@ public class Spam4Me extends BasePage{
     private static By setButtonLocator = By.xpath("//span[@id='inbox-id']/button[@class='save button small']");
     private static By emailListLocator = By.xpath("//tbody[@id='email_list']/tr");
 
+    private static String email;
+
     private Spam4Me(){
     }
 
@@ -40,7 +42,8 @@ public class Spam4Me extends BasePage{
     public static void createEmail (){
         clickOnElement(emailButtonLocator, "Email button on Spam4me does not clickable");
         tryToWaitForVisibilityOfElementLocated(wait, emailFieldLocator, "Email field does not visible");
-        fillElementWithData(emailFieldLocator, generateRandomEmail());
+        setNewRandomEmail();
+        fillElementWithData(emailFieldLocator, email);
         clickOnElement(setButtonLocator, "Set button on Spam4me does not clickable");
     }
 
@@ -87,8 +90,12 @@ public class Spam4Me extends BasePage{
         return UUID.randomUUID().toString();
     }
 
-    private static String generateRandomEmail(){
-        return (generateRandomUUIDString() + "@spam4.me");
+    private static void setNewRandomEmail(){
+        email = (generateRandomUUIDString() + "@spam4.me");
+    }
+
+    public static String getNewRandomEmail(){
+        return email;
     }
 
 }
