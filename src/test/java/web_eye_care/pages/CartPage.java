@@ -19,7 +19,7 @@ public class CartPage extends BasePage{
     private static By priceLocator = By.xpath("//td[@class='item-each']/span");
     private static By subtotalLocator = By.xpath("//td[@class='item-subtotal align-center']/span");
     private static By totalLocator = By.xpath("//tfoot//span[@class='txt-color shopping-total']");
-    private static By quantityLocator = By.xpath("//td[@class='item-qty']//option[@value='2']");
+    private static By quantityLocator = By.xpath("//td[@class='item-qty']//option[1]");
     private static By proceedToCheckoutLocator = By.xpath("//td[@class='cart-right']/button");
 
     private static By returningCustomerFormLocator = By.xpath("//form[@class='white-form shopping-cart-login']");
