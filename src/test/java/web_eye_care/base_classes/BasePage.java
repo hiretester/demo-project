@@ -28,7 +28,7 @@ public abstract class BasePage {
     public static boolean isElementPresent (By locator){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         List<WebElement> list = driver.findElements(locator);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         if (list.size() == 0){
             return false;
         } else {
