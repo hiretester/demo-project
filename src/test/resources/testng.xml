@@ -1,7 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="DemoSuite" verbose="1">
-    <!--<parameter name="email" value="test_a29@spam4.me" />-->
     <parameter name="password" value="qwerty" />
 
     <parameter name="registeredEmail" value="test_a1@spam4.me" />
