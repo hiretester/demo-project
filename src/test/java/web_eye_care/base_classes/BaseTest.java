@@ -19,14 +19,6 @@ public abstract class BaseTest {
 
 // Методы для инициализации и работы с драйвером ------------------------------------------------------------------
 
-/*
-TODO
-+Поднятие/закрытие браузера делаем до и после прохождения набора тестов. Дабы не терять время и рессурсы на поднятие каждого класса тестов
-+Подготовку почты (генерацию емейла, подготовку почтового сервера выносим в предусловие для той ГРУППЫ/класса тестов, в которой необходим емейл
-Все манипуляции с имейлом(методы страницы, генерация алиаса, манипуляции с почтовыми письмами выносятся отдельный класс и вызываются здесь по необходимости
-+в начале лучше писать аннотируемые пред и пост условия а потом уже методы которые они используют, так удобнее будет
-+ Добавить аллюр анотации для пред и пост условий тестов.*/
-
     private WebDriver getDriver(String browser, String driverPath) {
         switch (browser) {
             case "firefox":
@@ -60,11 +52,11 @@ TODO
 
         driver = hubURL.isEmpty() ? getDriver(browser, driverPath) : getRemoteDriver(hubURL, browser);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 15);
 
         BasePage.driver = driver;
         BasePage.wait = wait;

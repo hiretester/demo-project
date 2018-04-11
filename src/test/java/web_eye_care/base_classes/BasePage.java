@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import web_eye_care.utils.ResultValidationMessage;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -28,23 +27,12 @@ public abstract class BasePage {
     public static boolean isElementPresent (By locator){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         List<WebElement> list = driver.findElements(locator);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         if (list.size() == 0){
             return false;
         } else {
             return list.get(0).isDisplayed();
         }
-    }
-
-    public static boolean isValidationFieldEqualsTo(By locator, String validationMessage, ResultValidationMessage resultValidationMessage){
-        boolean elementPresent = isElementPresent(locator);
-        if (!elementPresent){
-            resultValidationMessage.validationMessage = "";
-            return false;
-        }
-        WebElement element = driver.findElement(locator);
-        resultValidationMessage.validationMessage = element.getText();
-        return element.getText().equals(validationMessage);
     }
 
     public static WebElement findElementByLocator(By locator){

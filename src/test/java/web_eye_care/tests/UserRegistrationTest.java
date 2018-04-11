@@ -26,13 +26,6 @@ public class UserRegistrationTest extends BaseTest{
     // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
     // Test case ID - REG-01
 
-/*Этот метод относится к предусловиям некоторых тестов.
- FIXME Необходимо вынести его как предусловие, отметить соответствующей аннотацией и убрать ассерт, можно обозвать его как setUpEmailBox
- (Ассерты используем только в тестах!).
- Ни каких отдельных реализаций шагов в классах с тестами.
- Это не хороший тон и запутает поддержку тестов, когда проект разрастется.
- В классах с тестами должны быть только пред/постусловия, передаваемые данные, и тела тестов.
-*/
     @Parameters({"spam4meUrl"})
     @BeforeClass
     private void setUpEmailBox(String url){

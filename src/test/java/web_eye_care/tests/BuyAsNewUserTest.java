@@ -64,7 +64,7 @@ public class BuyAsNewUserTest extends BaseTest{
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(ProductPage.getPrice(), CartPage.getPrice(), 0,
                 "Price from product page does not equal to the price from cart page");
-        softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),//почему не предусматриваешь параметры?
+        softAssert.assertTrue(CartPage.isSubtotalEqualsToPriceMultipliedByQuantity(),
                 "Subtotal price does not equal to the price multiplied by quantity");
         softAssert.assertEquals(CartPage.calculateSubtotal(), CartPage.getTotalPrice(), 0,
                 "Subtotal price plus fee does not equals to the total price");
