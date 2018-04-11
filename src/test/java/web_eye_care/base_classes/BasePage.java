@@ -28,7 +28,7 @@ public abstract class BasePage {
     public static boolean isElementPresent (By locator){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         List<WebElement> list = driver.findElements(locator);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         if (list.size() == 0){
             return false;
         } else {
@@ -56,6 +56,11 @@ public abstract class BasePage {
         element =  driver.findElement(locator);
         element.clear();
         element.sendKeys(data);
+    }
+
+    public static String getElementData(By locator){
+        element = driver.findElement(locator);
+        return element.getAttribute("value");
     }
 
     public static void clickOnElement(By locator, String msg){

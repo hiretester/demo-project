@@ -60,11 +60,11 @@ TODO
 
         driver = hubURL.isEmpty() ? getDriver(browser, driverPath) : getRemoteDriver(hubURL, browser);
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 10);
 
         BasePage.driver = driver;
         BasePage.wait = wait;

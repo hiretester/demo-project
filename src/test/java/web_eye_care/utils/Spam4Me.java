@@ -4,7 +4,6 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import web_eye_care.base_classes.BasePage;
-import java.util.UUID;
 
 import java.util.List;
 
@@ -42,8 +41,7 @@ public class Spam4Me extends BasePage{
     public static void createEmail (){
         clickOnElement(emailButtonLocator, "Email button on Spam4me does not clickable");
         tryToWaitForVisibilityOfElementLocated(wait, emailFieldLocator, "Email field does not visible");
-        setNewRandomEmail();
-        fillElementWithData(emailFieldLocator, email);
+        email = getElementData(emailFieldLocator)+"@spam4.me";
         clickOnElement(setButtonLocator, "Set button on Spam4me does not clickable");
     }
 
@@ -52,13 +50,13 @@ public class Spam4Me extends BasePage{
 
         waitForLetter();
 
-        boolean isLetter = false;
+        boolean isLetterInInbox = false;
         List<WebElement> emailList = driver.findElements(emailListLocator);
 
         int listSize = emailList.size();
 
         if (listSize == 0){
-            return isLetter;
+            return isLetterInInbox;
         }
 
         String emailSender;
@@ -70,12 +68,12 @@ public class Spam4Me extends BasePage{
             emailSender = emailSenderElement.getText();
 
             if (emailSender.trim().equals("rewards@webeyecare.com")){
-                isLetter = true;
+                isLetterInInbox = true;
                 break;
             }
         }
 
-        return isLetter;
+        return isLetterInInbox;
     }
 
     private static void waitForLetter (){
@@ -84,14 +82,6 @@ public class Spam4Me extends BasePage{
         }catch (InterruptedException e) {
             System.out.println(e);
         }
-    }
-
-    private static String generateRandomUUIDString(){
-        return UUID.randomUUID().toString();
-    }
-
-    private static void setNewRandomEmail(){
-        email = (generateRandomUUIDString() + "@spam4.me");
     }
 
     public static String getNewRandomEmail(){

@@ -45,7 +45,7 @@
         <parameter name="productPageUrl" value="https://www.webeyecare.com/Acuvue-Oasys-p/2308.htm"/>
 
         <classes>
-            <!--<class name="web_eye_care.tests.UserRegistrationTest" />-->
+            <class name="web_eye_care.tests.UserRegistrationTest" />
             <class name="web_eye_care.tests.BuyAsNewUserTest" />
             <class name="web_eye_care.tests.BuyAsExistingUserTest" />
         </classes>
