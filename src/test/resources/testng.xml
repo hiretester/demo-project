@@ -28,26 +28,4 @@
         </classes>
     </test>
 
-    <test name="Test case on Production on Chrome">
-
-        <parameter name="selenium.browser" value="chrome" />
-        <parameter name="selenium.driver.path" value="src/test/resources/drivers/chromedriver" />
-
-        <parameter name="spam4meUrl" value="https://www.spam4.me/inbox" />
-        <parameter name="mainPageUrl" value="https://www.webeyecare.com" />
-        <parameter name="loginAndRegistrationPageUrl" value="https://www.webeyecare.com/login.asp"/>
-        <parameter name="loginAfterSignOutPageUrl" value="https://www.webeyecare.com/login.asp?logout=yes"/>
-        <parameter name="myAccountPageUrl" value="https://www.webeyecare.com/myaccount.asp" />
-        <parameter name="cartPageUrl" value="https://www.webeyecare.com/ShoppingCart.asp" />
-        <parameter name="orderPageUrl" value="https://www.webeyecare.com/one-page-checkout.asp"/>
-        <parameter name="productCategoryPageUrl" value="https://www.webeyecare.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"/>
-        <parameter name="productPageUrl" value="https://www.webeyecare.com/Acuvue-Oasys-p/2308.htm"/>
-
-        <classes>
-            <class name="web_eye_care.tests.UserRegistrationTest" />
-            <class name="web_eye_care.tests.BuyAsNewUserTest" />
-            <class name="web_eye_care.tests.BuyAsExistingUserTest" />
-        </classes>
-    </test>
-
 </suite>
