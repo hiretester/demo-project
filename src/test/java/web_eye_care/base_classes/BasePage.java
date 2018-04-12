@@ -37,21 +37,22 @@ public abstract class BasePage {
 
     public static WebElement findElementByLocator(By locator){
         tryToWaitForPresenceOfElementLocated(wait,locator,"Element with locator " + locator.toString() + " does not located.");
-        return driver.findElement(locator);
+        return driver.findElement(locator);//избыточность кода
     }
 
-    public static void fillElementWithData(By locator, String data){
+    public static void fillElementWithData(By locator, String data){//где явное ожидание?
         element =  driver.findElement(locator);
         element.clear();
         element.sendKeys(data);
     }
 
-    public static String getElementData(By locator){
+    public static String getElementData(By locator){//TODO где явное ожидание?
         element = driver.findElement(locator);
         return element.getAttribute("value");
     }
 
     public static void clickOnElement(By locator, String msg){
+        //TODO:добавь сюда явное ожидание элемента. эта часть делает тесты нестабмльным
         element = driver.findElement(locator);
         tryToWaitForElementToBeClickable(wait, locator, msg);
         element.click();
@@ -80,7 +81,7 @@ public abstract class BasePage {
     }
 
     //-------------------Ожидания
-
+//TODO смысл от этого метода только в получении статуса, есть элемент на странице или нет. wait.until возвращает либо элемент либо ексепшн в данном случае тоесть фаинд елемент после него делать не нужно!
     public static boolean tryToWaitForPresenceOfElementLocated(WebDriverWait wait, By locator, String msg){
         boolean isPresent = true;
         try{
