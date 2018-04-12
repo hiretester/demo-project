@@ -39,10 +39,9 @@ public class Spam4Me extends BasePage{
 
     @Step("Set up email")
     public static void createEmail (){
-        clickOnElement(emailButtonLocator, "Email button on Spam4me does not clickable");
-        tryToWaitForVisibilityOfElementLocated(wait, emailFieldLocator, "Email field does not visible");
-        email = getElementData(emailFieldLocator)+"@spam4.me";
-        clickOnElement(setButtonLocator, "Set button on Spam4me does not clickable");
+        clickOnElement(emailButtonLocator, "Email button on Spam4me does not present", "Email button on Spam4me does not clickable");
+        email = getElementData(emailFieldLocator, "Email field does not visible")+"@spam4.me";
+        clickOnElement(setButtonLocator, "Set button on Spam4me does not present","Set button on Spam4me does not clickable");
     }
 
     @Step("Check for confirmation letter to be received")
@@ -86,6 +85,6 @@ public class Spam4Me extends BasePage{
 
     public static String getNewRandomEmail(){
         return email;
-    }//null?
+    }
 
 }

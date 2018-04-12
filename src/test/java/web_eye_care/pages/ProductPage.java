@@ -31,7 +31,7 @@ public class ProductPage extends BasePage{
 
     @Step("Add product to cart")
     public static void addToCart (){
-        clickOnElement(addToCartButtonLocator, "Add to cart button does not clickable");
+        clickOnElement(addToCartButtonLocator, "Add to cart button does not present", "Add to cart button does not clickable");
         selectPrescription();
     }
 
@@ -51,7 +51,7 @@ public class ProductPage extends BasePage{
     public static void selectPrescription (){
         boolean isPrescriptionShown = tryToWaitForVisibilityOfElementLocated(wait, selectPrescriptionButtonLocator,"Prescription form does not visible");
         if (isPrescriptionShown){
-            clickOnElement(selectPrescriptionButtonLocator,"Select button does not clickable");
+            clickOnElement(selectPrescriptionButtonLocator,"Select button does not present", "Select button does not clickable");
         }
     }
 

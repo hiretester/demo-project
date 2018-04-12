@@ -73,11 +73,13 @@ public class RegistrationAndLoginPage extends BasePage{
 
     @Step("Confirm user registration on registration form")
     private static void sendRegistrationForm(){
-        clickOnElement(continueButtonLocator, "Continue button on registration form does not clickable");
+        clickOnElement(continueButtonLocator, "Continue button on registration form does not present",
+                "Continue button on registration form does not clickable");
     }
 
     @Step("Sign In on login form")
     private static void sendLoginForm(){
-        clickOnElement(signInButtonLocator, "Sign In button on login form does not clickable");
+        clickOnElement(signInButtonLocator, "Sign In button on login form does not present",
+                "Sign In button on login form does not clickable");
     }
 }

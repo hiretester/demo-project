@@ -29,7 +29,7 @@ public class ProductCategoryPage extends BasePage{
 
     @Step("Goes to product page")
     public static void goToProductPage (){
-        clickOnElement(productLocator, "Product does not clickable");
+        clickOnElement(productLocator, "Product does not present", "Product does not clickable");
     }
 
     @Step("Remember product price from Product category page")

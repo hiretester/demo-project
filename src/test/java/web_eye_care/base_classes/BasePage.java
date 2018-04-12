@@ -46,15 +46,16 @@ public abstract class BasePage {
         element.sendKeys(data);
     }
 
-    public static String getElementData(By locator){//TODO где явное ожидание?
+    public static String getElementData(By locator, String msg){
+        tryToWaitForVisibilityOfElementLocated(wait, locator, msg);
         element = driver.findElement(locator);
         return element.getAttribute("value");
     }
 
-    public static void clickOnElement(By locator, String msg){
-        //TODO:добавь сюда явное ожидание элемента. эта часть делает тесты нестабмльным
+    public static void clickOnElement(By locator, String msg, String msg2){
+        tryToWaitForPresenceOfElementLocated(wait,locator,msg);
         element = driver.findElement(locator);
-        tryToWaitForElementToBeClickable(wait, locator, msg);
+        tryToWaitForElementToBeClickable(wait, locator, msg2);
         element.click();
     }
 
@@ -76,7 +77,7 @@ public abstract class BasePage {
     public static void closePopUpWindow(){
         boolean popUpWindowIsShown = isElementPresent(popUpWindowLocator);
         if (popUpWindowIsShown){
-            clickOnElement(popUpWindowCloseButtonLocator, "Pop-up window close button does not clickable");
+            clickOnElement(popUpWindowCloseButtonLocator, "","Pop-up window close button does not clickable");
         }
     }
 

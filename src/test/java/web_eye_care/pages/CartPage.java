@@ -46,7 +46,7 @@ public class CartPage extends BasePage{
 
     @Step("Proceed to checkout")
     public static void proceedToCheckout (){
-        clickOnElement(proceedToCheckoutLocator, "Proceed to checkout button does not clickable");
+        clickOnElement(proceedToCheckoutLocator, "Proceed to checkout button does not present", "Proceed to checkout button does not clickable");
     }
 
     @Step("Remember product price from Cart page")
@@ -204,7 +204,8 @@ public class CartPage extends BasePage{
 
     @Step("Confirm login and checkout on returning customer form")
     private static void sendReturningCustomerForm(){
-        clickOnElement(loginAndCheckoutButtonLocator, "Login and checkout button does not clickable");
+        clickOnElement(loginAndCheckoutButtonLocator, "Login and checkout button does not present",
+                "Login and checkout button does not clickable");
     }
 
     //--------------------------------------------- clean the cart
