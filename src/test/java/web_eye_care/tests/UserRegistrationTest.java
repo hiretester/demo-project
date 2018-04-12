@@ -18,8 +18,9 @@ import web_eye_care.utils.Spam4Me;
 
 @Listeners({TestListener.class})
 @Feature("User registration")
-@Story("User registration on the http://www.wecsandbox.com")//Fixme желательно чтоб стори у тебя совпадала с idea в документации.
+@Story("User registration on the http://www.wecsandbox.com")
 @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+//TODO: не хочешь сюда ещё тест кейс айди добавить? или дескрипшином айдишник добавь к каждому тесту. @Description
 public class UserRegistrationTest extends BaseTest{
 
     // test cases link
