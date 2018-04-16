@@ -139,6 +139,7 @@ public class CartPage extends BasePage{
     @Step("Check if total price calculated right on cart page")
     public static float calculateSubtotal(){
 
+        tryToWaitForVisibilityOfElementLocated(wait, cartListLocator,"Cart list does not visible");
         List<WebElement> cartList = driver.findElements(cartListLocator);
         int listSize = cartList.size();
 
