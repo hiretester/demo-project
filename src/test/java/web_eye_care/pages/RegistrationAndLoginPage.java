@@ -2,12 +2,9 @@ package web_eye_care.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import web_eye_care.base_classes.BasePage;
 
 public class RegistrationAndLoginPage extends BasePage{
-
-    private static WebElement emailField, passwordField, repeatPasswordField, continueButton, signInButton;
 
     private static By registrationFormLocator = By.xpath("//form[@class='login-box m-new']");
     private static By loginFormLocator = By.xpath("//form[@class='login-box m-login']");
@@ -61,34 +58,28 @@ public class RegistrationAndLoginPage extends BasePage{
 
     @Step("Fill email field with" + "{0}")
     private static void fillEmailField(String email, By locator){
-        emailField = driver.findElement(locator);
-        emailField.clear();
-        emailField.sendKeys(email);
+        fillElementWithData(locator, email);
     }
 
     @Step("Fill password field with" + "{0}")
     private static void fillPasswordField(String password, By locator){
-        passwordField = driver.findElement(locator);
-        passwordField.clear();
-        passwordField.sendKeys(password);
+        fillElementWithData(locator, password);fillElementWithData(locator, password);
     }
 
     @Step("Fill repeat password field with" + "{0}")
     private static void fillRepeatPasswordField(String password, By locator){
-        repeatPasswordField = driver.findElement(locator);
-        repeatPasswordField.clear();
-        repeatPasswordField.sendKeys(password);
+        fillElementWithData(locator, password);
     }
 
     @Step("Confirm user registration on registration form")
     private static void sendRegistrationForm(){
-        continueButton = driver.findElement(continueButtonLocator);
-        continueButton.click();
+        clickOnElement(continueButtonLocator, "Continue button on registration form does not present",
+                "Continue button on registration form does not clickable");
     }
 
-    @Step("Confirm user registration on registration form")
+    @Step("Sign In on login form")
     private static void sendLoginForm(){
-        signInButton = driver.findElement(signInButtonLocator);
-        signInButton.click();
+        clickOnElement(signInButtonLocator, "Sign In button on login form does not present",
+                "Sign In button on login form does not clickable");
     }
 }

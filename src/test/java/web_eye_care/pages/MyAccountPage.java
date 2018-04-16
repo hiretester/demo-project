@@ -2,8 +2,6 @@ package web_eye_care.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import web_eye_care.base_classes.BasePage;
 
 public class MyAccountPage extends BasePage {
@@ -26,22 +24,9 @@ public class MyAccountPage extends BasePage {
         return driver.getCurrentUrl().equals(url);
     }
 
-    @Step("Checking if right user email is shown on MyAccount page")
-    public static boolean isUserEmailIsShown (){
-     return false;
-    }
-
     @Step("Signing out from account")
     public static void signOut(){
-        boolean isMenuPresent = tryToWaitForPresenceOfElementLocated(wait, menuMyAccountLocator," My Account menu does not present");
-        WebElement menuMyAccount = driver.findElement(menuMyAccountLocator);
-        Actions builder = new Actions(driver);
-        builder.moveToElement(menuMyAccount).build().perform();
-
-        boolean isItemPresent = tryToWaitForPresenceOfElementLocated(wait, menuItemSignOutLocator,"Sign out item does not present");
-        WebElement menuItemSignInSignUp = driver.findElement(menuItemSignOutLocator);
-        builder = new Actions(driver);
-        builder.moveToElement(menuItemSignInSignUp).click().build().perform();
-
+        moveToElement(menuMyAccountLocator, "My Account menu does not present");
+        moveToElementAndClickOnIt(menuItemSignOutLocator, "Sign out item does not present", "Sign out item does not clickable");
     }
 }

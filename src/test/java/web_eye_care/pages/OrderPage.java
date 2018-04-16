@@ -20,9 +20,9 @@ public class OrderPage extends BasePage {
 
     @Step("Checking if order page is loaded")
     public static boolean isOrderPageOpened(String url){
-        boolean isProductListVisible = tryToWaitForVisibilityOfElementLocated(wait, billingFormLocator,"Billing form does not visible");
+        boolean isBillingFormVisible = tryToWaitForVisibilityOfElementLocated(wait, billingFormLocator,"Billing form does not visible");
 
-        if (!isProductListVisible){
+        if (!isBillingFormVisible){
             return false;
         }
 
@@ -51,10 +51,14 @@ public class OrderPage extends BasePage {
     }
 
     @Step("Remember subtotal price from Cart page")
-    public static void setSubtotalPrice () {
-        WebElement subtotalPrice = driver.findElement(subtotalLocator);
+    public static void rememberSubtotalPrice() {
+        WebElement subtotalPrice = findElementByLocator(subtotalLocator);
         String strPrice = subtotalPrice.getText().trim();
         strPrice = strPrice.substring(1);
         subtotal = Float.valueOf(strPrice);
+    }
+
+    public static float getSubtotalPrice(){
+        return subtotal;
     }
 }

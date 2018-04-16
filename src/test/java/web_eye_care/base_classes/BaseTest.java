@@ -19,7 +19,6 @@ public abstract class BaseTest {
 
 // Методы для инициализации и работы с драйвером ------------------------------------------------------------------
 
-
     private WebDriver getDriver(String browser, String driverPath) {
         switch (browser) {
             case "firefox":
@@ -46,7 +45,7 @@ public abstract class BaseTest {
         return new RemoteWebDriver(new URL(hubUrl), capabilities);
     }
 
-    @BeforeClass
+    @BeforeTest
     @Parameters({"selenium.hub", "selenium.browser", "selenium.driver.path"})
     public void setUp(@Optional("") String hubURL, @Optional("chrome") String browser, @Optional("src/test/resources/drivers/chromedriver") String driverPath)
             throws MalformedURLException {
@@ -57,20 +56,16 @@ public abstract class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 15);
 
         BasePage.driver = driver;
         BasePage.wait = wait;
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
     }
-
-    //public void refresh() {
-    //    driver.navigate().refresh();
-    //}
 }
