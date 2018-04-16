@@ -78,17 +78,6 @@ public abstract class BasePage {
     }
 
     //-------------------Ожидания
-//TODO смысл от этого метода только в получении статуса, есть элемент на странице или нет. wait.until возвращает либо элемент либо ексепшн в данном случае тоесть фаинд елемент после него делать не нужно!
-    /*public static boolean tryToWaitForPresenceOfElementLocated(WebDriverWait wait, By locator, String msg){
-        boolean isPresent = true;
-        try{
-            wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        }catch(TimeoutException te){
-            isPresent = false;
-            System.out.println(msg);
-        }
-        return isPresent;
-    }*/
 
     public static WebElement tryToWaitForPresenceOfElementLocated(WebDriverWait wait, By locator, String msg){
         WebElement webElement;
@@ -101,9 +90,7 @@ public abstract class BasePage {
         return webElement;
     }
 
-
-
-    public static boolean isElementClickable(WebDriverWait wait, By locator, String msg) {
+    public static boolean tryToWaitForElementToBeClickable(WebDriverWait wait, By locator, String msg) {
         boolean isClickable = true;
         try {
             wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -112,17 +99,6 @@ public abstract class BasePage {
             isClickable = false;
         }
         return isClickable;
-    }
-
-    public static WebElement tryToWaitForElementToBeClickable(WebDriverWait wait, By locator, String msg) {
-        WebElement webElement;
-        try {
-            webElement = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        }catch (TimeoutException te){
-            webElement = null;
-            System.out.println(msg);
-        }
-        return webElement;
     }
 
     public static boolean tryToWaitForVisibilityOfElementLocated(WebDriverWait wait, By locator, String msg) {
