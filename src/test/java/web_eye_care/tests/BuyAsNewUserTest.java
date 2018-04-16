@@ -20,13 +20,13 @@ import web_eye_care.pages.*;
 public class BuyAsNewUserTest extends BaseTest{
 
     // test cases link
-    // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
+    // https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0
     // Test case ID - BUY-01
 
     @Parameters({"mainPageUrl"})
     @Test()
     @Description("Opening main page of the site" + "\n" + "The step of the BUY-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToMainPage(String url) {
         MainPage.goToMainPage(url);
         Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");
@@ -35,7 +35,7 @@ public class BuyAsNewUserTest extends BaseTest{
     @Parameters({"productCategoryPageUrl"})
     @Test(dependsOnMethods = "testGoToMainPage")
     @Description("Opening  \"Acuvue\" product category page" + "\n" + "The step of the BUY-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToProductCategoryPage(String url){
         MainPage.goToProductCategoryPage();
         Assert.assertTrue(ProductCategoryPage.isProductCategoryPageOpened(url), "Product category page was not opened");
@@ -45,7 +45,7 @@ public class BuyAsNewUserTest extends BaseTest{
     @Parameters({"productPageUrl"})
     @Test(dependsOnMethods = "testGoToProductCategoryPage")
     @Description("Opening page of the first product from \"Acuvue\" category" + "\n" + "The step of the BUY-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToProductPage(String url){
         ProductCategoryPage.goToProductPage();
         Assert.assertTrue(ProductPage.isProductPageOpened(url), "Product page was not opened");
@@ -57,7 +57,7 @@ public class BuyAsNewUserTest extends BaseTest{
     @Parameters({"cartPageUrl"})
     @Test(dependsOnMethods = "testGoToProductPage")
     @Description("Adding chosen product to the cart" + "\n" + "The step of the BUY-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testAddToCart(String url){
         ProductPage.addToCart();
         Assert.assertTrue(CartPage.isCartPageOpened(url), "Cart page was not opened");
@@ -79,7 +79,7 @@ public class BuyAsNewUserTest extends BaseTest{
     @Parameters({"orderPageUrl"})
     @Test(dependsOnMethods = "testAddToCart")
     @Description("Checking order page"  + "\n" + "The step of the BUY-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testProceedToCheckout(String url){
         CartPage.proceedToCheckout();
         Assert.assertTrue(OrderPage.isOrderPageOpened(url),"Order page was not opened");
@@ -95,7 +95,6 @@ public class BuyAsNewUserTest extends BaseTest{
 
     @Parameters({"cartPageUrl"})
     @AfterClass
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
     public void cleanTheCart(String url){
         CartPage.goToTheCart(url);
         CartPage.cleanTheCart();

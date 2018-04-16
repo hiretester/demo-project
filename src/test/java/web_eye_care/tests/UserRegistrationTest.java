@@ -23,12 +23,11 @@ import web_eye_care.utils.Spam4Me;
 public class UserRegistrationTest extends BaseTest{
 
     // test cases link
-    // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
+    // https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0
     // Test case ID - REG-01
 
     @Parameters({"spam4meUrl"})
     @BeforeClass
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
     private void setUpEmailBox(String url){
         Spam4Me.goToSpam4Me(url);
         Spam4Me.createEmail();
@@ -37,16 +36,16 @@ public class UserRegistrationTest extends BaseTest{
     @Parameters({"mainPageUrl"})
     @Test()
     @Description("Opening main page of the site" + "\n" + "The step of the REG-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToMainPage(String url) {
         MainPage.goToMainPage(url);
-        Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable. Url http://www.wecsandbox.com");//ТODO добавь ещё URL в текст ассерта(чтобы сразу видеть, что проиошло с консоли)
+        Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable. Url http://www.wecsandbox.com");
     }
 
     @Parameters ({"loginAndRegistrationPageUrl"})
     @Test(dependsOnMethods = "testGoToMainPage")
     @Description("Opening registration page" + "\n" + "The step of the REG-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToRegistrationPage(String url){
         MainPage.goToRegistrationAndLoginPage();
         Assert.assertTrue(RegistrationAndLoginPage.isRegistrationPageOpened(url), "Registration page was not opened");
@@ -55,7 +54,7 @@ public class UserRegistrationTest extends BaseTest{
     @Parameters ({"password", "myAccountPageUrl"})
     @Test(dependsOnMethods = "testGoToRegistrationPage")
     @Description("Register new user" + "\n" + "The step of the REG-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testRegistrationOfNewUser(String password, String url){
         RegistrationAndLoginPage.registerNewUser(Spam4Me.getNewRandomEmail(), password);
         Assert.assertTrue(MyAccountPage.isMyAccountPageOpened(url),"My Account page was not opened");
@@ -65,7 +64,7 @@ public class UserRegistrationTest extends BaseTest{
     @Parameters ({"password", "myAccountPageUrl", "loginAfterSignOutPageUrl"})
     @Test(dependsOnMethods = "testRegistrationOfNewUser")
     @Description("Sign in as created user" + "\n" + "The step of the REG-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testSignInOfCreatedUser(String password, String url, String url2){
         Assert.assertTrue(RegistrationAndLoginPage.isLoginPageOpened(url2), "Login page was not opened");
         RegistrationAndLoginPage.signIn(Spam4Me.getNewRandomEmail(), password);
@@ -77,7 +76,7 @@ public class UserRegistrationTest extends BaseTest{
     @Parameters ({"spam4meUrl"})
     @Test(dependsOnMethods = "testSignInOfCreatedUser")
     @Description("Checking the email box" + "\n" + "The step of the REG-01 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testLetterInInbox(String url){
         Spam4Me.goToSpam4Me(url);
         Assert.assertTrue(Spam4Me.isSpam4MePageOpened(url), "spam4.me was not opened");

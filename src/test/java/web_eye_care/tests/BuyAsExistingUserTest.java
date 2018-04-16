@@ -20,13 +20,13 @@ import web_eye_care.pages.*;
 public class BuyAsExistingUserTest extends BaseTest{
 
     // test cases link
-    // https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0
-    //Test case ID - BUY-02
+    // https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0
+    // Test case ID - BUY-02
 
     @Parameters({"mainPageUrl"})
     @Test()
     @Description("Opening main page of the site" + "\n" + "The step of the BUY-02 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToMainPage(String url) {
         MainPage.goToMainPage(url);
         Assert.assertTrue(MainPage.isMainPageOpened(), "The site is unreachable");
@@ -35,7 +35,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     @Parameters({"productCategoryPageUrl"})
     @Test(dependsOnMethods = "testGoToMainPage")
     @Description("Opening  \"Acuvue\" product category page" + "\n" + "The step of the BUY-02 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToProductCategoryPage(String url){
         MainPage.goToProductCategoryPage();
         Assert.assertTrue(ProductCategoryPage.isProductCategoryPageOpened(url), "Product category page was not opened");
@@ -45,7 +45,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     @Parameters({"productPageUrl"})
     @Test(dependsOnMethods = "testGoToProductCategoryPage")
     @Description("Opening page of the first product from \"Acuvue\" category" + "\n" + "The step of the BUY-02 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testGoToProductPage(String url){
         ProductCategoryPage.goToProductPage();
         Assert.assertTrue(ProductPage.isProductPageOpened(url), "Product page was not opened");
@@ -57,7 +57,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     @Parameters({"cartPageUrl"})
     @Test(dependsOnMethods = "testGoToProductPage")
     @Description("Adding chosen product to the cart" + "\n" + "The step of the BUY-02 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testAddToCart(String url){
         ProductPage.addToCart();
         Assert.assertTrue(CartPage.isCartPageOpened(url), "Cart page was not opened");
@@ -80,7 +80,7 @@ public class BuyAsExistingUserTest extends BaseTest{
     @Parameters({"registeredEmail", "registeredPassword", "orderPageUrl"})
     @Test(dependsOnMethods = "testAddToCart")
     @Description("Checking order page" + "\n" + "The step of the BUY-02 Test case")
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
+    @Link("https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0")
     public void testProceedToCheckout(String email, String password, String url){
         CartPage.loginAndCheckout(email, password);
         Assert.assertTrue(OrderPage.isOrderPageOpened(url),"Order page was not opened");
@@ -96,7 +96,6 @@ public class BuyAsExistingUserTest extends BaseTest{
 
     @Parameters({"cartPageUrl"})
     @AfterClass
-    @Link("https://docs.google.com/spreadsheets/d/1XruN8JvT2ihSf0bA_86V0Zqp_kA9VmDi3b_cw9GDQZU/edit?pli=1#gid=0")
     public void cleanTheCart(String url){
         CartPage.goToTheCart(url);
         CartPage.cleanTheCart();
