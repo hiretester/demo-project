@@ -36,7 +36,8 @@ public class OrderPage extends BasePage {
 
     @Step("Checking if \"Place Order\" button is clickable")
     public static boolean isPlaceOrderButtonClickable(){
-        return tryToWaitForElementToBeClickable(wait, placeOrderButtonLocator,"\"Place Order\" button does not clickable");
+
+        return isElementClickable(wait, placeOrderButtonLocator,"\"Place Order\" button does not clickable");
     }
 
     @Step("Checking if subtotal price equals to total price from cart page")
