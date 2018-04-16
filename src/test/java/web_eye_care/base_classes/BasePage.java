@@ -40,7 +40,8 @@ public abstract class BasePage {
         return driver.findElement(locator);//избыточность кода
     }
 
-    public static void fillElementWithData(By locator, String data){//где явное ожидание?
+    public static void fillElementWithData(By locator, String data){
+        tryToWaitForPresenceOfElementLocated(wait,locator,"Element with locator " + locator.toString() + " does not located.");
         element =  driver.findElement(locator);
         element.clear();
         element.sendKeys(data);
