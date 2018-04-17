@@ -94,15 +94,11 @@ public abstract class BasePage {
     }
 
     public static int getIntFromLocator (By locator){
-        element = findElementByLocator(locator);
-        String strQuantity = element.getText().trim();
-        return Integer.valueOf(strQuantity);
+        return Integer.valueOf(getStringFromLocator(locator));
     }
 
     public static float getFloatFromLocator (By locator){
-        element = findElementByLocator(locator);
-        String strQuantity = element.getText().trim();
-        return Float.valueOf(strQuantity);
+        return Float.valueOf(getStringFromLocator(locator));
     }
 
     //-------------------Expectations
