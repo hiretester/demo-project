@@ -1,13 +1,13 @@
 h1 Demo project for testing WebEyeCare website
-
+==============================
 h2 Getting started
-
+-------------------------------
 The aim of the project is testing of user registration and purchasing of a product as new user 
 and as registered user on the http://www.wecsandbox.com according to the test cases
 https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0
 
 h2 Prerequisites
-
+----------------------------
 For running tests, maven, java 8 and latest version of Chrome should be installed.
 
 h2 Running tests
