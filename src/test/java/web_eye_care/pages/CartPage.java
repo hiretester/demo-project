@@ -35,7 +35,7 @@ public class CartPage extends BasePage{
 
     @Step("Check if cart page is loaded")
     public static boolean isCartPageOpened(String url){
-        boolean isShoppingCartFormVisible = tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
+        boolean isShoppingCartFormVisible = tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Shopping cart form does not visible");
 
         if (!isShoppingCartFormVisible){
             return false;
@@ -51,10 +51,7 @@ public class CartPage extends BasePage{
 
     @Step("Remember product price from Cart page")
     public static void rememberPrice() {
-        WebElement productPrice = findElementByLocator(priceLocator);
-        String strPrice = productPrice.getText().trim();
-        strPrice = strPrice.substring(1);
-        price = Float.valueOf(strPrice);
+        price = getPriceFromLocator(priceLocator);
     }
 
     @Step("Get product price from Cart page")
@@ -64,10 +61,7 @@ public class CartPage extends BasePage{
 
     @Step("Remember total price from Cart page")
     public static void rememberTotalPrice() {
-        WebElement totalProductPrice = findElementByLocator(totalLocator);
-        String strPrice = totalProductPrice.getText().trim();
-        strPrice = strPrice.substring(1);
-        total = Float.valueOf(strPrice);
+        total = getPriceFromLocator(totalLocator);
     }
 
     @Step("Get total price from Cart page")
@@ -77,10 +71,7 @@ public class CartPage extends BasePage{
 
     @Step("Remember subtotal price from Cart page")
     public static void rememberSubtotalPrice() {
-        WebElement subtotalProductPrice = findElementByLocator(subtotalLocator);
-        String strPrice = subtotalProductPrice.getText().trim();
-        strPrice = strPrice.substring(1);
-        subtotal = Float.valueOf(strPrice);
+        subtotal = getPriceFromLocator(subtotalLocator);
     }
 
     @Step("Get subtotal price from Cart page")
@@ -90,9 +81,7 @@ public class CartPage extends BasePage{
 
     @Step("Remember product quantity from Cart page")
     public static void rememberQuantity() {
-        WebElement productQuantity = findElementByLocator(quantityLocator);
-        String strQuantity = productQuantity.getText().trim();
-        quantity = Integer.valueOf(strQuantity);
+        quantity = getIntFromLocator(quantityLocator);
     }
 
     @Step("Get subtotal price from Cart page")
@@ -165,17 +154,12 @@ public class CartPage extends BasePage{
     }
 
     private static float readSubtotalPrice (By locator) {
-        WebElement subtotalProductPrice = findElementByLocator(locator);
-        String strPrice = subtotalProductPrice.getText().trim();
-        strPrice = strPrice.substring(1);
-        return Float.valueOf(strPrice);
+        return getPriceFromLocator(locator);
     }
 
     private static float readProcessingFee() {
         if (isElementPresent(processingFeeLocator)){
-            WebElement productFee = findElementByLocator(processingFeeLocator);
-            String strProductFee = productFee.getText().trim();
-            return Float.valueOf(strProductFee);
+            return getFloatFromLocator(processingFeeLocator);
         }else{
             return 0;
         }

@@ -22,7 +22,7 @@ public abstract class BasePage {
     private static By popUpWindowLocator = By.xpath("//div[@id='usi_content']");
     private static By popUpWindowCloseButtonLocator = By.xpath("//div[@id='usi_close']");
 
-    //-------------------Методы общие для всех страниц
+    //-------------------General methods for all pages
 
     public static boolean isElementPresent (By locator){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
@@ -77,7 +77,35 @@ public abstract class BasePage {
         }
     }
 
-    //-------------------Ожидания
+    public static float getPriceFromLocator (By locator){
+        element = findElementByLocator(locator);
+        String strPrice = element.getText().trim();
+        if (strPrice.length()<2){
+           System.out.println("Problems with price " + locator.toString());
+           return -1;
+        }
+        strPrice = strPrice.substring(1);
+        return  Float.valueOf(strPrice);
+    }
+
+    public static String getStringFromLocator (By locator){
+        element = findElementByLocator(locator);
+        return element.getText().trim();
+    }
+
+    public static int getIntFromLocator (By locator){
+        element = findElementByLocator(locator);
+        String strQuantity = element.getText().trim();
+        return Integer.valueOf(strQuantity);
+    }
+
+    public static float getFloatFromLocator (By locator){
+        element = findElementByLocator(locator);
+        String strQuantity = element.getText().trim();
+        return Float.valueOf(strQuantity);
+    }
+
+    //-------------------Expectations
 
     public static WebElement tryToWaitForPresenceOfElementLocated(WebDriverWait wait, By locator, String msg){
         WebElement webElement;
