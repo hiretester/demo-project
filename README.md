@@ -14,11 +14,11 @@ Running tests
 ------------------------------
 To run tests the next maven command should be used 
 
-mvn test
+> mvn test
 
 To run tests and generate allure report the next maven command should be used 
 
-mvn test site
+> mvn test site
 
 Allure Report
 ------------------------------
