@@ -12,6 +12,10 @@ For running tests, maven, java 8 and latest version of Chrome should be installe
 
 Running tests
 ------------------------------
+To run tests the next maven command should be used 
+
+mvn test
+
 To run tests and generate allure report the next maven command should be used 
 
 mvn test site
