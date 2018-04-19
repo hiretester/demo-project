@@ -37,7 +37,7 @@ the project will be located.
 
 It is recommended to use Mozilla Firefox for openning index.html file.
 
-Also it is possible to generate and open report using allure cli. For this [allure cli](https://docs.qameta.io/allure/#_installing_a_commandline) should be installed.
+Also it is possible to generate and open report using allure cli. To do this you need to install [allure cli](https://docs.qameta.io/allure/#_installing_a_commandline).
 
 After running tests, in terminal go to the ./target and print next command to generate report
 

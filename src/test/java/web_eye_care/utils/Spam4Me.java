@@ -86,5 +86,4 @@ public class Spam4Me extends BasePage{
     public static String getNewRandomEmail(){
         return email;
     }
-
 }
