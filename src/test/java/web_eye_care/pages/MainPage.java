@@ -21,7 +21,7 @@ public class MainPage extends BasePage {
 
     @Step("Checking if main page is opened")
     public static boolean isMainPageOpened(){
-        return tryToWaitForVisibilityOfElementLocated(wait, menuMyAccountLocator,"Main page was not opened");
+        return isElementVisible(wait, menuMyAccountLocator,"Main page was not opened");
     }
 
     @Step("Goes to registration and login page")

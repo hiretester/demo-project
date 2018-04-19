@@ -20,7 +20,7 @@ public class OrderPage extends BasePage {
 
     @Step("Checking if order page is loaded")
     public static boolean isOrderPageOpened(String url){
-        boolean isBillingFormVisible = tryToWaitForVisibilityOfElementLocated(wait, billingFormLocator,"Billing form does not visible");
+        boolean isBillingFormVisible = isElementVisible(wait, billingFormLocator,"Billing form does not visible");
 
         if (!isBillingFormVisible){
             return false;
@@ -31,13 +31,13 @@ public class OrderPage extends BasePage {
 
     @Step("Checking if registration form is visible")
     public static boolean isRegistrationFormVisible(){
-        return tryToWaitForVisibilityOfElementLocated(wait, registrationFormLocator,"Registration form does not visible");
+        return isElementVisible(wait, registrationFormLocator,"Registration form does not visible");
     }
 
     @Step("Checking if \"Place Order\" button is clickable")
     public static boolean isPlaceOrderButtonClickable(){
 
-        return tryToWaitForElementToBeClickable(wait, placeOrderButtonLocator,"\"Place Order\" button does not clickable");
+        return isElementClickable(wait, placeOrderButtonLocator,"\"Place Order\" button does not clickable");
     }
 
     @Step("Checking if subtotal price equals to total price from cart page")

@@ -36,36 +36,36 @@ public abstract class BasePage {
     }
 
     public static WebElement findElementByLocator(By locator){
-        return tryToWaitForPresenceOfElementLocated(wait,locator,"Element with locator " + locator.toString() + " does not located.");
+        return waitForElement(wait,locator,"Element with locator " + locator.toString() + " does not located.");
     }
 
     public static void fillElementWithData(By locator, String data){
-        element = tryToWaitForPresenceOfElementLocated(wait,locator,"Element with locator " + locator.toString() + " does not located.");
+        element = waitForElement(wait,locator,"Element with locator " + locator.toString() + " does not located.");
         element.clear();
         element.sendKeys(data);
     }
 
     public static String getElementData(By locator, String msg){
-        tryToWaitForVisibilityOfElementLocated(wait, locator, msg);
+        isElementVisible(wait, locator, msg);
         element = driver.findElement(locator);
         return element.getAttribute("value");
     }
 
     public static void clickOnElement(By locator, String msg, String msg2){
-        element = tryToWaitForPresenceOfElementLocated(wait,locator,msg);
-        tryToWaitForElementToBeClickable(wait, locator, msg2);
+        element = waitForElement(wait,locator,msg);
+        isElementClickable(wait, locator, msg2);
         element.click();
     }
 
     public static void moveToElement(By locator, String msg){
-        element = tryToWaitForPresenceOfElementLocated(wait, locator,msg);
+        element = waitForElement(wait, locator,msg);
         builder = new Actions(driver);
         builder.moveToElement(element).build().perform();
     }
 
     public static void moveToElementAndClickOnIt(By locator, String msg, String msg2){
-        element = tryToWaitForPresenceOfElementLocated(wait, locator,msg);
-        tryToWaitForElementToBeClickable(wait, locator,msg2);
+        element = waitForElement(wait, locator,msg);
+        isElementClickable(wait, locator,msg2);
         builder = new Actions(driver);
         builder.moveToElement(element).click().build().perform();
     }
@@ -103,7 +103,7 @@ public abstract class BasePage {
 
     //-------------------Expectations
 
-    public static WebElement tryToWaitForPresenceOfElementLocated(WebDriverWait wait, By locator, String msg){
+    public static WebElement waitForElement(WebDriverWait wait, By locator, String msg){
         WebElement webElement;
         try{
            webElement = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -114,7 +114,7 @@ public abstract class BasePage {
         return webElement;
     }
 
-    public static boolean tryToWaitForElementToBeClickable(WebDriverWait wait, By locator, String msg) {
+    public static boolean isElementClickable(WebDriverWait wait, By locator, String msg) {
         boolean isClickable = true;
         try {
             wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -125,7 +125,7 @@ public abstract class BasePage {
         return isClickable;
     }
 
-    public static boolean tryToWaitForVisibilityOfElementLocated(WebDriverWait wait, By locator, String msg) {
+    public static boolean isElementVisible(WebDriverWait wait, By locator, String msg) {
         boolean isVisible = true;
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

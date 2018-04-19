@@ -35,7 +35,7 @@ public class CartPage extends BasePage{
 
     @Step("Check if cart page is loaded")
     public static boolean isCartPageOpened(String url){
-        boolean isShoppingCartFormVisible = tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Shopping cart form does not visible");
+        boolean isShoppingCartFormVisible = isElementVisible(wait, shoppingCartFormLocator,"Shopping cart form does not visible");
 
         if (!isShoppingCartFormVisible){
             return false;
@@ -128,7 +128,7 @@ public class CartPage extends BasePage{
     @Step("Check if total price calculated right on cart page")
     public static float calculateSubtotal(){
 
-        tryToWaitForVisibilityOfElementLocated(wait, cartListLocator,"Cart list does not visible");
+        isElementVisible(wait, cartListLocator,"Cart list does not visible");
         List<WebElement> cartList = driver.findElements(cartListLocator);
         int listSize = cartList.size();
 
@@ -141,7 +141,7 @@ public class CartPage extends BasePage{
 
         By locator;
 
-        tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
+        isElementVisible(wait, shoppingCartFormLocator,"Product form does not visible");
         for (int i = listSize; i > 0; i--){
             locator = By.xpath("//tr[" + i + "]/td[@class='item-subtotal align-center']/span");
             subtotal = subtotal + readSubtotalPrice(locator);
@@ -167,7 +167,7 @@ public class CartPage extends BasePage{
 
     @Step("Check if returning customer form is visible")
     public static boolean isReturningCustomerFormVisible(){
-        return tryToWaitForVisibilityOfElementLocated(wait, returningCustomerFormLocator,"Returning customer form does not visible");
+        return isElementVisible(wait, returningCustomerFormLocator,"Returning customer form does not visible");
     }
 
     @Step("Fill returning customer form and sending it in order to login and proceed to checkout")
@@ -202,8 +202,8 @@ public class CartPage extends BasePage{
 
     @Step("Clean the cart")
     public static void cleanTheCart(){
-        tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
-        tryToWaitForElementToBeClickable(wait, proceedToCheckoutLocator, "Proceed to checkout button does not clickable");
+        isElementVisible(wait, shoppingCartFormLocator,"Product form does not visible");
+        isElementClickable(wait, proceedToCheckoutLocator, "Proceed to checkout button does not clickable");
 
         List<WebElement> cartList = driver.findElements(cartListLocator);
         int listSize = cartList.size();
@@ -218,7 +218,7 @@ public class CartPage extends BasePage{
             locator = By.xpath("//table[@class='cart-table']/tbody/tr[" + i + "]/td[@class='item-remove']/div");
             moveToElementAndClickOnIt(locator,"Remove item " + i + "does not present",
                     "Remove item " + i + "does not clickable");
-            tryToWaitForVisibilityOfElementLocated(wait, shoppingCartFormLocator,"Product form does not visible");
+            isElementVisible(wait, shoppingCartFormLocator,"Product form does not visible");
         }
     }
 

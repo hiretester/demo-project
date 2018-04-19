@@ -15,7 +15,7 @@ public class MyAccountPage extends BasePage {
 
     @Step("Checking if MyAccount page is loaded")
     public static boolean isMyAccountPageOpened(String url){
-        boolean isMyAccountTextVisible = tryToWaitForVisibilityOfElementLocated(wait, myAccountTextLocator,"My Account text does not visible");
+        boolean isMyAccountTextVisible = isElementVisible(wait, myAccountTextLocator,"My Account text does not visible");
 
         if (!isMyAccountTextVisible){
             return false;

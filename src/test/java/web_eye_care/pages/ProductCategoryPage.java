@@ -18,7 +18,7 @@ public class ProductCategoryPage extends BasePage{
 
     @Step("Checking if product category page is loaded")
     public static boolean isProductCategoryPageOpened(String url){
-        boolean isProductListVisible = tryToWaitForVisibilityOfElementLocated(wait, productListLocator,"Product list does not visible");
+        boolean isProductListVisible = isElementVisible(wait, productListLocator,"Product list does not visible");
 
         if (!isProductListVisible){
             return false;

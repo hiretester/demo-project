@@ -20,7 +20,7 @@ public class ProductPage extends BasePage{
 
     @Step("Checking if product page is loaded")
     public static boolean isProductPageOpened(String url){
-        boolean isProductFormVisible = tryToWaitForVisibilityOfElementLocated(wait, productFormLocator,"Product form does not visible");
+        boolean isProductFormVisible = isElementVisible(wait, productFormLocator,"Product form does not visible");
 
         if (!isProductFormVisible){
             return false;
@@ -49,7 +49,7 @@ public class ProductPage extends BasePage{
 
     @Step("Chose prescription")
     public static void selectPrescription (){
-        boolean isPrescriptionShown = tryToWaitForVisibilityOfElementLocated(wait, selectPrescriptionButtonLocator,"Prescription form does not visible");
+        boolean isPrescriptionShown = isElementVisible(wait, selectPrescriptionButtonLocator,"Prescription form does not visible");
         if (isPrescriptionShown){
             clickOnElement(selectPrescriptionButtonLocator,"Select button does not present", "Select button does not clickable");
         }

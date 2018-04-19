@@ -28,7 +28,7 @@ public class Spam4Me extends BasePage{
 
     @Step("Check if email page is loaded")
     public static boolean isSpam4MePageOpened(String url){
-        boolean isEmailBoxVisible = tryToWaitForVisibilityOfElementLocated(wait, emailBoxLocator,"Spam4me email box does not visible");
+        boolean isEmailBoxVisible = isElementVisible(wait, emailBoxLocator,"Spam4me email box does not visible");
 
         if (!isEmailBoxVisible){
             return false;

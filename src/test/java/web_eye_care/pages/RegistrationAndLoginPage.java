@@ -21,7 +21,7 @@ public class RegistrationAndLoginPage extends BasePage{
 
     @Step("Checking if registration and login page is loaded")
     public static boolean isRegistrationPageOpened(String url){
-        boolean isRegistrationFormVisible = tryToWaitForVisibilityOfElementLocated(wait, registrationFormLocator,"Registration form does not visible");
+        boolean isRegistrationFormVisible = isElementVisible(wait, registrationFormLocator,"Registration form does not visible");
 
         if (!isRegistrationFormVisible){
             return false;
@@ -32,7 +32,7 @@ public class RegistrationAndLoginPage extends BasePage{
 
     @Step("Checking if registration and login page is loaded")
     public static boolean isLoginPageOpened(String url){
-        boolean isLoginFormVisible = tryToWaitForVisibilityOfElementLocated(wait, loginFormLocator,"Login form does not visible");
+        boolean isLoginFormVisible = isElementVisible(wait, loginFormLocator,"Login form does not visible");
 
         if (!isLoginFormVisible){
             return false;
