@@ -50,7 +50,7 @@ public class TestListener extends BaseTest implements ITestListener{
         return iTestResult.getMethod().getConstructorOrMethod().getName();
     }
 
-    @Attachment (value = "{1}", type = "image/png")
+    @Attachment (value = "Screenshot", type = "image/png")
     private byte[] saveScreenshotPNG(WebDriver driver, String imageName){
         return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     }
