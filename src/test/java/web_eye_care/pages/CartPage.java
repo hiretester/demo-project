@@ -144,7 +144,7 @@ public class CartPage extends BasePage{
         isElementVisible(wait, shoppingCartFormLocator,"Product form does not visible");
         for (int i = listSize; i > 0; i--){
             locator = By.xpath("//tr[" + i + "]/td[@class='item-subtotal align-center']/span");
-            subtotal = subtotal + readSubtotalPrice(locator);
+            subtotal = subtotal + readPrice(locator);
         }
 
         fee = readProcessingFee();
@@ -153,10 +153,12 @@ public class CartPage extends BasePage{
         return subtotal;
     }
 
-    private static float readSubtotalPrice (By locator) {
+    //Get subtotal price from Cart page
+    private static float readPrice(By locator) {
         return getPriceFromLocator(locator);
     }
 
+    //
     private static float readProcessingFee() {
         if (isElementPresent(processingFeeLocator)){
             return getFloatFromLocator(processingFeeLocator);

@@ -29,9 +29,9 @@ public abstract class BasePage {
     //-------------------General methods for all pages
 
     /**
-     * isElementPresent method is search for element without implicitly wait
+     * isElementPresent method is searching for element without implicitly wait
      * @param locator - the locator of an element we need to find
-     * @return returns true if element is located on the page, otherwise returns false
+     * @return method returns true if element is located on the page, otherwise returns false
      */
     public static boolean isElementPresent (By locator){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
@@ -45,9 +45,9 @@ public abstract class BasePage {
     }
 
     /**
-     * findElementByLocator method search for element with explicitly wait
+     * findElementByLocator method is searching for element with explicitly wait
      * @param locator - locator of an element we need to find
-     * @return returns WebElement object or null if element was not found
+     * @return method returns WebElement object or null if element was not found
      */
     public static WebElement findElementByLocator(By locator){
         return waitForElement(wait,locator,"Element with locator " + locator.toString() + " does not located.");
@@ -69,7 +69,7 @@ public abstract class BasePage {
      * getElementData method finds element by locator and returns its value
      * @param locator - locator of an element
      * @param msg - message that will be printed on the console if the element was not found
-     * @return returns value attribute of the element
+     * @return method returns value attribute of the element
      */
     public static String getElementData(By locator, String msg){
         isElementVisible(wait, locator, msg);
@@ -114,7 +114,7 @@ public abstract class BasePage {
     }
 
     /**
-     * closePopUpWindow method close pop up window with popUpWindowLocator locator
+     * closePopUpWindow method is used to close pop up window with popUpWindowLocator locator
      */
     public static void closePopUpWindow(){
         boolean popUpWindowIsShown = isElementPresent(popUpWindowLocator);
@@ -172,11 +172,12 @@ public abstract class BasePage {
     //-------------------Expectations
 
     /**
-     * waitForElement
-     * @param wait
-     * @param locator
-     * @param msg
-     * @return
+     * waitForElement method waits until presence of element is located on the page for preset time and returns element
+     * or null if element was not located
+     * @param wait - WebDriverWait object with preset time for waiting
+     * @param locator - locator of an element
+     * @param msg - message that will be printed on the console if element was not found
+     * @return method returns WebElement object or null if element was not found
      */
     public static WebElement waitForElement(WebDriverWait wait, By locator, String msg){
         WebElement webElement;
@@ -189,6 +190,14 @@ public abstract class BasePage {
         return webElement;
     }
 
+    /**
+     * isElementClickable method waits for element to be clickable for preset time and returns boolean value of is element
+     * clickable or not
+     * @param wait - WebDriverWait object with preset time for waiting
+     * @param locator - locator of an element
+     * @param msg - message that will be printed on the console if element isn`t clickable
+     * @return method returns true if element is clickable, otherwise returns false
+     */
     public static boolean isElementClickable(WebDriverWait wait, By locator, String msg) {
         boolean isClickable = true;
         try {
@@ -200,6 +209,13 @@ public abstract class BasePage {
         return isClickable;
     }
 
+    /**
+     * isElementVisible method waits for element to be visible for preset time and returns boolean value of element visibility
+     * @param wait - WebDriverWait object with preset time for waiting
+     * @param locator - locator of an element
+     * @param msg - message that will be printed on the console if element isn`t visible
+     * @return method returns true if element is visible, otherwise returns false
+     */
     public static boolean isElementVisible(WebDriverWait wait, By locator, String msg) {
         boolean isVisible = true;
         try {
