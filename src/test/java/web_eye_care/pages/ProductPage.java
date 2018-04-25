@@ -39,7 +39,7 @@ public class ProductPage extends BasePage{
     }
 
     /**
-     * addToCart method is used to add product to the cart
+     * addToCart method is used to add product to the cart and to open Cart page via clicking on "Proceed to checkout" button
      */
     @Step("Add product to cart")
     public static void addToCart (){

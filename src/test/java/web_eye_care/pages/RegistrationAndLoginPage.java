@@ -4,6 +4,9 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import web_eye_care.base_classes.BasePage;
 
+/**
+ * RegistrationAndLoginPage class is a PageObject class that used to work with page that contains registration and login forms
+ */
 public class RegistrationAndLoginPage extends BasePage{
 
     private static By registrationFormLocator = By.xpath("//form[@class='login-box m-new']");
@@ -19,6 +22,12 @@ public class RegistrationAndLoginPage extends BasePage{
     private RegistrationAndLoginPage(){
     }
 
+    /**
+     * isRegistrationPageOpened method is used to check if registration and login page was successfully opened
+     * @param url - url address of the page
+     * @return method returns true if element with registrationFormLocator locator is visible on the page and url
+     * address of current page is equals to url address of Registration and Login page, otherwise returns false
+     */
     @Step("Checking if registration and login page is loaded")
     public static boolean isRegistrationPageOpened(String url){
         boolean isRegistrationFormVisible = isElementVisible(wait, registrationFormLocator,"Registration form does not visible");
@@ -30,6 +39,12 @@ public class RegistrationAndLoginPage extends BasePage{
         return driver.getCurrentUrl().equals(url);
     }
 
+    /**
+     * isLoginPageOpened method is used to check if registration and login page was successfully opened
+     * @param url - url address of the page
+     * @return method returns true if element with loginFormLocator locator is visible on the page and url
+     * address of current page is equals to url address of Registration and Login page, otherwise returns false
+     */
     @Step("Checking if registration and login page is loaded")
     public static boolean isLoginPageOpened(String url){
         boolean isLoginFormVisible = isElementVisible(wait, loginFormLocator,"Login form does not visible");
@@ -41,6 +56,12 @@ public class RegistrationAndLoginPage extends BasePage{
         return driver.getCurrentUrl().equals(url);
     }
 
+    /**
+     * registerNewUser method is used to fill email, password and repeat password fields of registration form and to
+     * submit registration
+     * @param email - email of new user
+     * @param password - password of new user
+     */
     @Step("Filling registration form and sending it in order to register a new user")
     public static void registerNewUser(String email, String password){
         fillEmailField(email, emailFieldLocator);
@@ -49,6 +70,11 @@ public class RegistrationAndLoginPage extends BasePage{
         sendRegistrationForm();
     }
 
+    /**
+     * signIn method is used to sign in as a registered user into MyAccount
+     * @param email - email of registered user
+     * @param password  - password of registered user
+     */
     @Step("Filling returning customer form and sending it in order to sign in")
     public static void signIn(String email, String password){
         fillEmailField(email, emailFieldForLoginLocator);

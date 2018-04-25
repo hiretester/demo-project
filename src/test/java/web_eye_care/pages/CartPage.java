@@ -7,6 +7,9 @@ import web_eye_care.base_classes.BasePage;
 
 import java.util.List;
 
+/**
+ * CartPage class is a PageObject class that used to work with cart page of the website
+ */
 public class CartPage extends BasePage{
 
     private static By shoppingCartFormLocator = By.id("shop-cart-form");
@@ -33,6 +36,12 @@ public class CartPage extends BasePage{
     private CartPage (){
     }
 
+    /**
+     * isCartPageOpened method is used to check if Cart page was successfully opened
+     * @param url - url address of the page
+     * @return method returns true if element with shoppingCartFormLocator locator is visible on the page and url
+     * address of current page is equals to url address of Cart page, otherwise returns false
+     */
     @Step("Check if cart page is loaded")
     public static boolean isCartPageOpened(String url){
         boolean isShoppingCartFormVisible = isElementVisible(wait, shoppingCartFormLocator,"Shopping cart form does not visible");
@@ -44,68 +53,93 @@ public class CartPage extends BasePage{
         return driver.getCurrentUrl().equals(url);
     }
 
+    /**
+     * proceedToCheckout method is used to open Order page via clicking on "Proceed to checkout" button
+     */
     @Step("Proceed to checkout")
     public static void proceedToCheckout (){
         clickOnElement(proceedToCheckoutLocator, "Proceed to checkout button does not present", "Proceed to checkout button does not clickable");
     }
 
+    /**
+     * rememberPrice method is used to save price of the product from Cart page in price static variable of CartPage class
+     */
     @Step("Remember product price from Cart page")
     public static void rememberPrice() {
         price = getPriceFromLocator(priceLocator);
     }
 
+    /**
+     * getPrice method is used to get value of price variable that contains price of the product from Cart page
+     * @return method returns value of price variable
+     */
     @Step("Get product price from Cart page")
     public static float getPrice() {
         return price;
     }
 
+    /**
+     * rememberTotalPrice method is used to save total price of the order from Cart page in total static variable of CartPage class
+     */
     @Step("Remember total price from Cart page")
     public static void rememberTotalPrice() {
         total = getPriceFromLocator(totalLocator);
     }
 
+    /**
+     * getTotalPrice method is used to get value of total variable that contains total price of the order from Cart page
+     * @return method returns value of total variable
+     */
     @Step("Get total price from Cart page")
     public static float getTotalPrice() {
         return total;
     }
 
+    /**
+     * rememberSubtotalPrice method is used to save subtotal price of product (price of product multiplied by its quantity)
+     * from Cart page in subtotal static variable of CartPage class
+     */
     @Step("Remember subtotal price from Cart page")
     public static void rememberSubtotalPrice() {
         subtotal = getPriceFromLocator(subtotalLocator);
     }
 
+    /**
+     * getSubtotalPrice method is used to get value of subtotal variable that contains subtotal price of product
+     * (price of product multiplied by its quantity)from Cart page
+     * @return method returns value of subtotal variable
+     */
     @Step("Get subtotal price from Cart page")
     public static float getSubtotalPrice() {
         return subtotal;
     }
 
+    /**
+     * rememberQuantity method is used to save quantity of the product from Cart page in quantity static variable of CartPage class
+     */
     @Step("Remember product quantity from Cart page")
     public static void rememberQuantity() {
         quantity = getIntFromLocator(quantityLocator);
     }
 
+    /**
+     * getQuantity method is used to get value of quantity variable that contains quantity of the product
+     * @return method returns value of quantity variable
+     */
     @Step("Get subtotal price from Cart page")
     public static int getQuantity() {
         return quantity;
     }
 
-    @Step("Check if price equals to the price from product page")
-    public static boolean isPriceEqualsToPriceFromProductPage(){
-        boolean isEqual = false;
-
-        if(price == ProductPage.getPrice()){
-            isEqual = true;
-        }
-
-        return isEqual;
-    }
-
+    /**
+     * isSubtotalEqualsToPriceMultipliedByQuantity  method is used to check if subtotal price equals to the price multiplied by its quantity
+     * @return method returns true if subtotal = price * quantity, otherwise returns false
+     */
     @Step("Check if subtotal price equals to the price multiplied by the quantity")
     public static boolean isSubtotalEqualsToPriceMultipliedByQuantity(){
         boolean isEqual = false;
 
-        float subtotalPrice = price;
-        subtotalPrice = subtotalPrice * quantity;
+        float subtotalPrice = price * quantity;
 
         if(subtotalPrice == subtotal){
             isEqual = true;
@@ -114,17 +148,10 @@ public class CartPage extends BasePage{
         return isEqual;
     }
 
-    @Step("Check if total price equals to subtotal price")
-    public static boolean isTotalEqualsToSubtotal(){
-        boolean isEqual = false;
-
-        if(total == subtotal){
-            isEqual = true;
-        }
-
-        return isEqual;
-    }
-
+    /**
+     * calculateSubtotal method is used to calculate the sum of all subtotal prices of products in the cart and processing fee
+     * @return method returns 0 if there is no products in the cart, otherwise returns sum of all subtotal prices and processing fee
+     */
     @Step("Check if total price calculated right on cart page")
     public static float calculateSubtotal(){
 
@@ -141,10 +168,10 @@ public class CartPage extends BasePage{
 
         By locator;
 
-        isElementVisible(wait, shoppingCartFormLocator,"Product form does not visible");
+        isElementVisible(wait, shoppingCartFormLocator,"Shopping cart form does not visible");
         for (int i = listSize; i > 0; i--){
             locator = By.xpath("//tr[" + i + "]/td[@class='item-subtotal align-center']/span");
-            subtotal = subtotal + readPrice(locator);
+            subtotal = subtotal + readSubtotalPrice(locator);
         }
 
         fee = readProcessingFee();
@@ -154,11 +181,11 @@ public class CartPage extends BasePage{
     }
 
     //Get subtotal price from Cart page
-    private static float readPrice(By locator) {
+    private static float readSubtotalPrice(By locator) {
         return getPriceFromLocator(locator);
     }
 
-    //
+    //Get processing fee from Cart page
     private static float readProcessingFee() {
         if (isElementPresent(processingFeeLocator)){
             return getFloatFromLocator(processingFeeLocator);
@@ -167,11 +194,22 @@ public class CartPage extends BasePage{
         }
     }
 
+    /**
+     * isReturningCustomerFormVisible method is used to check if form for login of returning customer is shown on the page
+     * @return method returns true if element with returningCustomerFormLocator locator is visible on the page,
+     * otherwise returns false
+     */
     @Step("Check if returning customer form is visible")
     public static boolean isReturningCustomerFormVisible(){
         return isElementVisible(wait, returningCustomerFormLocator,"Returning customer form does not visible");
     }
 
+    /**
+     * loginAndCheckout method is used to fill returning customer form with email and password and to click on
+     * "Login and checkout" button for moving to order page as registered user
+     * @param email - email of returning customer
+     * @param password - password of returning customer
+     */
     @Step("Fill returning customer form and sending it in order to login and proceed to checkout")
     public static void loginAndCheckout(String email, String password){
         fillEmailField(email);
@@ -179,12 +217,12 @@ public class CartPage extends BasePage{
         sendReturningCustomerForm();
     }
 
-    @Step("Fill email field with" + "{0}")
+    @Step("Fill email field")
     private static void fillEmailField(String email){
         fillElementWithData(emailLocator, email);
     }
 
-    @Step("Fill password field with" + "{0}")
+    @Step("Fill password field")
     private static void fillPasswordField(String password){
         fillElementWithData(passwordLocator,password);
     }
@@ -197,11 +235,18 @@ public class CartPage extends BasePage{
 
     //--------------------------------------------- clean the cart
 
+    /**
+     * goToTheCart method is used to open Cart page via navigating to url of the cart page
+     * @param url - url address of the page
+     */
     @Step("Open Cart page")
     public static void goToTheCart(String url){
         driver.navigate().to(url);
     }
 
+    /**
+     * cleanTheCart method is used to delete products from the cart
+     */
     @Step("Clean the cart")
     public static void cleanTheCart(){
         isElementVisible(wait, shoppingCartFormLocator,"Product form does not visible");
