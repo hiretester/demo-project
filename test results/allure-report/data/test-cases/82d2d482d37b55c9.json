@@ -1,0 +1,392 @@
+{
+  "uid" : "82d2d482d37b55c9",
+  "name" : "testAddToCart",
+  "fullName" : "web_eye_care.tests.BuyAsNewUserTest.testAddToCart",
+  "historyId" : "62c126341f86c6604b782d92e9b9814f",
+  "time" : {
+    "start" : 1525703473708,
+    "stop" : 1525703477593,
+    "duration" : 3885
+  },
+  "description" : "Adding chosen product to the cart\nThe step of the BUY-01 Test case",
+  "descriptionHtml" : "<p>Adding chosen product to the cart\nThe step of the BUY-01 Test case</p>\n",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1525703409817,
+      "stop" : 1525703413731,
+      "duration" : 3914
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Add product to cart",
+      "time" : {
+        "start" : 1525703473708,
+        "stop" : 1525703477304,
+        "duration" : 3596
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Chose prescription",
+        "time" : {
+          "start" : 1525703473808,
+          "stop" : 1525703477304,
+          "duration" : 3496
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check if cart page is loaded",
+      "time" : {
+        "start" : 1525703477321,
+        "stop" : 1525703477356,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Remember product price from Cart page",
+      "time" : {
+        "start" : 1525703477356,
+        "stop" : 1525703477385,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Remember total price from Cart page",
+      "time" : {
+        "start" : 1525703477385,
+        "stop" : 1525703477414,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Remember product quantity from Cart page",
+      "time" : {
+        "start" : 1525703477414,
+        "stop" : 1525703477448,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Remember subtotal price from Cart page",
+      "time" : {
+        "start" : 1525703477449,
+        "stop" : 1525703477479,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get product price from Product category page",
+      "time" : {
+        "start" : 1525703477482,
+        "stop" : 1525703477483,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get product price from Cart page",
+      "time" : {
+        "start" : 1525703477483,
+        "stop" : 1525703477483,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check if subtotal price equals to the price multiplied by the quantity",
+      "time" : {
+        "start" : 1525703477484,
+        "stop" : 1525703477484,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check if total price calculated right on cart page",
+      "time" : {
+        "start" : 1525703477485,
+        "stop" : 1525703477593,
+        "duration" : 108
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get total price from Cart page",
+      "time" : {
+        "start" : 1525703477593,
+        "stop" : 1525703477593,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 12,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1525703516503,
+      "stop" : 1525703516580,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "cleanTheCart",
+    "time" : {
+      "start" : 1525703480177,
+      "stop" : 1525703484634,
+      "duration" : 4457
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Cart page",
+      "time" : {
+        "start" : 1525703480178,
+        "stop" : 1525703482543,
+        "duration" : 2365
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Clean the cart",
+      "time" : {
+        "start" : 1525703482543,
+        "stop" : 1525703484634,
+        "duration" : 2091
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testAddToCart"
+  }, {
+    "name" : "parentSuite",
+    "value" : "DemoSuite"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Test Server on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.BuyAsNewUserTest"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "12575@user-H81M-HD3.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Product ordering"
+  }, {
+    "name" : "story",
+    "value" : "Ordering product as a new user"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "cartPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "loginAfterSignOutPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "myAccountPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "orderPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  }, {
+    "name" : "password",
+    "value" : "qwerty"
+  }, {
+    "name" : "productCategoryPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  }, {
+    "name" : "productPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"
+  }, {
+    "name" : "registeredEmail",
+    "value" : "test_a1@spam4.me"
+  }, {
+    "name" : "registeredPassword",
+    "value" : "qwerty"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "spam4meUrl",
+    "value" : "https://www.spam4.me/inbox"
+  } ],
+  "links" : [ {
+    "name" : "https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "82d2d482d37b55c9.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+}

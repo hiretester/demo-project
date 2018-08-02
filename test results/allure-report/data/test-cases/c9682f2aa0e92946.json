@@ -1,0 +1,362 @@
+{
+  "uid" : "c9682f2aa0e92946",
+  "name" : "testRegistrationOfNewUser",
+  "fullName" : "web_eye_care.tests.UserRegistrationTest.testRegistrationOfNewUser",
+  "historyId" : "716a33815df1d43363acc0f769c002ab",
+  "time" : {
+    "start" : 1525703423742,
+    "stop" : 1525703427419,
+    "duration" : 3677
+  },
+  "description" : "Register new user\nThe step of the REG-01 Test case",
+  "descriptionHtml" : "<p>Register new user\nThe step of the REG-01 Test case</p>\n",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1525703409817,
+      "stop" : 1525703413731,
+      "duration" : 3914
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUpEmailBox",
+    "time" : {
+      "start" : 1525703413751,
+      "stop" : 1525703416786,
+      "duration" : 3035
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open email page",
+      "time" : {
+        "start" : 1525703413822,
+        "stop" : 1525703416538,
+        "duration" : 2716
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check if email page is loaded",
+        "time" : {
+          "start" : 1525703416494,
+          "stop" : 1525703416538,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "https://www.spam4.me/inbox"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "https://www.spam4.me/inbox"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Set up email",
+      "time" : {
+        "start" : 1525703416539,
+        "stop" : 1525703416786,
+        "duration" : 247
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Filling registration form and sending it in order to register a new user",
+      "time" : {
+        "start" : 1525703423743,
+        "stop" : 1525703424233,
+        "duration" : 490
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Fill email field with{0}",
+        "time" : {
+          "start" : 1525703423743,
+          "stop" : 1525703423890,
+          "duration" : 147
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "qyvrthwq@spam4.me"
+        }, {
+          "name" : "locator",
+          "value" : "By.xpath: //form[@class='login-box m-new']//input[@name='Email']"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill password field with{0}",
+        "time" : {
+          "start" : 1525703423891,
+          "stop" : 1525703424028,
+          "duration" : 137
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "qwerty"
+        }, {
+          "name" : "locator",
+          "value" : "By.xpath: //form[@class='login-box m-new']//input[@name='password']"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill repeat password field with{0}",
+        "time" : {
+          "start" : 1525703424029,
+          "stop" : 1525703424128,
+          "duration" : 99
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "qwerty"
+        }, {
+          "name" : "locator",
+          "value" : "By.xpath: //form[@class='login-box m-new']//input[@name='passwordagain']"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Confirm user registration on registration form",
+        "time" : {
+          "start" : 1525703424128,
+          "stop" : 1525703424233,
+          "duration" : 105
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "qyvrthwq@spam4.me"
+      }, {
+        "name" : "password",
+        "value" : "qwerty"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Checking if MyAccount page is loaded",
+      "time" : {
+        "start" : 1525703424239,
+        "stop" : 1525703427275,
+        "duration" : 3036
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Signing out from account",
+      "time" : {
+        "start" : 1525703427275,
+        "stop" : 1525703427419,
+        "duration" : 144
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1525703516503,
+      "stop" : 1525703516580,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testRegistrationOfNewUser"
+  }, {
+    "name" : "parentSuite",
+    "value" : "DemoSuite"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Test Server on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "12575@user-H81M-HD3.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "User registration"
+  }, {
+    "name" : "story",
+    "value" : "User registration on the http://www.wecsandbox.com"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "qwerty"
+  }, {
+    "name" : "arg1",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "cartPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "loginAfterSignOutPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "myAccountPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "orderPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  }, {
+    "name" : "password",
+    "value" : "qwerty"
+  }, {
+    "name" : "productCategoryPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  }, {
+    "name" : "productPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"
+  }, {
+    "name" : "registeredEmail",
+    "value" : "test_a1@spam4.me"
+  }, {
+    "name" : "registeredPassword",
+    "value" : "qwerty"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "spam4meUrl",
+    "value" : "https://www.spam4.me/inbox"
+  } ],
+  "links" : [ {
+    "name" : "https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c9682f2aa0e92946.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ "qwerty", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+}

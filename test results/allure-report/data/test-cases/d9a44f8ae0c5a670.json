@@ -1,0 +1,260 @@
+{
+  "uid" : "d9a44f8ae0c5a670",
+  "name" : "testGoToMainPage",
+  "fullName" : "web_eye_care.tests.UserRegistrationTest.testGoToMainPage",
+  "historyId" : "de25b65e7a49e7ffb8f561b49a046d5e",
+  "time" : {
+    "start" : 1525703416842,
+    "stop" : 1525703421598,
+    "duration" : 4756
+  },
+  "description" : "Opening main page of the site\nThe step of the REG-01 Test case",
+  "descriptionHtml" : "<p>Opening main page of the site\nThe step of the REG-01 Test case</p>\n",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1525703409817,
+      "stop" : 1525703413731,
+      "duration" : 3914
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUpEmailBox",
+    "time" : {
+      "start" : 1525703413751,
+      "stop" : 1525703416786,
+      "duration" : 3035
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open email page",
+      "time" : {
+        "start" : 1525703413822,
+        "stop" : 1525703416538,
+        "duration" : 2716
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check if email page is loaded",
+        "time" : {
+          "start" : 1525703416494,
+          "stop" : 1525703416538,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "https://www.spam4.me/inbox"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "https://www.spam4.me/inbox"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Set up email",
+      "time" : {
+        "start" : 1525703416539,
+        "stop" : 1525703416786,
+        "duration" : 247
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusDetails" : {
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Trying to load main page of the site",
+      "time" : {
+        "start" : 1525703416851,
+        "stop" : 1525703421560,
+        "duration" : 4709
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "http://www.wecsandbox.com"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Checking if main page is opened",
+      "time" : {
+        "start" : 1525703421560,
+        "stop" : 1525703421593,
+        "duration" : 33
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1525703516503,
+      "stop" : 1525703516580,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGoToMainPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "DemoSuite"
+  }, {
+    "name" : "suite",
+    "value" : "Test case on Test Server on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "web_eye_care.tests.UserRegistrationTest"
+  }, {
+    "name" : "host",
+    "value" : "user-H81M-HD3"
+  }, {
+    "name" : "thread",
+    "value" : "12575@user-H81M-HD3.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "User registration"
+  }, {
+    "name" : "story",
+    "value" : "User registration on the http://www.wecsandbox.com"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "cartPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp"
+  }, {
+    "name" : "loginAfterSignOutPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes"
+  }, {
+    "name" : "loginAndRegistrationPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/login.asp"
+  }, {
+    "name" : "mainPageUrl",
+    "value" : "http://www.wecsandbox.com"
+  }, {
+    "name" : "myAccountPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/myaccount.asp"
+  }, {
+    "name" : "orderPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp"
+  }, {
+    "name" : "password",
+    "value" : "qwerty"
+  }, {
+    "name" : "productCategoryPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm"
+  }, {
+    "name" : "productPageUrl",
+    "value" : "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm"
+  }, {
+    "name" : "registeredEmail",
+    "value" : "test_a1@spam4.me"
+  }, {
+    "name" : "registeredPassword",
+    "value" : "qwerty"
+  }, {
+    "name" : "selenium.browser",
+    "value" : "chrome"
+  }, {
+    "name" : "selenium.driver.path",
+    "value" : "src/test/resources/drivers/chromedriver"
+  }, {
+    "name" : "spam4meUrl",
+    "value" : "https://www.spam4.me/inbox"
+  } ],
+  "links" : [ {
+    "name" : "https://docs.google.com/spreadsheets/d/1UTtHeSP3ovSTiGV6Kow1BH6eWGZE8wBcY7-XLLMnjTk/edit#gid=0",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d9a44f8ae0c5a670.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+}

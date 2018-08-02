@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "There is no confirmation letter in inbox after registration expected [true] but found [false]",
+      "children" : [ {
+        "name" : "testLetterInInbox",
+        "uid" : "b8c31988a5500465",
+        "parentUid" : "eba6f56e5a9cb8edb580efdc236b72d0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1525703437697,
+          "stop" : 1525703468523,
+          "duration" : 30826
+        },
+        "flaky" : false,
+        "parameters" : [ "https://www.spam4.me/inbox", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+      } ],
+      "uid" : "eba6f56e5a9cb8edb580efdc236b72d0"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

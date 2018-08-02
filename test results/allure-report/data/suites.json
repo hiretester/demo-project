@@ -1,0 +1,205 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "DemoSuite",
+    "children" : [ {
+      "name" : "Test case on Test Server on Chrome",
+      "children" : [ {
+        "name" : "web_eye_care.tests.UserRegistrationTest",
+        "children" : [ {
+          "name" : "testGoToMainPage",
+          "uid" : "d9a44f8ae0c5a670",
+          "parentUid" : "2d1e981b65e7bbd2b222c2a25dcbf2e7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703416842,
+            "stop" : 1525703421598,
+            "duration" : 4756
+          },
+          "flaky" : false,
+          "parameters" : [ "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testGoToRegistrationPage",
+          "uid" : "725cc0e6b3bc7d6d",
+          "parentUid" : "2d1e981b65e7bbd2b222c2a25dcbf2e7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703421713,
+            "stop" : 1525703423739,
+            "duration" : 2026
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/login.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testRegistrationOfNewUser",
+          "uid" : "c9682f2aa0e92946",
+          "parentUid" : "2d1e981b65e7bbd2b222c2a25dcbf2e7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703423742,
+            "stop" : 1525703427419,
+            "duration" : 3677
+          },
+          "flaky" : false,
+          "parameters" : [ "qwerty", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testSignInOfCreatedUser",
+          "uid" : "75b624624c0e906a",
+          "parentUid" : "2d1e981b65e7bbd2b222c2a25dcbf2e7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703427426,
+            "stop" : 1525703437694,
+            "duration" : 10268
+          },
+          "flaky" : false,
+          "parameters" : [ "qwerty", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testLetterInInbox",
+          "uid" : "b8c31988a5500465",
+          "parentUid" : "2d1e981b65e7bbd2b222c2a25dcbf2e7",
+          "status" : "failed",
+          "time" : {
+            "start" : 1525703437697,
+            "stop" : 1525703468523,
+            "duration" : 30826
+          },
+          "flaky" : false,
+          "parameters" : [ "https://www.spam4.me/inbox", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        } ],
+        "uid" : "2d1e981b65e7bbd2b222c2a25dcbf2e7"
+      }, {
+        "name" : "web_eye_care.tests.BuyAsNewUserTest",
+        "children" : [ {
+          "name" : "testGoToMainPage",
+          "uid" : "ac3ccd5b02b04619",
+          "parentUid" : "b35217883348398050b73c903c6fb84f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703468527,
+            "stop" : 1525703469581,
+            "duration" : 1054
+          },
+          "flaky" : false,
+          "parameters" : [ "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testGoToProductCategoryPage",
+          "uid" : "6fbfc9391983bc5f",
+          "parentUid" : "b35217883348398050b73c903c6fb84f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703469583,
+            "stop" : 1525703470895,
+            "duration" : 1312
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testGoToProductPage",
+          "uid" : "ee94e7b9bdf08a5b",
+          "parentUid" : "b35217883348398050b73c903c6fb84f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703470897,
+            "stop" : 1525703473706,
+            "duration" : 2809
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testAddToCart",
+          "uid" : "82d2d482d37b55c9",
+          "parentUid" : "b35217883348398050b73c903c6fb84f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703473708,
+            "stop" : 1525703477593,
+            "duration" : 3885
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testProceedToCheckout",
+          "uid" : "3508dd1bef87f9c3",
+          "parentUid" : "b35217883348398050b73c903c6fb84f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703477596,
+            "stop" : 1525703480176,
+            "duration" : 2580
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        } ],
+        "uid" : "b35217883348398050b73c903c6fb84f"
+      }, {
+        "name" : "web_eye_care.tests.BuyAsExistingUserTest",
+        "children" : [ {
+          "name" : "testGoToMainPage",
+          "uid" : "2d2f73756d08d870",
+          "parentUid" : "995f42d3d63a46a603ddb7ad997a9480",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703484636,
+            "stop" : 1525703485473,
+            "duration" : 837
+          },
+          "flaky" : false,
+          "parameters" : [ "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testGoToProductCategoryPage",
+          "uid" : "3d00fefdd2d44606",
+          "parentUid" : "995f42d3d63a46a603ddb7ad997a9480",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703485476,
+            "stop" : 1525703486631,
+            "duration" : 1155
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testGoToProductPage",
+          "uid" : "ab938b6e739e49b8",
+          "parentUid" : "995f42d3d63a46a603ddb7ad997a9480",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703486633,
+            "stop" : 1525703488515,
+            "duration" : 1882
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testAddToCart",
+          "uid" : "de9a95735074444b",
+          "parentUid" : "995f42d3d63a46a603ddb7ad997a9480",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703488517,
+            "stop" : 1525703491600,
+            "duration" : 3083
+          },
+          "flaky" : false,
+          "parameters" : [ "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        }, {
+          "name" : "testProceedToCheckout",
+          "uid" : "420d7f245bb68438",
+          "parentUid" : "995f42d3d63a46a603ddb7ad997a9480",
+          "status" : "passed",
+          "time" : {
+            "start" : 1525703491602,
+            "stop" : 1525703509778,
+            "duration" : 18176
+          },
+          "flaky" : false,
+          "parameters" : [ "test_a1@spam4.me", "qwerty", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "http://hrqzq.qvfht.servertrust.com/ShoppingCart.asp", "http://hrqzq.qvfht.servertrust.com/login.asp?logout=yes", "http://hrqzq.qvfht.servertrust.com/login.asp", "http://www.wecsandbox.com", "http://hrqzq.qvfht.servertrust.com/myaccount.asp", "http://hrqzq.qvfht.servertrust.com/one-page-checkout.asp", "qwerty", "http://hrqzq.qvfht.servertrust.com/Acuvue-Disposable-Contact-Lenses-s/157.htm", "http://hrqzq.qvfht.servertrust.com/Acuvue-Oasys-Contacts-p/2308.htm", "test_a1@spam4.me", "qwerty", "chrome", "src/test/resources/drivers/chromedriver", "https://www.spam4.me/inbox" ]
+        } ],
+        "uid" : "995f42d3d63a46a603ddb7ad997a9480"
+      } ],
+      "uid" : "4d2e19dc6fe4e22c4d0ab0a550fb1f71"
+    } ],
+    "uid" : "bbce806f9194653d54221660f46351aa"
+  } ],
+  "name" : "suites"
+}
